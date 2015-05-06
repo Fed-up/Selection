@@ -9,7 +9,7 @@
   right: 0;
   z-index: 1000;
   /*background: $main_color;*/
-  background: url(/images/paws/sborder.png) no-repeat 0 0;
+  /*background: url(/images/paws/sborder.png) no-repeat 0 0;*/
   height: 6rem;
   z-index: 2;
   width: 100%;
@@ -20,21 +20,21 @@
   @media only screen and (min-width:768px) {
     .header {
       text-align: center; 
-      background: url(/images/paws/mborder.png) no-repeat 0 0; 
+      /*background: url(/images/paws/mborder.png) no-repeat 0 0; */
     } 
   }
 
 @media only screen and (min-width:961px) {
     .header {
       text-align: center; 
-      background: url(/images/paws/lborder.png) no-repeat 0 0;  
+      /*background: url(/images/paws/lborder.png) no-repeat 0 0;  */
     } 
 }
 
 @media only screen and (min-width:1351px) {
     .header {
       text-align: center; 
-      background: url(/images/paws/xlborder.png) no-repeat 0 0; 
+      /*background: url(/images/paws/xlborder.png) no-repeat 0 0; */
     } 
 }
 
@@ -62,7 +62,7 @@
   width: 6rem;
   color: #fff;
   height: 6rem;
-  background: url(/images/paws/logo200.png) no-repeat 0 0;
+  background: url(/images/selection/logo200.png) no-repeat 0 0;
   background-size: contain; }
   @media only screen and (min-width:768px) {
     .logo__image {

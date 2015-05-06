@@ -19,7 +19,7 @@
                 <div class="registered__message">{{ $registered }}</div>
             @else
                 {{ Form::open(array('action' => 'HomeController@postAddUser', 'class' => 'form-horizontal')) }} 
-                    <h2 class="form__title--signup">Dog Cafe soon to Melbourne..</h2> 
+                    <h2 class="form__title--signup">Selection Cafe</h2> 
 
                     <div class="form-group {{ ($errors->has('fname')) ? 'has-error' : '' ; }} row">
                         {{ Form::label('fname', 'Full Name: ', array('class' => ' form_field_title ')) }}
@@ -47,41 +47,31 @@
             @endif        
         </section>
         <section class="section__white--homepage">
-            <img src="/images/paws/s2leaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf1">
-            <p>Where real food comes to life</p>
+            <!-- <img src="/images/paws/s2leaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf1"> -->
+            <p>Today is an oppotunity</p>
         </section>
         <section id="mission"class="section__mission">
-            <img src="/images/paws/rleaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf3">
+            <!-- <img src="/images/paws/rleaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf3"> -->
             <article class="small-12 medium-10 medium-push-1 large-8 large-push-2 xlarge-6 xlarge-push-3">
                 <p class="">
-                We are creating a dog friendly ‘real food’
-                cafe, that is passionate about providing 
-                nutritious, organic, locally sourced cuisine  
+                    Every now and then something special turns into reality and this is true for the new proud owners of Selection Cafe.
+                    Our passion and love for food has developed into a career. We are currently expanding our current business<a class="textlink" href="https://www.sonaughtybutnice.com"> SoNaughtyButNice.com </a>
+                    We look forward to introducing a new concept into Melbourne and celebrating the best food our country has to offer!
                 </p>
-                <br/>
-                <p class="">
-                    We believe in the healing power of food
-                    and desire to educate and inspire people 
-                    to expect the best not only for themselves
-                    but for our canine friends as well
-                </p>
-                <br/>
-                <p class="">
-                    We strive to create a place where service
-                    is not only a smile, its a place to call a
-                    second home, a place where there
-                    will always be..
-                </p>
+                <!-- <br/> -->
+                <p class=""></p>
+                <!-- <br/> -->
+                <p class=""></p>
             </article>         
         </section>
         <section class="section__white--homepage ">
-            <img src="/images/paws/logo200.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-small-only" style="width: 200px;  margin: auto;">
-            <img src="/images/paws/logo300.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-medium-only" style="width: 300px;  margin: auto;">
-            <img src="/images/paws/logo400.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-large-up" style="width: 400px;  margin: auto;">
+            <img src="/images/selection/logo200.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-small-only" style="width: 200px;  margin: auto;">
+            <img src="/images/selection/logo300.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-medium-only" style="width: 300px;  margin: auto;">
+            <img src="/images/selection/logo400.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-large-up" style="width: 400px;  margin: auto;">
             <!-- <p>Where real food comes to life</p> -->
         </section>
         <section id="fs" class="section__facebook">
-            <img src="/images/paws/s2leaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf1">
+            <!-- <img src="/images/paws/s2leaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf1"> -->
             <a id="fl" href="https://www.facebook.com/pages/Time-4-Paws/341349089397253?fref=ts" class="facebook__link">
                 
                 Check us out on facebook
@@ -112,7 +102,7 @@
                     Come experience great service, great atmosphere and get your 4 legged fur fix =) After all everyone needs to take ‘Time 4 Paws’
                 </p>
             </article>  
-            <img src="/images/paws/bleaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf2">       
+            <!-- <img src="/images/paws/bleaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf2">        -->
         </section>
     </main>
 @stop

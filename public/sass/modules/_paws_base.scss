@@ -260,3 +260,6 @@ video#bgvid {
 
 #fs:hover{ background-color: #3b5998; }
 #fs:hover #fl {color: white}
+
+a.textlink{text-decoration: none; color: $white;}
+a.textlink:hover{text-decoration: none; color: $main_dark;}
