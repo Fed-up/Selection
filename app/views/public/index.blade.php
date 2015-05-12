@@ -77,7 +77,7 @@
                 Check us out on facebook
             </a>
         </section>
-        <section id="vision"class="section__vision">
+        <!-- <section id="vision"class="section__vision">
             <article class="small-12 medium-10 medium-push-1 large-8 large-push-2 xlarge-6 xlarge-push-3">
                 <b class="vision_p">
                 A cafe that welcomes the ENTIRE family, with menus
