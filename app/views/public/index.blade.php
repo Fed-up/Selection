@@ -6,8 +6,8 @@
     <div class="bg"></div>
         <div class="video__home">
             <video autoplay loop poster="/images/paws/videopic.jpg" id="bgvid" class="show-for-large-up">
-                <source src="videos/dogshow.webm" type="video/webm">
-                <source src="videos/dogshow.mp4" type="video/mp4">
+                <source src="videos/websitefood2.webm" type="video/webm">
+                <source src="videos/websitefood2.mp4" type="video/mp4">
             </video>
         </div>
         <div id="vidpause"></div>
@@ -19,7 +19,7 @@
                 <div class="registered__message">{{ $registered }}</div>
             @else
                 {{ Form::open(array('action' => 'HomeController@postAddUser', 'class' => 'form-horizontal')) }} 
-                    <h2 class="form__title--signup">Selection Cafe</h2> 
+                    <h2 class="form__title--signup">Fresh New Food at Selection Cafe</h2> 
 
                     <div class="form-group {{ ($errors->has('fname')) ? 'has-error' : '' ; }} row">
                         {{ Form::label('fname', 'Full Name: ', array('class' => ' form_field_title ')) }}

@@ -8,7 +8,7 @@ button:focus {
 .video__home{
 	@media #{$small-only} { 
 		background-color: $main_dark;
-	  	background: transparent url(/images/paws/mobiledog.png) 50% 50% / cover no-repeat ;
+	  	background: transparent url(/images/selection/bg.png) 50% 50% / cover no-repeat ;
 	 	height: 23.5rem;
 	 	width: 100%; 
 	 	margin-top: -2.5rem; 
@@ -18,11 +18,11 @@ button:focus {
 
   	@media #{$medium-only} { 
 		background-color: $main_dark;
-		background: transparent url(/images/paws/mobiledog.png) 50% 50% / cover no-repeat ;
+		background: transparent url(/images/selection/bg.png) 50% 50% / cover no-repeat ;
 	  	/*background: url(/images/paws/mobiledog.png) no-repeat 0 0; */
 	 	height: 23.5rem;
 	 	width: 100%;
-	 	margin-top: -2.5rem;
+	 	margin-top: -2.5rem; 
 	 	overflow: hidden;
 	 	background-size:cover; 
   	}  
