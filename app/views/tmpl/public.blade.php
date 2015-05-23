@@ -11,10 +11,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" > 
       @yield('_header')
       <!-- Dev site css --> 
-      <link rel="stylesheet" type="text/css" href="../sass/compiled_css/dev_paws.css"> 
+      <link rel="stylesheet" type="text/css" href="../sass/compiled_css/dev_selection.css"> 
       
       <!-- Live site css  --> 
-      <!-- <link rel="stylesheet" type="text/css" href="../deploy_css/paws.min.css">  -->
+      <!-- <link rel="stylesheet" type="text/css" href="../deploy_css/selection.min.css">  -->
 
 
       <link rel="stylesheet" type="text/css" href="/packages/jquery-1.11.1.min/vendor/jquery-ui-1.10.4.custom/css/no-theme/jquery-ui-1.10.4.custom.min.css"/>
@@ -30,7 +30,7 @@
     <div class="content-slot">
       @yield('content')
       <!-- <div class="footer__push"></div> -->
-      @include('public.footer') 
+      @include('public.footer')  
     </div>
 
 
@@ -41,12 +41,35 @@
       id="panel--right" 
       class="panel--right"> <!-- //panel -->
         <div id="navigation" class="">
+          @if (Auth::check())
+              
+          @else
+             {{ Form::open(array('url' => 'login', 'class' => 'form-signin form-signin--swipe')) }}
+              <a href="/signup" class="side__member__button">Become a Member</a> 
+              <h3 class="side__login__header">Join Us Today</h3> 
+
+              <div class="form__input--side--login form__input--side--login--swipe">
+                  {{ Form::label('email', 'Email: ', array('class' => 'input__name--white')) }}
+                  {{ Form::email('email', '', array('placeholder'=>'Email', 'class'=>'form-control' ) ) }}
+              </div>
+              <div class="form__input--side--login form__input--side--login--swipe">
+                  {{ Form::label('password', 'Password: ', array('class' => 'input__name--white')) }}
+                  {{ Form::password('password', array('placeholder'=>'Password', 'class'=>'form-control' ) ) }}
+              </div>
+              
+              {{ Form::submit('Login', array('class' => 'side__login__button--swipe')) }}
+              
+            {{ Form::close() }}
+          @endif
             <nav class="">
                 <!-- <a class="side--nav" href="/">{{ ((Auth::guest())? '' : ((Auth::user()->admin == 1)? HTML::link('admin', 'Profile') : HTML::link('profile', 'Profile'))) }}</a> -->
-                {{ ((Auth::guest())? '' : ((Auth::user()->admin == 1)? HTML::link('admin', 'Admin', array('class' => 'side--nav')) : '')) }}
-                <a class="{{((Request::segment(1) === 'collections')? 'side--nav navTab_active' : 'side--nav')}}" href="/">Home</a>
-                <a class="{{((Request::segment(1) === 'ingredients')? 'side--nav navTab_active' : 'side--nav')}}" href="http://www.time4paws.com.au/#mission">Our Mission</a>                 
-                <a class="{{((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav')}}" href="http://www.time4paws.com.au/#vision">Our Vision for you</a>
+<!--                 {{ ((Auth::guest())? '' : ((Auth::user()->admin == 1)? HTML::link('admin', 'Admin', array('class' => 'side--nav')) : '')) }} -->
+                {{ ((Auth::guest())? '' : ((Auth::user()->admin == 1)? HTML::link('admin', 'Profile', array('class' => 'side--nav')) : HTML::link('profile', 'Profile', array('class' => 'side--nav')))) }}
+                <a class="{{((Request::segment(1) === '/')? 'side--nav navTab_active' : 'side--nav')}}" href="/">Home</a>
+                <a class="{{((Request::segment(1) === 'ingredients')? 'side--nav navTab_active' : 'side--nav')}}" href="/">Our Vision</a>                 
+                <a class="{{((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav')}}" href="/recipes">Our Menu</a>
+                <a class="{{((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav')}}" href="/collections">Our Selections</a>
+                <a class="{{((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav')}}" href="/catering">Order Catering</a>
                 <a class="{{((Request::segment(1) === 'events')? 'side--nav navTab_active' : 'side--nav')}}" href="/">Sign Up</a>
                 <a class="video__link" href="http://www.dogloversshow.com.au">Video Credit: Dog Lovers Show</a>
             </nav>

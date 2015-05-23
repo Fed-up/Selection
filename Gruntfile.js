@@ -46,7 +46,7 @@ module.exports = function(grunt) {
 					sourceComments: "normal"
 				},
 		        files: {
-		          'public/sass/compiled_css/dev_paws.css': 'public/sass/paws.scss'
+		          'public/sass/compiled_css/dev_selection.css': 'public/sass/selection.scss'
 		        }     
 			},
 			// dist: {
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
 		copy:{	//Copies the sass files to into the deploy folder ready for the llive site		
 			css:{
 					files : {
-						'public/deploy_css/paws.min.css' : 'public/sass/compiled_css/dev_paws.css'
+						'public/deploy_css/selection.min.css' : 'public/sass/compiled_css/dev_selection.css'
 					}
 			},
 			// js:{
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
 		cssmin:{
 			dist:{
 				files: {
-					'public/deploy_css/paws.min.css' : 'public/sass/compiled_css/dev_paws.css'
+					'public/deploy_css/selection.min.css' : 'public/sass/compiled_css/dev_selection.css'
 				}
 			}
 		},

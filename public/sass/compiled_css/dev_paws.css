@@ -3426,9 +3426,471 @@ body.showPanel .content-slot {
   color: #fff;
   border-bottom: #fff; }
 
-/*@import "modules/flexslider";*/
-/*@import "modules/checkout";*/
-/*@import "modules/collections";*/
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+@media only screen and (max-width: 480px) {
+  /* line 12, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flexslider--tom {
+    display: none; } }
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  /* line 18, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flexslider--tom {
+    display: none; } }
+
+@media only screen and (min-width: 768px) {
+  /* line 24, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flexslider--tom {
+    display: normal; } }
+
+/* Browser Resets
+*********************************/
+/* line 29, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 33, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus {
+  outline: none; }
+
+/* line 32, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 39, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.slides, .flex-control-nav, .flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+@font-face {
+  font-family: 'flexslider-icon';
+  src: url('fonts/flexslider-icon.eot');
+  src: url('fonts/flexslider-icon.eot?#iefix') format("embedded-opentype"), url('fonts/flexslider-icon.woff') format("woff"), url('fonts/flexslider-icon.ttf') format("truetype"), url('fonts/flexslider-icon.svg#flexslider-icon') format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 50, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 61, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flexslider {
+  margin: 0;
+  padding: 0; }
+  /* line 65, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flexslider .slides > li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden; }
+  /* line 70, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flexslider .slides img {
+    width: 100%;
+    display: block; }
+
+/* line 51, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 52, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 53, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 84, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flex-pauseplay span {
+  text-transform: capitalize; }
+
+/* Clearfix for the .slides element */
+/* line 56, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 91, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+/* line 57, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 102, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+html[xmlns] .slides {
+  display: block; }
+
+/* line 58, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 108, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+* html .slides {
+  height: 1%; }
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 63, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 117, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.no-js .slides > li:first-child {
+  display: block; }
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 67, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 125, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flexslider {
+  margin: 0 0.625rem 2rem;
+  background: #fff;
+  position: relative;
+  zoom: 1; }
+
+/* line 68, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 134, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+
+/* line 69, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 144, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.loading .flex-viewport {
+  max-height: 300px; }
+
+/* line 70, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 150, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flexslider .slides {
+  zoom: 1;
+  height: 100%; }
+
+/* line 71, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 157, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.carousel li {
+  margin-right: 5px; }
+
+/* Direction Nav */
+/* line 74, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 164, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flex-direction-nav {
+  *height: 0; }
+  /* line 166, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flex-direction-nav a {
+    text-decoration: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  /* line 183, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flex-direction-nav .flex-prev {
+    left: 0; }
+  /* line 186, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flex-direction-nav .flex-next {
+    right: 0;
+    text-align: right; }
+
+/* line 75, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 76, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 77, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 78, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 201, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flexslider:hover .flex-prev {
+  opacity: 0.7;
+  left: 10px; }
+/* line 205, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flexslider:hover .flex-next {
+  opacity: 0.7;
+  right: 10px; }
+  /* line 208, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flexslider:hover .flex-next:hover {
+    opacity: 1; }
+/* line 212, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flexslider:hover .flex-prev:hover {
+  opacity: 1; }
+
+/* line 79, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 80, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 81, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 224, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flex-direction-nav .flex-disabled {
+  opacity: 0 !important;
+  filter: alpha(opacity=0);
+  cursor: default; }
+/* line 230, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flex-direction-nav a:before {
+  font-family: "flexslider-icon";
+  font-size: 40px;
+  line-height: 1;
+  display: inline-block;
+  content: '\f001'; }
+/* line 237, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flex-direction-nav a.flex-next:before {
+  content: '\f002'; }
+
+/* line 82, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 83, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* Pause/Play */
+/* line 86, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 250, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000; }
+  /* line 262, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flex-pauseplay a:before {
+    font-family: "flexslider-icon";
+    font-size: 20px;
+    display: inline-block;
+    content: '\f004'; }
+  /* line 268, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flex-pauseplay a:hover {
+    opacity: 1; }
+  /* line 271, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flex-pauseplay a.flex-play:before {
+    content: '\f003'; }
+
+/* line 87, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 88, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 89, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* Control Nav */
+/* line 92, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 285, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center; }
+  /* line 290, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flex-control-nav li {
+    margin: 0 6px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+
+/* line 93, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 94, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 302, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3); }
+  /* line 318, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flex-control-paging li a:hover {
+    background: #333;
+    background: rgba(0, 0, 0, 0.7); }
+  /* line 322, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flex-control-paging li a.flex-active {
+    background: #000;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: default; }
+
+/* line 95, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 96, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 98, C:/webroot/lcsnbn/sass/modules/flexslider */
+/* line 335, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden; }
+  /* line 339, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flex-control-thumbs li {
+    width: 25%;
+    float: left;
+    margin: 0; }
+  /* line 344, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flex-control-thumbs img {
+    width: 100%;
+    display: block;
+    opacity: 0.7;
+    cursor: pointer; }
+    /* line 349, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+    .flex-control-thumbs img:hover {
+      opacity: 1; }
+  /* line 353, C:/GitHub/Selection/public/sass/modules/_flexslider.scss */
+  .flex-control-thumbs .flex-active {
+    opacity: 1;
+    cursor: default; }
+
+/* line 1, C:/webroot/lcsnbn/sass/modules/checkout */
+/* line 2, C:/GitHub/Selection/public/sass/modules/_checkout.scss */
+.checkout__section {
+  position: relative;
+  margin-bottom: 3rem; }
+
+/* line 6, C:/webroot/lcsnbn/sass/modules/checkout */
+/* line 7, C:/GitHub/Selection/public/sass/modules/_checkout.scss */
+.checkout__content {
+  position: absolute;
+  right: 0.5rem; }
+
+/* line 11, C:/webroot/lcsnbn/sass/modules/checkout */
+/* line 12, C:/GitHub/Selection/public/sass/modules/_checkout.scss */
+.cart__total {
+  display: inline-block;
+  padding: 0.5rem; }
+
+/* line 16, C:/webroot/lcsnbn/sass/modules/checkout */
+/* line 17, C:/GitHub/Selection/public/sass/modules/_checkout.scss */
+.content-box__summary--price {
+  color: #343434; }
+
+/* line 20, C:/webroot/lcsnbn/sass/modules/checkout */
+/* line 21, C:/GitHub/Selection/public/sass/modules/_checkout.scss */
+.content-box__summary--quantity {
+  color: #343434; }
+
+/* line 24, C:/webroot/lcsnbn/sass/modules/checkout */
+/* line 25, C:/GitHub/Selection/public/sass/modules/_checkout.scss */
+.pay_icon {
+  float: right;
+  margin-right: 0.6rem; }
+
+/*END CONTENT*/
+/**----------Collection Section------------**/
+/* line 3, C:/webroot/lcsnbn/sass/modules/collections */
+/* line 4, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+h2.collection_section_title {
+  margin-top: 30px;
+  text-align: left;
+  margin-left: 10px; }
+
+/* line 8, C:/webroot/lcsnbn/sass/modules/collections */
+/* line 10, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+.tile {
+  float: left;
+  position: relative;
+  height: 0;
+  width: 46%;
+  padding-top: 22%;
+  margin: 1.5%;
+  background-size: 100%;
+  background-repeat: no-repeat; }
+
+/* line 18, C:/webroot/lcsnbn/sass/modules/collections */
+/* line 21, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+a.tile.four.columns:hover .tile__label {
+  display: none; }
+
+/* line 21, C:/webroot/lcsnbn/sass/modules/collections */
+/* line 25, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+.tile__label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: headings;
+  color: #343434; }
+
+/* line 30, C:/webroot/lcsnbn/sass/modules/collections */
+/* line 35, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+.tile--grid {
+  position: relative; }
+
+/* line 33, C:/webroot/lcsnbn/sass/modules/collections */
+/* line 39, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+.tile--grid__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: solid 1px #e0e0e0; }
+
+/* line 43, C:/webroot/lcsnbn/sass/modules/collections */
+/* line 49, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+.hp_collection img {
+  Width: 100%; }
+
+/* line 46, C:/webroot/lcsnbn/sass/modules/collections */
+/* line 53, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+.hp_collection {
+  margin-bottom: 20px; }
+
+/* line 49, C:/webroot/lcsnbn/sass/modules/collections */
+/* line 57, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+div.collection.container {
+  margin-top: 10px;
+  position: relative; }
+
+@media only screen and (max-width: 959px) {
+  /* line 55, C:/webroot/lcsnbn/sass/modules/collections */
+  /* line 63, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+  .ingredient_caption {
+    top: -220px; } }
+
+@media only screen and (max-width: 767px) {
+  /**_______________Collection Section_______________________**/
+  /* line 66, C:/webroot/lcsnbn/sass/modules/collections */
+  /* line 71, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+  a.tile.four.columns {
+    float: left;
+    position: relative;
+    height: 0;
+    width: 46%;
+    padding-top: 42%;
+    margin: 1.5%;
+    background-size: 100%;
+    background-repeat: no-repeat; }
+  /* line 76, C:/webroot/lcsnbn/sass/modules/collections */
+  /* line 81, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+  article.tile.tile--grid.four.columns {
+    width: 46%;
+    padding-top: 42%;
+    margin: 1.5%; }
+  /* line 81, C:/webroot/lcsnbn/sass/modules/collections */
+  /* line 86, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+  .tile__label {
+    font-family: base_font; }
+  /* line 85, C:/webroot/lcsnbn/sass/modules/collections */
+  /* line 89, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+  .tile--grid {
+    position: relative; }
+  /* line 88, C:/webroot/lcsnbn/sass/modules/collections */
+  /* line 92, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+  .tile--grid__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: solid 1px #e0e0e0; }
+  /* line 98, C:/webroot/lcsnbn/sass/modules/collections */
+  /* line 101, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+  .hp_collection img {
+    Width: 100%; }
+  /* line 101, C:/webroot/lcsnbn/sass/modules/collections */
+  /* line 104, C:/GitHub/Selection/public/sass/modules/_collections.scss */
+  .hp_collection {
+    margin-bottom: 20px; } }
+
 /*==== Footer ======= */
 /* line 2, C:/GitHub/Selection/public/sass/modules/_footer.scss */
 .footer__wrapper .push {
@@ -3635,7 +4097,190 @@ body.showPanel .content-slot {
     top: 1.75rem; } }
 
 /*End Header*/
-/*@import "modules/ingredients";*/
+/**----------Ingrdient Section------------**/
+/* line 2, C:/webroot/lcsnbn/sass/modules/ingredients */
+/* line 3, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+.container .hp_ingredients__title {
+  margin: 0px; }
+
+/* line 6, C:/webroot/lcsnbn/sass/modules/ingredients */
+/* line 7, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+.ingredient_caption {
+  background-color: white;
+  margin: 5px;
+  padding: 5px;
+  opacity: 0.8;
+  color: black;
+  top: -280px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: -85px;
+  font-size: 14px;
+  text-decoration: none;
+  pointer-events: none; }
+
+/* line 20, C:/webroot/lcsnbn/sass/modules/ingredients */
+/* line 22, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+img.hp_main_ingredient:hover + div.ingredient_caption {
+  opacity: 0.1;
+  font-size: 16px; }
+
+/* line 24, C:/webroot/lcsnbn/sass/modules/ingredients */
+/* line 27, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+figcaption.caption_3_stack {
+  display: none; }
+
+/* line 27, C:/webroot/lcsnbn/sass/modules/ingredients */
+/* line 31, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+.hp_view_ingredient {
+  display: none; }
+
+/* line 29, C:/webroot/lcsnbn/sass/modules/ingredients */
+/* line 35, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+.hp_ingredient {
+  height: auto;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 10px 0;
+  border: #e0e0e0 1px solid; }
+
+/* line 40, C:/webroot/lcsnbn/sass/modules/ingredients */
+/* line 43, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+.hp_ingredient .section_title {
+  padding: 40px; }
+
+/* line 44, C:/webroot/lcsnbn/sass/modules/ingredients */
+/* line 47, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+.hp_main_ingredient {
+  border: e0e0e0 1px solid; }
+
+/* line 48, C:/webroot/lcsnbn/sass/modules/ingredients */
+/* line 51, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+.ingredient_3_stack {
+  margin: 5px;
+  display: block;
+  border: e0e0e0 1px solid; }
+
+/* line 53, C:/webroot/lcsnbn/sass/modules/ingredients */
+/* line 57, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+.ingredient_link {
+  display: none; }
+
+@media only screen and (max-width: 959px) {
+  /* line 58, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 62, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .ingredient_caption {
+    top: -220px; } }
+
+@media only screen and (max-width: 767px) {
+  /**----------Ingrdient Section------------**/
+  /* line 73, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 72, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  #ingredient_container {
+    display: none; }
+  /* line 76, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 75, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .hp_ingredient .section_title {
+    padding: 0px; }
+  /* line 79, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 78, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .container .hp_ingredient {
+    margin-top: 0px; }
+  /* line 82, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 81, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .ingredient_caption {
+    display: none; }
+  /* line 85, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 84, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .ingredient_mobile {
+    display: none; }
+  /* line 88, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 87, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  div.five.columns img {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%; }
+  /* line 93, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 92, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .hp_ingredient img {
+    width: 100px; }
+  /* line 96, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 95, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .container .hp_ingredient .columns {
+    margin: 0px;
+    height: auto; }
+  /* line 100, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 99, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  #thumbs img {
+    float: left;
+    width: 30%; }
+  /* line 104, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 103, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .mini_image {
+    background: blue;
+    z-index: 1; } }
+
+@media only screen and (max-width: 479px) {
+  /**______________Ingredient Section__________________**/
+  /*div.four.columns.recipe_box {
+		width:48%;
+		margin:2px;	
+	}*/
+  /*div.hp_recipe{margin-left:4px;}*/
+  /* line 119, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 115, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  div.four.columns.Collection_box {
+    width: 48%;
+    margin: 2px; }
+  /* line 123, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 119, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  div.hp_collection {
+    margin-left: 4px; }
+  /* line 124, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 122, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .catering_click {
+    pading-top: 0px; }
+  /* line 125, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 125, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .mini_extra_block_title {
+    display: none; }
+  /* line 126, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 128, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  h6.extra_block_title {
+    margin: 5px; }
+  /* line 128, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 131, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  #catering_extra {
+    top: -149px;
+    height: 51%; }
+  /* line 132, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 135, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .catering_click {
+    padding-top: 1%; }
+  /* line 135, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 138, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  #event_extra {
+    top: 145px;
+    height: 51%; }
+  /* line 139, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 142, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .event_click {
+    height: 70%;
+    margin-top: 8%; }
+  /* line 143, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 146, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .hp_event_date_box {
+    width: 30%;
+    height: 50%; }
+  /* line 147, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 150, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  .hp_event_name {
+    margin-left: 33%; }
+  /* line 150, C:/webroot/lcsnbn/sass/modules/ingredients */
+  /* line 153, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
+  #last_event {
+    display: none; } }
+
 /* line 2, C:/GitHub/Selection/public/sass/modules/_login.scss */
 .section {
   background-color: white;
@@ -3685,11 +4330,736 @@ body.showPanel .content-slot {
 .input__text--login {
   width: 100%; }
 
-/*@import "modules/profile";*/
-/*@import "modules/promo";*/
-/*@import "modules/recipes";*/
-/*@import "modules/signup";*/
-/*@import "modules/tile";*/
+/* line 1, C:/webroot/lcsnbn/sass/modules/profile */
+/* line 2, C:/GitHub/Selection/public/sass/modules/_profile.scss */
+.profile__image {
+  margin-top: 1rem;
+  border: 1px solid #e0e0e0; }
+
+/* line 6, C:/webroot/lcsnbn/sass/modules/profile */
+/* line 7, C:/GitHub/Selection/public/sass/modules/_profile.scss */
+.profile__account__link {
+  background-color: #73cb4d;
+  border: 1px solid #e0e0e0;
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.3rem;
+  text-align: center;
+  color: #fff; }
+
+/* line 17, C:/webroot/lcsnbn/sass/modules/profile */
+/* line 17, C:/GitHub/Selection/public/sass/modules/_profile.scss */
+.profile__image__link {
+  position: relative;
+  display: block; }
+
+/* line 22, C:/webroot/lcsnbn/sass/modules/profile */
+/* line 22, C:/GitHub/Selection/public/sass/modules/_profile.scss */
+.profile__image__link__name {
+  position: absolute;
+  right: 0;
+  top: 2rem;
+  padding: 0.3rem;
+  background-color: #73cb4d;
+  color: #fff;
+  border-radius: 5px 0 0 5px; }
+
+/**----------Collection Ad Block Section------------**/
+/* line 2, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 3, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+h6.extra_block_title {
+  text-align: center;
+  margin: 8px; }
+
+/* line 6, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 8, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.mini_extra_block_title {
+  font-family: headings; }
+
+/* line 9, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 12, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.hp_catering_p_name {
+  text-align: center;
+  margin: 0px;
+  font-size: 12px;
+  font-weight: bold; }
+
+/* line 15, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 19, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.hp_catering_summary {
+  text-align: center;
+  margin: 0px;
+  font-size: 12px;
+  line-height: 14px; }
+
+/* line 21, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 26, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.catering_click {
+  color: #343434;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  vertical-align: central;
+  padding-top: 10%;
+  margin: 1%;
+  margin-left: 1%;
+  width: 48%;
+  height: 40%;
+  float: left;
+  border: 1px solid #8ecba5; }
+
+/* line 35, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 41, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.catering_click:hover {
+  background: #8ecba5;
+  color: #fff; }
+
+/* line 39, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 46, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.hp_catering_name {
+  margin-top: 10%; }
+
+/*_________Event______________*/
+/* line 45, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 51, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+#event_extra {
+  overflow: hidden;
+  z-index: 0; }
+
+/* line 49, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 56, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.event_click {
+  height: 40%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 2%;
+  overflow: hidden; }
+
+/* line 57, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 65, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+div.event_click:hover div.hp_event_date_box {
+  background: #fff;
+  color: #343434;
+  border: 1px solid #8ecba5; }
+
+/* line 62, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 71, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.hp_event_date_box {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0px;
+  font-size: 12px;
+  background: #8ecba5;
+  color: #fff;
+  width: 25%;
+  height: 52%;
+  float: left; }
+
+/* line 75, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 85, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.hp_event_date {
+  font-size: 22px;
+  margin-left: 3%; }
+
+/* line 79, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 90, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.hp_date_th {
+  font-size: 10px; }
+
+/* line 82, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 94, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.hp_event_month {
+  font-size: 12px;
+  line-height: 2px; }
+
+/* line 86, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 99, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.hp_event_name {
+  margin-left: 28%;
+  color: #343434;
+  font-size: 14px;
+  padding-bottom: 2%; }
+
+/**_________________COMMUNITY SECTION___________________**/
+/* line 94, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 107, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.join_section_title {
+  text-align: center; }
+
+/* line 97, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 111, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.join.container {
+  position: relative; }
+
+/* line 101, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 115, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+div.five.columns img {
+  width: 100%; }
+
+/* line 104, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 119, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.join_pitch {
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  height: 100%;
+  position: absolute; }
+
+/* line 111, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 126, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.join_content {
+  font-size: 32px;
+  margin: 20px;
+  text-align: center; }
+
+/* line 116, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 132, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.join_us {
+  padding: 3px;
+  font-size: 14px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #8ecba5;
+  text-decoration: none;
+  color: #343434;
+  text-align: center;
+  width: 50%;
+  left: 25%;
+  right: 25%;
+  position: absolute; }
+
+/* line 131, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 148, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.join_us:hover {
+  background: #8ecba5;
+  text-decoration: none;
+  color: #fff; }
+
+/* line 136, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 154, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.join_row {
+  margin: 10px; }
+
+/* line 139, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 158, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.join_span {
+  padding-left: 20px; }
+
+/* line 142, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 162, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.join_text {
+  padding: 10px; }
+
+/* line 145, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 166, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.social_icon {
+  width: 20%; }
+
+/* line 148, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 170, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+.social_text {
+  margin: 10px;
+  width: 80%; }
+
+/* line 152, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 175, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+div.four.columns.social_links {
+  float: right; }
+
+/* line 155, C:/webroot/lcsnbn/sass/modules/promo */
+/* line 179, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+div.four.columns.social_links {
+  margin-top: 30px; }
+
+@media only screen and (max-width: 959px) {
+  /*_____Event Ad Block_________________________*/
+  /* line 160, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 185, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .catering_click {
+    height: 39%; }
+  /* line 167, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 188, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .hp_event_date_box {
+    width: 25%;
+    height: 65%; }
+  /* line 171, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 192, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .hp_event_date {
+    font-size: 22px;
+    margin-left: 3%; }
+  /* line 175, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 196, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .hp_date_th {
+    font-size: 10px; }
+  /* line 178, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 199, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .hp_event_month {
+    font-size: 12px;
+    line-height: 2px; }
+  /* line 182, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 203, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .hp_event_name {
+    margin-left: 28%;
+    color: #343434;
+    font-size: 14px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /**___________________Join Section______________________**/
+  /* line 191, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 211, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .social_text {
+    margin-top: 0px;
+    width: 80%; }
+  /* line 195, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 215, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  div.social_section.row {
+    margin-bottom: 0px; }
+  /* line 198, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 218, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  div.four.columns.social_links {
+    margin-top: 10px; } }
+
+@media only screen and (max-width: 767px) {
+  /**_______________Community Section_______________________**/
+  /* line 205, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 224, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .social_icon {
+    width: 20%; }
+  /* line 208, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 227, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .social_text {
+    margin: 10px; }
+  /* line 211, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 230, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  div.five.columns.image_div {
+    width: 40%; }
+  /* line 214, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 233, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  div.seven.columns.join_pitch {
+    width: 60%;
+    position: relative;
+    height: 168px; }
+  /* line 219, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 238, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .join_content {
+    font-size: 20px; }
+  /* line 222, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 241, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .join_us {
+    font-size: 14px;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    position: absolute;
+    top: 70%; }
+  /* line 230, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 249, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  figure.one.columns.alpha.social_icon {
+    width: 50%;
+    float: left; } }
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 239, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 256, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  #catering_extra {
+    top: -210px;
+    height: 50%; }
+  /* line 243, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 260, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  #event_extra {
+    top: 210px;
+    height: 50%; } }
+
+@media only screen and (max-width: 479px) {
+  /**______________Join Section________________**/
+  /* line 252, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 267, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .social_icons {
+    display: inline; }
+  /* line 255, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 270, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  div.seven.columns.join_pitch {
+    height: 120px; }
+  /* line 258, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 273, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .join_content {
+    font-size: 18px;
+    margin: 5px; }
+  /* line 262, C:/webroot/lcsnbn/sass/modules/promo */
+  /* line 277, C:/GitHub/Selection/public/sass/modules/_promo.scss */
+  .social_text {
+    display: none; } }
+
+/* Medium devices (desktops, 992px and up) */
+/*@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }*/
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  /* line 4, C:/webroot/lcsnbn/sass/modules/recipes */
+  /* line 5, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+  .content__summary {
+    display: none; } }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 11, C:/webroot/lcsnbn/sass/modules/recipes */
+  /* line 10, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+  .content__summary {
+    display: none; } }
+
+@media all and (max-width: 459px) {
+  /* line 23, C:/webroot/lcsnbn/sass/modules/recipes */
+  /* line 17, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+  .content__tag {
+    /*position: absolute;
+		right: 0rem;
+		margin: 0.1rem;
+		padding: 0.3rem;
+		font-size: 14px;
+		bottom: -3.4rem;*/
+    display: none; }
+  /* line 32, C:/webroot/lcsnbn/sass/modules/recipes */
+  /* line 26, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+  .content__summary {
+    display: none; } }
+
+/*Recipe Page*/
+/* line 3, C:/webroot/lcsnbn/sass/modules/recipe-page */
+/* line 38, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+.logo__image {
+  position: absolute;
+  bottom: -0.75rem;
+  right: 10px;
+  width: 4rem;
+  color: #fff;
+  height: 4rem;
+  background: url(/images/site/logo.png) no-repeat 0 0;
+  background-size: contain; }
+
+@media only screen and (min-width: 768px) {
+  /* line 48, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+  .logo__image {
+    bottom: -0.77rem; } }
+
+/* line 18, C:/webroot/lcsnbn/sass/modules/recipe-page */
+/* line 52, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+.content__side__icon {
+  color: #343434;
+  border: 1px solid #def0e5;
+  background-color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: auto;
+  margin-top: 0.5rem;
+  line-height: 3.5rem; }
+
+@media only screen and (min-width: 481px) {
+  /* line 64, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+  .content__side__icon {
+    width: 3.4rem;
+    height: 3.4rem; } }
+
+@media only screen and (max-width: 480px) {
+  /* line 69, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+  .section-box--margin {
+    margin-top: 0.5rem; } }
+
+/* line 43, C:/webroot/lcsnbn/sass/modules/recipe-page */
+/* line 73, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+.section__box--fresh-fact {
+  background-color: #fff;
+  border-top: 1px solid #87cdac;
+  margin-top: 1rem; }
+
+@media only screen and (min-width: 481px) {
+  /* line 78, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+  .section__box--fresh-fact {
+    margin-bottom: 0.3rem;
+    border-top: 0;
+    margin-top: 0rem; } }
+
+/* line 54, C:/webroot/lcsnbn/sass/modules/recipe-page */
+/* line 84, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+.section__box--nutrition-panel {
+  background-color: #fff;
+  border-top: 1px solid #87cdac;
+  margin-top: 0rem; }
+
+@media only screen and (min-width: 481px) {
+  /* line 89, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+  .section__box--nutrition-panel {
+    margin-bottom: 0.3rem;
+    margin-top: 1rem; } }
+
+/* line 64, C:/webroot/lcsnbn/sass/modules/recipe-page */
+/* line 94, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+.recipe__icon {
+  display: block;
+  margin-bottom: -0.7rem;
+  margin-top: 0.4rem; }
+
+/*///////////// Sign up section*/
+/* line 3, C:/webroot/lcsnbn/sass/modules/signup */
+/* line 3, C:/GitHub/Selection/public/sass/modules/_signup.scss */
+.section--form {
+  padding: 2rem 1rem; }
+
+@media only screen and (min-width: 768px) {
+  /* line 8, C:/GitHub/Selection/public/sass/modules/_signup.scss */
+  .section--form {
+    padding: 2rem; } }
+
+/* line 12, C:/GitHub/Selection/public/sass/modules/_signup.scss */
+.form__box_p {
+  text-align: center; }
+
+/* line 41, C:/webroot/lcsnbn/sass/modules/signup */
+/* line 17, C:/GitHub/Selection/public/sass/modules/_signup.scss */
+.form__button--sub {
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 0px;
+  border-radius: 0.5rem;
+  color: #87cdac;
+  margin-top: 0.7rem;
+  font-size: 0.8rem; }
+
+/* line 52, C:/webroot/lcsnbn/sass/modules/signup */
+/* line 28, C:/GitHub/Selection/public/sass/modules/_signup.scss */
+.form__button--sub--signup {
+  margin-left: 0rem; }
+
+/* line 56, C:/webroot/lcsnbn/sass/modules/signup */
+/* line 32, C:/GitHub/Selection/public/sass/modules/_signup.scss */
+.form__button--sub:hover {
+  padding: 0.5rem;
+  background-color: #87cdac;
+  border: 0px;
+  border-radius: 0.2rem;
+  color: #fff;
+  margin-left: 10%; }
+
+/* line 65, C:/webroot/lcsnbn/sass/modules/signup */
+/* line 41, C:/GitHub/Selection/public/sass/modules/_signup.scss */
+.form__button--sub--signup:hover {
+  margin-left: 0rem; }
+
+/* line 69, C:/webroot/lcsnbn/sass/modules/signup */
+/* line 45, C:/GitHub/Selection/public/sass/modules/_signup.scss */
+.content__sub__heading {
+  text-align: center;
+  font-style: italic; }
+
+/* line 74, C:/webroot/lcsnbn/sass/modules/signup */
+/* line 50, C:/GitHub/Selection/public/sass/modules/_signup.scss */
+.promo__list {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-style: italic;
+  list-style-type: disc; }
+
+/* line 81, C:/webroot/lcsnbn/sass/modules/signup */
+/* line 57, C:/GitHub/Selection/public/sass/modules/_signup.scss */
+.promo__list__ul {
+  margin: 2rem;
+  margin-top: 2.5rem; }
+
+/*///////////// Content section*/
+/* line 2, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 3, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-boxes__wrapper {
+  padding: 0; }
+
+@media only screen and (max-width: 480px) {
+  /* line 6, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-boxes__wrapper > .columns {
+    padding: 0; } }
+
+/* line 16, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 10, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box {
+  background: #fff;
+  border: solid 1px #e0e0e0;
+  /*padding-bottom: 30px; */
+  /*margin-bottom: 0.5rem;*/
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 0.25rem; }
+
+@media only screen and (min-width: 1351px) {
+  /* line 19, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-box {
+    margin-bottom: 1rem; } }
+
+@media only screen and (min-width: 481px) {
+  /* line 22, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-box {
+    margin-bottom: 0.8rem; } }
+
+/* line 35, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 25, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box .row {
+  position: relative; }
+
+@media only screen and (min-width: 481px) {
+  /* line 28, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-box .row {
+    position: static; } }
+
+/* line 75, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 32, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box__copy {
+  position: relative;
+  height: 100%; }
+
+/* line 79, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 37, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box__copy__inner {
+  display: block;
+  padding: 0.5rem 0.75rem; }
+
+/* line 83, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 42, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box__copy__inner--recipe {
+  display: block;
+  padding: 0.5rem 0.75rem 3rem; }
+
+/* line 87, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 47, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box__copy__inner--homepage {
+  padding: 0.5rem 0.75rem 0rem;
+  border-bottom: 0; }
+
+/* line 93, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 52, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box__title {
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.4;
+  font-weight: bold;
+  color: #343434;
+  border-top: 0; }
+
+@media only screen and (min-width: 481px) {
+  /* line 60, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-box__title {
+    height: 1.8em;
+    line-height: 1.4;
+    padding-bottom: 3.2rem; } }
+
+@media only screen and (min-width: 768px) {
+  /* line 65, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-box__title {
+    height: 1.5em;
+    line-height: 1.2; } }
+
+@media only screen and (min-width: 961px) {
+  /* line 69, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-box__title {
+    height: 1.7em; } }
+
+@media only screen and (min-width: 1351px) {
+  /* line 72, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-box__title {
+    height: 1.5em;
+    font-size: 0.95rem; } }
+
+/* line 118, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 77, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box--homepage {
+  display: block;
+  height: 8rem;
+  overflow: hidden; }
+
+@media only screen and (min-width: 481px) {
+  /* line 82, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-box--homepage {
+    height: auto; } }
+
+/* line 127, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 85, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box--homepage .content-box__image {
+  width: 100%;
+  height: 100%; }
+
+@media only screen and (min-width: 481px) {
+  /* line 89, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-box--homepage .content-box__image {
+    height: 0;
+    padding-top: 100%; } }
+
+/* line 93, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box__title--homepage {
+  font-size: 1rem;
+  line-height: 1.4;
+  border-radius: 5px 0 0 5px;
+  position: absolute;
+  font-weight: bold;
+  background-color: #73cb4d;
+  right: 0rem;
+  top: 1rem;
+  padding: 0.3rem; }
+
+@media only screen and (min-width: 481px) {
+  /* line 105, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-box__title--homepage {
+    position: static;
+    padding: 0.5rem;
+    line-height: 1.4;
+    font-size: 1.2rem;
+    background: white;
+    height: auto; } }
+
+@media only screen and (min-width: 768px) {
+  /* line 115, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-box__title--homepage {
+    line-height: 1.4;
+    font-size: 1rem; } }
+
+/* line 173, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 121, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box__summary {
+  color: #343434;
+  font-size: 0.8rem; }
+
+@media only screen and (min-width: 481px) {
+  /* line 125, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+  .content-box__summary {
+    display: none; } }
+
+/* line 181, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 129, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box__summary--display {
+  color: #343434;
+  font-size: 0.8rem;
+  font-style: italic;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  float: right; }
+
+/* line 190, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 138, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box__tag {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.6rem;
+  padding: 0.1rem 0.3rem;
+  border: 1px solid #fd8d91;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #343434; }
+
+/* line 202, C:/webroot/lcsnbn/sass/modules/tile */
+/* line 150, C:/GitHub/Selection/public/sass/modules/_tile.scss */
+.content-box__tag:hover {
+  color: #fff;
+  border: 1px solid #ff7c81;
+  background-color: #ff7c81; }
+
 /* line 4, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__submit__button--login {
   padding: 0.8rem;
@@ -4000,6 +5370,190 @@ input.input__text--error {
   .form__buttons {
     text-align: center; } }
 
-/*@import "modules/ingredient_page";*/
-/*@import "modules/recipe_page";*/
-/*@import "modules/event_page";*/
+/* line 4, C:/webroot/lcsnbn/sass/modules/ingredient-page */
+/* line 2, C:/GitHub/Selection/public/sass/modules/_ingredient_page.scss */
+.content-side__icon {
+  margin: 0.5rem 0;
+  color: #343434;
+  border: 1px solid #E30B5D;
+  text-align: center;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%; }
+
+/*Recipe Page*/
+/* line 3, C:/webroot/lcsnbn/sass/modules/recipe-page */
+/* line 3, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
+.logo__image {
+  position: absolute;
+  bottom: -0.75rem;
+  right: 10px;
+  width: 4rem;
+  color: #fff;
+  height: 4rem;
+  background: url(/images/site/logo.png) no-repeat 0 0;
+  background-size: contain; }
+
+@media only screen and (min-width: 768px) {
+  /* line 13, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
+  .logo__image {
+    bottom: -0.77rem; } }
+
+/* line 18, C:/webroot/lcsnbn/sass/modules/recipe-page */
+/* line 17, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
+.content__side__icon {
+  color: #343434;
+  border: 1px solid #def0e5;
+  background-color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: auto;
+  margin-top: 0.5rem;
+  line-height: 3.5rem; }
+
+@media only screen and (min-width: 481px) {
+  /* line 29, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
+  .content__side__icon {
+    width: 3.4rem;
+    height: 3.4rem; } }
+
+@media only screen and (max-width: 480px) {
+  /* line 34, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
+  .section-box--margin {
+    margin-top: 0.5rem; } }
+
+/* line 43, C:/webroot/lcsnbn/sass/modules/recipe-page */
+/* line 38, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
+.section__box--fresh-fact {
+  background-color: #fff;
+  border-top: 1px solid #87cdac;
+  margin-top: 1rem; }
+
+@media only screen and (min-width: 481px) {
+  /* line 43, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
+  .section__box--fresh-fact {
+    margin-bottom: 0.3rem;
+    border-top: 0;
+    margin-top: 0rem; } }
+
+/* line 54, C:/webroot/lcsnbn/sass/modules/recipe-page */
+/* line 49, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
+.section__box--nutrition-panel {
+  background-color: #fff;
+  border-top: 1px solid #87cdac;
+  margin-top: 0rem; }
+
+@media only screen and (min-width: 481px) {
+  /* line 54, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
+  .section__box--nutrition-panel {
+    margin-bottom: 0.3rem;
+    margin-top: 1rem; } }
+
+/* line 64, C:/webroot/lcsnbn/sass/modules/recipe-page */
+/* line 59, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
+.recipe__icon {
+  display: block;
+  margin-bottom: -0.7rem;
+  margin-top: 0.4rem; }
+
+/* line 3, C:/webroot/lcsnbn/sass/modules/event_page */
+/* line 2, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+.section-box--margin {
+  margin-top: 0.5rem; }
+
+/* line 7, C:/webroot/lcsnbn/sass/modules/event_page */
+/* line 6, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+.form__submit__button--event {
+  width: 100%;
+  margin: auto;
+  margin-top: 1rem; }
+
+@media only screen and (min-width: 481px) {
+  /* line 11, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+  .form__submit__button--event {
+    width: auto;
+    margin: 0.5rem;
+    position: absolute;
+    right: 0; } }
+
+/* line 21, C:/webroot/lcsnbn/sass/modules/event_page */
+/* line 18, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+.event__information {
+  margin-top: 1rem; }
+
+@media only screen and (min-width: 481px) {
+  /* line 21, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+  .event__information {
+    margin-top: 3.5rem; } }
+
+@media only screen and (min-width: 768px) {
+  /* line 24, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+  .event__information {
+    margin-top: 2.5rem; } }
+
+/* line 31, C:/webroot/lcsnbn/sass/modules/event_page */
+/* line 28, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+.form__group--event {
+  /* float: right; */
+  /* position: relative; */
+  text-align: right;
+  /* width: auto; */
+  margin-top: 1rem; }
+
+/* line 39, C:/webroot/lcsnbn/sass/modules/event_page */
+/* line 36, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+.input__text--event {
+  display: block;
+  color: #343434;
+  padding: 0.7rem;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 0px;
+  border: 1px solid #def0e5;
+  text-align: right;
+  width: 30%;
+  margin-left: 70%; }
+
+@media only screen and (min-width: 481px) {
+  /* line 48, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+  .input__text--event {
+    width: 25%;
+    margin-left: 75%; } }
+
+@media only screen and (min-width: 768px) {
+  /* line 52, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+  .input__text--event {
+    width: 10%;
+    margin-left: 90%; } }
+
+/* line 62, C:/webroot/lcsnbn/sass/modules/event_page */
+/* line 57, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+.fluid-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0; }
+
+/* line 67, C:/webroot/lcsnbn/sass/modules/event_page */
+/* line 64, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+.fluid-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; }
+
+/* line 80, C:/webroot/lcsnbn/sass/modules/event_page */
+/* line 73, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+.section__box li {
+  padding: 0.5rem;
+  list-style-type: disc;
+  margin-left: 2.5rem; }
+
+/* line 86, C:/webroot/lcsnbn/sass/modules/event_page */
+/* line 79, C:/GitHub/Selection/public/sass/modules/_event_page.scss */
+.section__box p {
+  padding: 0.5rem; }
