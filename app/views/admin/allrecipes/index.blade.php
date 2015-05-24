@@ -46,6 +46,9 @@
                         {{ link_to('/admin/menu/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-danger glyphicon glyphicon-remove disabled')) }}
                     @endif
                 </td>
+                <td>
+                    {{ link_to('/admin/menu/recipes/confirmdelete/'.$recipe->id, 'Delete', array('class' => 'btn btn-danger')) }}
+                </td>
             </tr>
             @endforeach   
             

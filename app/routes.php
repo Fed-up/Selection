@@ -191,6 +191,8 @@ Route::group(array('before' => 'auth'), function() {
 	//Website All Recipes
 	Route::get('admin/website/allrecipes', 'Admin_RecipesController@getAllRecipes');	
 	Route::get('admin/website/allrecipes/active/{id}', 'Admin_RecipesController@getAllActiveRecipes');
+	Route::get('admin/menu/recipes/confirmdelete/{id}', 'Admin_RecipesController@getConfirmDeleteRecipes');
+	
 	
 	
 	// Route::post('admin/upload', 'Admin_AdminController@postUpload');

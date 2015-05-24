@@ -928,7 +928,7 @@ class Admin_RecipesController extends BaseController{
 	}
 
 	public function getAllRecipes(){
-		$data = MenuRecipes::orderBy('name','ASC')->get();
+		$data = MenuRecipes::where('selection_active','!=', 9)->orderBy('name','ASC')->get();
 		return View::make('admin.allrecipes.index')
 			->with(array(
 				'data' => $data,
@@ -949,12 +949,20 @@ class Admin_RecipesController extends BaseController{
 		return Redirect::action('Admin_RecipesController@getRecipes');
 	}
 	
+	public function getConfirmDeleteRecipes($id){
+		$data = MenuRecipes::findOrFail($id);
+		$data->selection_active = 9;
+		$data->save();
+		return Redirect::action('Admin_RecipesController@getAllRecipes');
+	}
+
 	public function getDeleteRecipes($id){
 		$data = MenuRecipes::findOrFail($id);
 		$data->selection_active = 9;
 		$data->save();
 		return Redirect::action('Admin_RecipesController@getRecipes');
 	}
+
 }
 
 
