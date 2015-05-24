@@ -20,7 +20,7 @@
 class Admin_RecipesController extends BaseController{
 
 	public function getRecipes(){
-		$data = MenuRecipes::where('active', '!=', 9)->orderBy('name','ASC')->get();
+		$data = MenuRecipes::where('selection_active', '!=', 9)->orderBy('name','ASC')->get();
 		return View::make('admin.recipes.index')
 			->with(array(
 				'data' => $data,
@@ -86,7 +86,7 @@ class Admin_RecipesController extends BaseController{
 			$data->name = Input::get('title');
 			$data->summary = Input::get('summary');
 			$data->menu_categories_id = Input::get('categories');
-			$data->active = (isset($input['active'])) ? 1 : 0;
+			$data->selection_active = (isset($input['selection_active'])) ? 1 : 0;
 			$data->exclusive  = (isset($input['exclusive'])) ? 1 : 0;
 			$data->length 	= $input['length'];
 			$data->difficulty 	= $input['difficulty'];
@@ -395,7 +395,7 @@ class Admin_RecipesController extends BaseController{
 			$data->name 	= $input['title'];
 			$data->summary 	= $input['summary'];
 			$data->menu_categories_id 	= $input['categories'];
-			$data->active = (isset($input['active'])) ? 1 : 0;
+			$data->selection_active = (isset($input['selection_active'])) ? 1 : 0;
 			$data->exclusive  = (isset($input['exclusive'])) ? 1 : 0;
 			$data->length 	= $input['length'];
 			
@@ -926,17 +926,32 @@ class Admin_RecipesController extends BaseController{
 			}
 		}
 	}
+
+	public function getAllRecipes(){
+		$data = MenuRecipes::orderBy('name','ASC')->get();
+		return View::make('admin.allrecipes.index')
+			->with(array(
+				'data' => $data,
+			));
+	}
+
+	public function getAllActiveRecipes($id){
+		$data = MenuRecipes::findOrFail($id);
+		$data->selection_active = ($data->selection_active == 0)? 1 : ($data->selection_active == 9)? 1 : 0; //If it is == 0 thats true so change the value to 1, else if its false the value is 1 so change it to 0
+		$data->save();
+		return Redirect::action('Admin_RecipesController@getAllRecipes');
+	}
 	
 	public function getActiveRecipes($id){
 		$data = MenuRecipes::findOrFail($id);
-		$data->active = ($data->active == 0)? 1 : 0; //If it is == 0 thats true so change the value to 1, else if its false the value is 1 so change it to 0
+		$data->selection_active = ($data->selection_active == 0)? 1 : 0; //If it is == 0 thats true so change the value to 1, else if its false the value is 1 so change it to 0
 		$data->save();
 		return Redirect::action('Admin_RecipesController@getRecipes');
 	}
 	
 	public function getDeleteRecipes($id){
 		$data = MenuRecipes::findOrFail($id);
-		$data->active = 9;
+		$data->selection_active = 9;
 		$data->save();
 		return Redirect::action('Admin_RecipesController@getRecipes');
 	}

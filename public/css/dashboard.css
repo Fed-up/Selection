@@ -478,6 +478,10 @@ font-style: normal; }
     }
 }
 
+.admin__col{
+  width: 10%;
+}
+
 
 
 
