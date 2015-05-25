@@ -1,8 +1,17 @@
-    <header class="band header">
-        <!-- <a class="logo__text" href="/">Time 4 Paws</a> -->
-        <a class=" trigger-menu"><span class="logo__image"></span></a>
-        <a class=" trigger-menu"><span class="menu__image"></span></a>
-    </header>
+    
+    @if(isset($home))
+        <header class="band header home">
+            <!-- <a class="logo__text" href="/">Time 4 Paws</a> -->
+            <a class=" trigger-menu"><span class="logo__image"></span></a>
+            <a class=" trigger-menu"><span class="menu__image"></span></a>
+        </header>
+    @else
+        <header class="band header">
+            <!-- <a class="logo__text" href="/">Time 4 Paws</a> -->
+            <a class=" trigger-menu"><span class="logo__image"></span></a>
+            <a class=" trigger-menu"><span class="menu__image"></span></a>
+        </header>
+    @endif
 
 
 

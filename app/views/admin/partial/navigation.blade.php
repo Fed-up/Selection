@@ -47,6 +47,7 @@
         @if (Request::segment(2) === 'website')
             <li <?php echo (Request::segment(3) === 'header')? 'class="active"' : 'class=""' ; ?>>{{ HTML::link('admin/website/header', 'Header Images') }}</li>
             <li <?php echo (Request::segment(3) === 'allrecipes')? 'class="active"' : 'class=""' ; ?>>{{ HTML::link('admin/website/allrecipes', 'All Recipes') }}</li>
+            <li <?php echo (Request::segment(3) === 'allcategories')? 'class="active"' : 'class=""' ; ?>>{{ HTML::link('admin/website/allcategories', 'All Categories') }}</li>
             <li <?php echo (Request::segment(3) === 'quotes')? 'class="active"' : 'class=""' ; ?>>{{ HTML::link('admin/website/quotes', 'Quotes') }}</li>
             
         @endif 

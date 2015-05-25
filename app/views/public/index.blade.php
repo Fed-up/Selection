@@ -2,7 +2,7 @@
 
 @section('content')
 
-<main class="main page">
+<main class="main page home">
     <div class="bg"></div>
         <div class="video__home">
             <video autoplay loop poster="/images/paws/videopic.jpg" id="bgvid" class="show-for-large-up">

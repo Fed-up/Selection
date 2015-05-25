@@ -3,7 +3,10 @@
 class HomeController extends BaseController {
 
 	public function getIndex(){
-		return View::make('public.index');
+		return View::make('public.index')
+		->with(array(
+			'home' => 'home', 
+		));
 	}
 
 	public function postAddUser(){

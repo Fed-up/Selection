@@ -67,9 +67,13 @@ ul, li {
   transition-duration: 0.5s;
   background-color: $background; //F3F6F5;
   // height: 100%;
-  padding-top: 2.5rem;
+  padding-top:2.5rem;
   position: relative;
   z-index: 1; }
+
+.main.page.home{
+    margin-top:-5.5rem;
+}
 
 .page {
   color: $text;
