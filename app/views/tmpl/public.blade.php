@@ -71,7 +71,7 @@
                 <a class="{{((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav')}}" href="/collections">Our Selections</a>
                 <a class="{{((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav')}}" href="/catering">Order Catering</a>
                 <a class="{{((Request::segment(1) === 'events')? 'side--nav navTab_active' : 'side--nav')}}" href="/">Sign Up</a>
-                <a class="video__link" href="http://www.dogloversshow.com.au">Video Credit: Dog Lovers Show</a>
+                <!-- <a class="video__link" href="http://www.dogloversshow.com.au">Video Credit: Dog Lovers Show</a> -->
             </nav>
         </div>
 

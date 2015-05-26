@@ -3,9 +3,44 @@
 class HomeController extends BaseController {
 
 	public function getIndex(){
+
+
+	// CLIENT INFO
+	// CLIENT ID	94698d5b9b00463481a789a88fd89195
+	// CLIENT SECRET	af946a514b9840d898d0970677174f81
+	// WEBSITE URL	http://www.selectioncafe.com.au
+	// REDIRECT URI	http://www.selectioncafe.com.au
+	// SUPPORT EMAIL	social@selectioncafe.com.au
+
+		$token = "94698d5b9b00463481a789a88fd89195";
+		$insta_url = 'https://api.instagram.com/v1/tags/sonaughtybutnice/media/recent?client_id='.$token.'&count=12';
+
+		// $insta_json = file_get_contents($insta_url);
+		// $insta_array = json_decode($insta_json, $true);
+
+		//  Initiate curl
+		$ch = curl_init();
+		// Disable SSL verification
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		// Will return the response, if false it print the response
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		// Set the url
+		curl_setopt($ch, CURLOPT_URL,$insta_url);
+		// Execute
+		$result=curl_exec($ch);
+		// Closing
+		curl_close($ch);
+
+		// Will dump a beauty json :3
+		$insta_array = json_decode($result, true);
+		// foreach($insta_array['data'] as $image){
+		// 	echo '<pre>'; print_r($image['images']['low_resolution']['url']); echo '</pre>'; 	
+		// }
+
 		return View::make('public.index')
 		->with(array(
-			'home' => 'home', 
+			'home' => 'home',
+			'insta_array' => $insta_array 
 		));
 	}
 

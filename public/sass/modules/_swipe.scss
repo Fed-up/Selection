@@ -5,8 +5,8 @@
     height: 100%;
     top: 0;
     right: 0;
-    background-color: $menu_light;
-    padding-top: 6rem; 
+    background-color: $menu_dark;
+    padding-top: 4rem; 
 }
 
 @media only screen and (max-width: 761px) {
@@ -24,7 +24,6 @@ body.showPanel .content-slot {
   transform: translateX(-18rem); }
 
 
-
 .navTab_active {
   background-color: $menu_dark;
   color: #fff;
@@ -33,9 +32,9 @@ body.showPanel .content-slot {
 }
 
 .side--nav {
-    color: $menu_dark;
+    color: #e0e0e0;
     display: block;
-    background-color: $menu_light;
+    background-color: $menu_dark;
     width: 100%;
     padding-left: 1rem;
     // margin: 0.1rem 0;
@@ -43,12 +42,14 @@ body.showPanel .content-slot {
     line-height: 3.5rem;
     text-align: left;
     font-size: 1.125rem; 
-    border-bottom: #fff 1px solid;
+    border-bottom: #343434 1px solid;
     font-weight: 700;
 }
 
 .side--nav:hover {
-  background-color: $menu_dark; 
+  background-color: $menu_light; 
   color: $white;
-  border-bottom: $white;
+  margin-top: -0.1rem;
+  border-top: #191919 1px solid;
+  border-bottom: #191919 1px solid;
 }

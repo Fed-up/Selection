@@ -55,8 +55,8 @@
             <article class="small-12 medium-10 medium-push-1 large-8 large-push-2 xlarge-6 xlarge-push-3">
                 <p class="">
                     Every now and then something special turns into reality and this is true for the new proud owners of Selection Cafe.
-                    Our passion and love for food has developed into a career. We are currently expanding our current business<a class="textlink" href="https://www.sonaughtybutnice.com"> SoNaughtyButNice.com </a>
-                    We look forward to introducing a new concept into Melbourne and celebrating the best food our country has to offer!
+                    Our passion and love for food has developed into a career. We are currently expanding our current business<a class="textlink" href="https://www.sonaughtybutnice.com"> SoNaughtyButNice.com </a>.
+                    We look forward to introducing a new concept into South Melbourne and celebrating the best food our country has to offer!
                 </p>
                 <!-- <br/> -->
                 <p class=""></p>
@@ -64,10 +64,24 @@
                 <p class=""></p>
             </article>         
         </section>
-        <section class="section__white--homepage ">
-            <img src="/images/selection/logo200.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-small-only" style="width: 200px;  margin: auto;">
-            <img src="/images/selection/logo300.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-medium-only" style="width: 300px;  margin: auto;">
-            <img src="/images/selection/logo400.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-large-up" style="width: 400px;  margin: auto;">
+        <div class=" section__white--homepage"> 
+            <section class="row ">
+                <p>Instagram Feed</p>
+                @foreach($insta_array['data'] as $image)
+                <a href="https://instagram.com/sonaughtybutnice" class="columns small-4 large-2 end">
+                    <div class="image-box">
+                        <img src="{{$image['images']['low_resolution']['url']}}"> </img>    
+                    </div>
+                </a>
+                @endforeach
+            </section>
+        </div>
+
+
+
+            <!-- <img src="/images/selection/logo200.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-small-only" style="width: 200px;  margin: auto;"> -->
+            <!-- <img src="/images/selection/logo300.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-medium-only" style="width: 300px;  margin: auto;"> -->
+            <!-- <img src="/images/selection/logo400.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-large-up" style="width: 400px;  margin: auto;"> -->
             <!-- <p>Where real food comes to life</p> -->
         </section>
         <section id="fs" class="section__facebook">

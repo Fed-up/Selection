@@ -3388,8 +3388,8 @@ a.textlink:hover {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: #def0e5;
-  padding-top: 6rem; }
+  background-color: #292929;
+  padding-top: 4rem; }
 
 @media only screen and (max-width: 761px) {
   /* line 13, C:/GitHub/Selection/public/sass/modules/_swipe.scss */
@@ -3404,31 +3404,33 @@ body.showPanel .content-slot {
   -o-transform: translateX(-18rem);
   transform: translateX(-18rem); }
 
-/* line 28, C:/GitHub/Selection/public/sass/modules/_swipe.scss */
+/* line 27, C:/GitHub/Selection/public/sass/modules/_swipe.scss */
 .navTab_active {
-  background-color: #87cdac;
+  background-color: #292929;
   color: #fff;
   width: 100%; }
 
-/* line 35, C:/GitHub/Selection/public/sass/modules/_swipe.scss */
+/* line 34, C:/GitHub/Selection/public/sass/modules/_swipe.scss */
 .side--nav {
-  color: #87cdac;
+  color: #e0e0e0;
   display: block;
-  background-color: #def0e5;
+  background-color: #292929;
   width: 100%;
   padding-left: 1rem;
   height: 3.5rem;
   line-height: 3.5rem;
   text-align: left;
   font-size: 1.125rem;
-  border-bottom: #fff 1px solid;
+  border-bottom: #343434 1px solid;
   font-weight: 700; }
 
-/* line 50, C:/GitHub/Selection/public/sass/modules/_swipe.scss */
+/* line 49, C:/GitHub/Selection/public/sass/modules/_swipe.scss */
 .side--nav:hover {
-  background-color: #87cdac;
+  background-color: #464646;
   color: #fff;
-  border-bottom: #fff; }
+  margin-top: -0.1rem;
+  border-top: #191919 1px solid;
+  border-bottom: #191919 1px solid; }
 
 /*
  * jQuery FlexSlider v2.2.0
@@ -4075,7 +4077,7 @@ div.collection.container {
   width: 4rem;
   color: #fff;
   height: 4rem;
-  background: url(/images/selection/logo100.png) no-repeat 0 0;
+  background: url(/images/selection/logo1004.png) no-repeat 0 0;
   background-size: contain; }
 
 @media only screen and (min-width: 768px) {
@@ -5359,7 +5361,7 @@ input.input__text--error {
   position: absolute;
   bottom: 2.5rem;
   right: 0;
-  background: url(/images/selection/logo100.png) no-repeat 0 0;
+  background: url(/images/selection/join100.png) no-repeat 0 0;
   height: 120px;
   width: 140px; }
   @media only screen and (max-width: 480px) {
