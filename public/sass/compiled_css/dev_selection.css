@@ -2939,7 +2939,7 @@ ul, li {
 
 /* line 208, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .subnav {
-  border-bottom: 1px solid #87cdac;
+  border-bottom: 1px solid #fa262b;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   text-align: center; }
@@ -3106,13 +3106,13 @@ ul, li {
   text-align: right;
   margin-top: -1rem;
   margin-bottom: 1rem;
-  color: #49c1b8; }
+  color: #c21e22; }
 
 /* line 340, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .package__total--create-package {
   text-align: right;
   margin-bottom: 1rem;
-  color: #49c1b8; }
+  color: #c21e22; }
 
 /* line 4, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 input:focus, select:focus, textarea:focus, button:focus {
@@ -3120,8 +3120,8 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 @media only screen and (max-width: 480px) {
   .video__home {
-    background-color: #49c1b8;
-    background: transparent url(/images/selection/bg.png) 50% 50%/cover no-repeat;
+    background-color: #c21e22;
+    background: transparent url(/images/selection/selection.png) 50% 50%/cover no-repeat;
     height: 23.5rem;
     width: 100%;
     margin-top: -2.5rem;
@@ -3129,8 +3129,8 @@ input:focus, select:focus, textarea:focus, button:focus {
     background-size: cover; } }
 @media only screen and (min-width:481px) and (max-width:768px) {
   .video__home {
-    background-color: #49c1b8;
-    background: transparent url(/images/selection/bg.png) 50% 50%/cover no-repeat;
+    background-color: #c21e22;
+    background: transparent url(/images/selection/selection.png) 50% 50%/cover no-repeat;
     /*background: url(/images/paws/mobiledog.png) no-repeat 0 0; */
     height: 23.5rem;
     width: 100%;
@@ -3169,7 +3169,7 @@ input:focus, select:focus, textarea:focus, button:focus {
 /* line 64, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .section__white--form {
   position: absolute;
-  top: 6.5rem;
+  top: 3.5rem;
   /* background-color: #fff; */
   padding: 1rem;
   /* width: 100%; */
@@ -3177,46 +3177,103 @@ input:focus, select:focus, textarea:focus, button:focus {
   color: #fff; }
   @media only screen and (min-width:481px) {
     .section__white--form {
-      top: 6rem; } }
+      top: 3rem; } }
   @media only screen and (min-width:769px) {
     .section__white--form {
-      top: 12rem; } }
+      top: 7rem; } }
   @media only screen and (min-width:961px) {
     .section__white--form {
-      top: 19rem;
+      top: 15rem;
       /*background-color: green;*/ } }
 
 /* line 87, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+.business_name {
+  color: #fa262b;
+  font-size: 1.4rem; }
+  @media only screen and (min-width:481px) {
+    .business_name {
+      font-size: 1.6rem; } }
+  @media only screen and (min-width:769px) {
+    .business_name {
+      font-size: 2rem; } }
+  @media only screen and (min-width:961px) {
+    .business_name {
+      font-size: 2.1rem; } }
+  @media only screen and (min-width:1351px) {
+    .business_name {
+      font-size: 2.1rem; } }
+
+/* line 103, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+.map_location {
+  color: #fd5155;
+  font-size: 0.9rem; }
+  @media only screen and (min-width:481px) {
+    .map_location {
+      font-size: 1.2rem; } }
+  @media only screen and (min-width:769px) {
+    .map_location {
+      font-size: 1.6rem; } }
+  @media only screen and (min-width:961px) {
+    .map_location {
+      font-size: 1.7rem; } }
+  @media only screen and (min-width:1351px) {
+    .map_location {
+      font-size: 1.7rem; } }
+
+/* line 120, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .section__white--homepage {
   position: relative;
-  font-family: paws_heading;
-  color: #49c1b8;
-  font-size: 2.3rem;
+  font-family: base_font;
+  font-size: 0.9rem;
   background-color: #fff;
-  padding-top: 9rem;
+  padding-top: 10rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 5rem;
+  padding-bottom: 1.8rem;
   text-align: center;
   z-index: -1; }
   @media only screen and (min-width:481px) {
     .section__white--homepage {
-      padding: 5rem;
-      font-size: 3.1rem; } }
+      padding: 4rem; } }
   @media only screen and (min-width:769px) {
     .section__white--homepage {
-      padding: 5rem;
-      font-size: 6.2rem; } }
+      padding: 4rem; } }
   @media only screen and (min-width:961px) {
     .section__white--homepage {
-      padding: 5rem;
-      font-size: 8.3rem; } }
+      padding: 5rem; } }
   @media only screen and (min-width:1351px) {
     .section__white--homepage {
-      padding: 5rem;
-      font-size: 10rem; } }
+      padding: 5rem; } }
 
-/* line 116, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 145, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+#map-canvas {
+  width: 100%;
+  height: 400px; }
+
+/* line 150, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+.section__points {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+/* line 155, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+.points.first {
+  margin-top: 0rem; }
+
+/* line 159, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+.points {
+  border: 1px #343434 solid;
+  height: 20rem;
+  background-color: #c21e22; }
+  @media only screen and (max-width: 480px) {
+    .points {
+      margin-top: 1rem; } }
+
+/* line 169, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+.fresh__point {
+  margin: 1rem;
+  background-color: #fff; }
+
+/* line 174, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .section__mission {
   position: relative;
   font-family: paws_base_font;
@@ -3225,13 +3282,13 @@ input:focus, select:focus, textarea:focus, button:focus {
   padding-bottom: 3rem;
   text-align: center;
   font-size: 18px;
-  background-color: #87cdac;
+  background-color: #fd5155;
   color: #fff; }
   @media only screen and (max-width: 480px) {
     .section__mission {
       font-size: 22px; } }
 
-/* line 131, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 189, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .section__vision {
   position: relative;
   font-family: base_font;
@@ -3240,33 +3297,33 @@ input:focus, select:focus, textarea:focus, button:focus {
   padding-bottom: 3rem;
   text-align: center;
   font-size: 18px;
-  background-color: #49c1b8;
+  background-color: #fd5155;
   color: #fff; }
   @media only screen and (max-width: 480px) {
     .section__vision {
       font-size: 22px; } }
 
-/* line 146, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 204, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .error_message {
   font-size: 80%;
   color: #ff7c81; }
 
-/* line 151, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 209, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .video__link {
   color: #343434;
   position: fixed;
   bottom: 1rem;
   right: 1rem; }
 
-/* line 157, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 215, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .video__link:hover {
-  color: #49c1b8; }
+  color: #c21e22; }
 
-/* line 161, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 219, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .bullet_point {
   list-style-type: circle; }
 
-/* line 165, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 223, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .vision_list {
   text-align: left; }
   @media only screen and (max-width: 480px) {
@@ -3274,14 +3331,13 @@ input:focus, select:focus, textarea:focus, button:focus {
       padding-left: 2rem;
       padding-right: 0.5rem; } }
 
-/* line 173, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 231, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .section__facebook {
   /*position: relative;*/
   margin: 0rem;
   font-family: paws_heading;
-  color: #87cdac;
   font-size: 2.3rem;
-  background-color: #def0e5;
+  background-color: #fff;
   padding-top: 5rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -3305,30 +3361,30 @@ input:focus, select:focus, textarea:focus, button:focus {
       padding: 5rem;
       font-size: 10rem; } }
 
-/* line 204, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 262, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .vision_p {
   text-align: center; }
 
-/* line 208, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 266, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .leaf1 {
   position: absolute;
   bottom: 1rem;
   left: 0;
   margin: 0; }
 
-/* line 215, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 273, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .leaf2 {
   position: absolute;
   bottom: 0;
   right: 2rem; }
 
-/* line 221, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 279, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .leaf3 {
   position: absolute;
   right: 0;
   bottom: -9rem; }
 
-/* line 227, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 285, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .registered__message {
   font-family: paws_base_font;
   color: #fff;
@@ -3337,14 +3393,14 @@ input:focus, select:focus, textarea:focus, button:focus {
   padding: 1rem;
   font-size: 28px; }
 
-/* line 236, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 294, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 .facebook__link {
   padding-top: 5rem;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 5rem;
   /*text-align: center;*/
-  color: #87cdac; }
+  color: #fd5155; }
   @media only screen and (min-width:481px) {
     .facebook__link {
       /*padding:5rem;*/
@@ -3362,23 +3418,23 @@ input:focus, select:focus, textarea:focus, button:focus {
       /*padding:5rem;*/
       font-size: 10rem; } }
 
-/* line 261, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 319, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 #fs:hover {
   background-color: #3b5998; }
 
-/* line 262, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 320, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 #fs:hover #fl {
   color: white; }
 
-/* line 264, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 322, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 a.textlink {
   text-decoration: none;
   color: #fff; }
 
-/* line 265, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
+/* line 323, C:/GitHub/Selection/public/sass/modules/_paws_base.scss */
 a.textlink:hover {
   text-decoration: none;
-  color: #49c1b8; }
+  color: #c21e22; }
 
 /* line 1, C:/GitHub/Selection/public/sass/modules/_swipe.scss */
 .panel--right {
@@ -3913,7 +3969,7 @@ div.collection.container {
   width: 100%;
   line-height: 2rem;
   padding: 0.8rem;
-  border-bottom: 1px solid #49c1b8;
+  border-bottom: 1px solid #c21e22;
   text-align: center; }
 
 /* line 18, C:/GitHub/Selection/public/sass/modules/_footer.scss */
@@ -3996,7 +4052,7 @@ div.collection.container {
 /* line 106, C:/webroot/lcsnbn/sass/modules/footer */
 /* line 87, C:/GitHub/Selection/public/sass/modules/_footer.scss */
 .top__section__footer {
-  background-color: #def0e5; }
+  background-color: #fd5155; }
 
 /* line 115, C:/webroot/lcsnbn/sass/modules/footer */
 /* line 92, C:/GitHub/Selection/public/sass/modules/_footer.scss */
@@ -4025,7 +4081,7 @@ div.collection.container {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #87cdac;
+  background: #fa262b;
   /*background: url(/images/paws/sborder.png) no-repeat 0 0;*/
   height: 2.5rem;
   z-index: 2;
@@ -4753,7 +4809,7 @@ div.four.columns.social_links {
 /* line 52, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
 .content__side__icon {
   color: #343434;
-  border: 1px solid #def0e5;
+  border: 1px solid #fd5155;
   background-color: #fff;
   text-align: center;
   font-size: 1rem;
@@ -4778,7 +4834,7 @@ div.four.columns.social_links {
 /* line 73, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
 .section__box--fresh-fact {
   background-color: #fff;
-  border-top: 1px solid #87cdac;
+  border-top: 1px solid #fa262b;
   margin-top: 1rem; }
 
 @media only screen and (min-width: 481px) {
@@ -4792,7 +4848,7 @@ div.four.columns.social_links {
 /* line 84, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
 .section__box--nutrition-panel {
   background-color: #fff;
-  border-top: 1px solid #87cdac;
+  border-top: 1px solid #fa262b;
   margin-top: 0rem; }
 
 @media only screen and (min-width: 481px) {
@@ -4830,7 +4886,7 @@ div.four.columns.social_links {
   background-color: #fff;
   border: 0px;
   border-radius: 0.5rem;
-  color: #87cdac;
+  color: #fa262b;
   margin-top: 0.7rem;
   font-size: 0.8rem; }
 
@@ -4843,7 +4899,7 @@ div.four.columns.social_links {
 /* line 32, C:/GitHub/Selection/public/sass/modules/_signup.scss */
 .form__button--sub:hover {
   padding: 0.5rem;
-  background-color: #87cdac;
+  background-color: #fa262b;
   border: 0px;
   border-radius: 0.2rem;
   color: #fff;
@@ -5093,7 +5149,7 @@ div.four.columns.social_links {
   padding: 0.4rem;
   border-radius: 0.5rem;
   font-weight: bold;
-  background-color: #87cdac;
+  background-color: #fa262b;
   color: #fff; }
 
 /* line 35, C:/GitHub/Selection/public/sass/modules/_form.scss */
@@ -5102,7 +5158,7 @@ div.four.columns.social_links {
   padding: 0.7rem;
   border-radius: 0.5rem;
   font-weight: bold;
-  background-color: #87cdac;
+  background-color: #fa262b;
   color: #fff;
   float: right;
   border: none; }
@@ -5275,7 +5331,7 @@ input:-webkit-autofill {
   color: #fff;
   font-weight: 100;
   font-size: 30px; }
-  @media only screen and (min-width:481px) {
+  @media only screen and (min-width:769px) {
     .form__title--signup {
       padding-bottom: 1rem; } }
 
@@ -5406,7 +5462,7 @@ input.input__text--error {
 /* line 17, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
 .content__side__icon {
   color: #343434;
-  border: 1px solid #def0e5;
+  border: 1px solid #fd5155;
   background-color: #fff;
   text-align: center;
   font-size: 1rem;
@@ -5431,7 +5487,7 @@ input.input__text--error {
 /* line 38, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
 .section__box--fresh-fact {
   background-color: #fff;
-  border-top: 1px solid #87cdac;
+  border-top: 1px solid #fa262b;
   margin-top: 1rem; }
 
 @media only screen and (min-width: 481px) {
@@ -5445,7 +5501,7 @@ input.input__text--error {
 /* line 49, C:/GitHub/Selection/public/sass/modules/_recipe_page.scss */
 .section__box--nutrition-panel {
   background-color: #fff;
-  border-top: 1px solid #87cdac;
+  border-top: 1px solid #fa262b;
   margin-top: 0rem; }
 
 @media only screen and (min-width: 481px) {
@@ -5514,7 +5570,7 @@ input.input__text--error {
   border-radius: 5px;
   background-color: #fff;
   border: 0px;
-  border: 1px solid #def0e5;
+  border: 1px solid #fd5155;
   text-align: right;
   width: 30%;
   margin-left: 70%; }

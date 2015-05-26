@@ -1,5 +1,167 @@
 @extends('tmpl.public')
 
+@section('_header')
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+  var myLatlng = new google.maps.LatLng(-37.831043,144.959600);
+  var mapOptions = {
+    zoom: 16,
+    center: myLatlng,
+    scrollwheel: false,
+    navigationControl: false,
+    mapTypeControl: false,
+    scaleControl: false,
+    draggable: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    // How you would like to style the map. 
+    // This is where you would paste any style found on Snazzy Maps.
+    styles: [
+    {
+        "featureType": "water",
+        "stylers": [
+            {
+                "saturation": 43
+            },
+            {
+                "lightness": -11
+            },
+            {
+                "hue": "#0088ff"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "hue": "#ff0000"
+            },
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 99
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#808080"
+            },
+            {
+                "lightness": 54
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ece2d9"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#ccdca1"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#767676"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#b8cb93"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.sports_complex",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.medical",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.business",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    }
+]
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Selection Cafe - Indulge in local fresh foods'
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+    </script> 
+
+@stop
+
 @section('content')
 
 <main class="main page home">
@@ -48,7 +210,33 @@
         </section>
         <section class="section__white--homepage">
             <!-- <img src="/images/paws/s2leaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf1"> -->
-            <p>Today is an oppotunity</p>
+            <p class="business_name">Selection Cafe</p>
+            <p class="map_location">210 Clarendon Street, South Melbourne, 3250</p>
+        </section>
+        <div id="map-canvas"></div>
+        <section id=""class="section__points row">
+            <div class="columns small-12 medium-4 end">
+                <article class="points first">
+                    <div class="fresh__point">
+                    
+                    </div>
+                </article>
+            </div>
+            <div class="columns small-12 medium-4 end">
+                <article class="points">
+                <div id="1" style="overflow: hidden; background: #fff; padding: 5px; width: 125px">
+                    <div id="2" style="position: relative; background: red; padding: 2px; width: 100px; height: 100px">
+                        <div id="3" style="position: absolute; top: 10px; background: #000; padding: 2px; width: 75px; height: 150px"/>
+                    </div>
+                </div>
+                    
+                </article>
+            </div>
+            <div class="columns small-12 medium-4 end">
+                <article class="points">
+                    
+                </article>
+            </div>
         </section>
         <section id="mission"class="section__mission">
             <!-- <img src="/images/paws/rleaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf3"> -->
@@ -58,10 +246,7 @@
                     Our passion and love for food has developed into a career. We are currently expanding our current business<a class="textlink" href="https://www.sonaughtybutnice.com"> SoNaughtyButNice.com </a>.
                     We look forward to introducing a new concept into South Melbourne and celebrating the best food our country has to offer!
                 </p>
-                <!-- <br/> -->
-                <p class=""></p>
-                <!-- <br/> -->
-                <p class=""></p>
+
             </article>         
         </section>
         <div class=" section__white--homepage"> 
@@ -76,18 +261,9 @@
                 @endforeach
             </section>
         </div>
-
-
-
-            <!-- <img src="/images/selection/logo200.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-small-only" style="width: 200px;  margin: auto;"> -->
-            <!-- <img src="/images/selection/logo300.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-medium-only" style="width: 300px;  margin: auto;"> -->
-            <!-- <img src="/images/selection/logo400.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="show-for-large-up" style="width: 400px;  margin: auto;"> -->
-            <!-- <p>Where real food comes to life</p> -->
-        </section>
         <section id="fs" class="section__facebook">
             <!-- <img src="/images/paws/s2leaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf1"> -->
             <a id="fl" href="https://www.facebook.com/pages/Time-4-Paws/341349089397253?fref=ts" class="facebook__link">
-                
                 Check us out on facebook
             </a>
         </section>

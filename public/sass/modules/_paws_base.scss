@@ -8,7 +8,7 @@ button:focus {
 .video__home{
 	@media #{$small-only} { 
 		background-color: $main_dark;
-	  	background: transparent url(/images/selection/bg.png) 50% 50% / cover no-repeat ;
+	  	background: transparent url(/images/selection/selection.png) 50% 50% / cover no-repeat ;
 	 	height: 23.5rem;
 	 	width: 100%; 
 	 	margin-top: -2.5rem; 
@@ -18,7 +18,7 @@ button:focus {
 
   	@media #{$medium-only} { 
 		background-color: $main_dark;
-		background: transparent url(/images/selection/bg.png) 50% 50% / cover no-repeat ;
+		background: transparent url(/images/selection/selection.png) 50% 50% / cover no-repeat ;
 	  	/*background: url(/images/paws/mobiledog.png) no-repeat 0 0; */
 	 	height: 23.5rem;
 	 	width: 100%;
@@ -63,56 +63,114 @@ video#bgvid {
 }*/
 .section__white--form{
 	position: absolute;
-	top: 6.5rem;
+	top: 3.5rem;
 	/* background-color: #fff; */
 	padding: 1rem;
 	/* width: 100%; */
 	/* border: 1px solid #e0e0e0; */
 	color: #fff;
 	@media #{$medium-up} { 
-  		top: 6rem;
+  		top: 3rem;
   	}
 
 	@media #{$large-up} { 
-  		top: 12rem;
+  		top: 7rem;
   	}
 
   	@media #{$xlarge-up} { 
-  		top: 19rem;
+  		top: 15rem;
   		/*background-color: green;*/
   	}
 
 }
+
+.business_name{
+	color: $main_color;
+	font-size:1.4rem;
+	@media #{$medium-up} { 
+  		font-size: 1.6rem;
+  	}
+  	@media #{$large-up} { 
+  		font-size: 2rem;
+  	}
+  	@media #{$xlarge-up} { 
+  		font-size: 2.1rem;
+  	}
+  	@media #{$xxlarge-up} { 
+  		font-size: 2.1rem;
+  	}
+}
+.map_location{
+	color: $main_light;
+	font-size:0.9rem;
+	@media #{$medium-up} { 
+  		font-size: 1.2rem;
+   	}
+  	@media #{$large-up} { 
+  		font-size: 1.6rem;
+  	}
+  	@media #{$xlarge-up} { 
+  		font-size: 1.7rem;
+  	}
+  	@media #{$xxlarge-up} { 
+  		font-size: 1.7rem;
+  	}
+}
  
 .section__white--homepage{
 	position: relative;
-	font-family: paws_heading;
-	color: $main_dark;
-	font-size: 2.3rem;
+	font-family: base_font;
+	font-size: 0.9rem;
 	background-color: #fff;
-	padding-top: 9rem;
-	padding-left: 1rem;
+	padding-top: 10rem;
+	padding-left: 1rem; 
 	padding-right: 1rem;
-	padding-bottom:5rem;
+	padding-bottom:1.8rem;
 	text-align: center;
 	z-index: -1;
 	@media #{$medium-up} { 
-  		padding:5rem;
-  		font-size: 3.1rem;
+  		padding:4rem;
   	}
   	@media #{$large-up} { 
-  		padding:5rem;
-  		font-size: 6.2rem;
+  		padding:4rem;;
   	}
   	@media #{$xlarge-up} { 
   		padding:5rem;
-  		font-size: 8.3rem;
   	}
   	@media #{$xxlarge-up} { 
   		padding:5rem;
-  		font-size: 10rem;
   	}
 }
+
+#map-canvas {
+	width: 100%;
+	height: 400px;
+}
+
+.section__points{
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
+.points.first{
+	margin-top:0rem;
+}
+
+.points{
+	border:1px #343434 solid;
+	height:20rem;
+	// width:100%;
+	background-color:$main_dark;
+	@media #{$small-only} { 
+  		margin-top:1rem;
+  	}
+}
+
+.fresh__point{
+	margin:1rem;
+	background-color: #fff; 
+}
+
 .section__mission{
 	position: relative;
 	font-family: paws_base_font; 
@@ -121,7 +179,7 @@ video#bgvid {
 	padding-bottom:3rem;
 	text-align:center;
 	font-size:18px;
-	background-color:$main_color;
+	background-color:$main_light;
 	color:#fff;
 	@media #{$small-only} { 
   		font-size:22px;
@@ -136,7 +194,7 @@ video#bgvid {
 	padding-bottom:3rem;
 	text-align:center;
 	font-size:18px;
-	background-color:$main_dark;
+	background-color:$main_light;
 	color:#fff;
 	@media #{$small-only} { 
   		font-size:22px;
@@ -174,9 +232,9 @@ video#bgvid {
 	/*position: relative;*/
 	margin: 0rem;
 	font-family: paws_heading;
-	color: $main_color;
+	// color: #fff;
 	font-size: 2.3rem;
-	background-color: $main_light;
+	background-color: $white;
 	padding-top: 5rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -239,7 +297,7 @@ video#bgvid {
 	padding-right: 1rem;
 	padding-bottom:5rem;
 	/*text-align: center;*/
-	color: $main_color;
+	color: $main_light;
 	@media #{$medium-up} { 
   		/*padding:5rem;*/
   		font-size: 3.1rem;
