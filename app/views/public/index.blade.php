@@ -223,17 +223,16 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 </article>
             </div>
             <div class="columns small-12 medium-4 end">
-                <article class="points">
-                <div id="1" style="overflow: hidden; background: #fff; padding: 5px; width: 125px">
-                    <div id="2" style="position: relative; background: red; padding: 2px; width: 100px; height: 100px">
+                <article class="points" style="padding: 1rem">
+                <div id="1" style="overflow: hidden; background: #fff; padding: 5px; width: 100%; height:100%;">
+                    <div id="2" style="position: relative; background: red; padding: 2px; margin:auto; width: 100px; height: 100px">
                         <div id="3" style="position: absolute; top: 10px; background: #000; padding: 2px; width: 75px; height: 150px"/>
                     </div>
                 </div>
                     
                 </article>
             </div>
-            <div class="columns small-12 medium-4 end">
-                <article class="points">
+            <div class="columns small-12 medium-4 end">                <article class="points">
                     
                 </article>
             </div>
