@@ -21,18 +21,19 @@
                 <?php foreach($rData as $index=>$recipe): ?>
                     <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
                         <article class="content-box">
-                            <div class="row collapse">                                   
-                                <a href="/recipe/<?php echo $recipe->id; ?>" class="columns small-4 medium-12 end">
-                                  <img src="/uploads/<?php echo $rImage[$recipe->id]; ?>" />
+                            <div class="row collapse" id="recipe__row">                                   
+                                <a href="/recipe/<?php echo $recipe->id; ?>" class="columns small-4 medium-12 tile__title end">
+                                    <span class="tile__title--inner"><?php echo $recipe->name; ?></span>
+                                    <img src="/uploads/<?php echo $rImage[$recipe->id]; ?>" />
                                 </a>
-                                <section class="columns small-8 medium-12">
+                                <section class="columns small-8 medium-12 content-box__copy--wrapper">
                                     <div class="content-box__copy">
                                         <a href="/recipe/<?php echo $recipe->id; ?>" class="content-box__copy__inner--recipe"><h5 class="content-box__title"><?php echo $recipe->name; ?></h5></a>
-                                        <?php if(!empty($category[$recipe->id])): ?>
+                                        <!-- <?php if(!empty($category[$recipe->id])): ?>
                                             <a href="/collection/<?php echo $category[$recipe->id]->id; ?>" class="content-box__tag"><?php echo $category[$recipe->id]->name; ?></a>
                                         <?php else: ?>
                                             <a href="/collections" class="content-box__tag">Collections</a>
-                                        <?php endif; ?>
+                                        <?php endif; ?> -->
                                     </div>
                                 </section>
                             </div>

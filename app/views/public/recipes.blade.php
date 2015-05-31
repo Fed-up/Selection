@@ -22,18 +22,19 @@
                 @foreach($rData as $index=>$recipe)
                     <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
                         <article class="content-box">
-                            <div class="row collapse">                                   
-                                <a href="/recipe/{{$recipe->id}}" class="columns small-4 medium-12 end">
-                                  <img src="/uploads/{{ $rImage[$recipe->id] }}" />
+                            <div class="row collapse" id="recipe__row">                                   
+                                <a href="/recipe/{{$recipe->id}}" class="columns small-4 medium-12 tile__title end">
+                                    <span class="tile__title--inner">{{$recipe->name}}</span>
+                                    <img src="/uploads/{{ $rImage[$recipe->id] }}" />
                                 </a>
-                                <section class="columns small-8 medium-12">
+                                <section class="columns small-8 medium-12 content-box__copy--wrapper">
                                     <div class="content-box__copy">
                                         <a href="/recipe/{{$recipe->id}}" class="content-box__copy__inner--recipe"><h5 class="content-box__title">{{$recipe->name}}</h5></a>
-                                        @if(!empty($category[$recipe->id]))
+                                        <!-- @if(!empty($category[$recipe->id]))
                                             <a href="/collection/{{$category[$recipe->id]->id}}" class="content-box__tag">{{$category[$recipe->id]->name}}</a>
                                         @else
                                             <a href="/collections" class="content-box__tag">Collections</a>
-                                        @endif
+                                        @endif -->
                                     </div>
                                 </section>
                             </div>

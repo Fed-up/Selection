@@ -57,7 +57,7 @@
                   {{ Form::password('password', array('placeholder'=>'Password', 'class'=>'form-control' ) ) }}
               </div>
               
-              {{ Form::submit('Login', array('class' => 'side__login__button--swipe')) }}
+              {{ Form::submit('Login', array('class' => 'side__login__button--swipe')) }}  
               
             {{ Form::close() }}
           @endif
@@ -68,7 +68,7 @@
                 <a class="{{((Request::segment(1) === '/')? 'side--nav navTab_active' : 'side--nav')}}" href="/">Home</a>
                 <a class="{{((Request::segment(1) === 'ingredients')? 'side--nav navTab_active' : 'side--nav')}}" href="/">Our Vision</a>                 
                 <a class="{{((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav')}}" href="/recipes">Our Menu</a>
-                <a class="{{((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav')}}" href="/collections">Our Selections</a>
+                <!-- <a class="{{((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav')}}" href="/collections">Our Selections</a> -->
                 <a class="{{((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav')}}" href="/catering">Order Catering</a>
                 <a class="{{((Request::segment(1) === 'events')? 'side--nav navTab_active' : 'side--nav')}}" href="/">Sign Up</a>
                 <!-- <a class="video__link" href="http://www.dogloversshow.com.au">Video Credit: Dog Lovers Show</a> -->

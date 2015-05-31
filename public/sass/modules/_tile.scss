@@ -1,20 +1,48 @@
 /*///////////// Content section*/
 /* line 2, C:/webroot/lcsnbn/sass/modules/tile */
 .content-boxes__wrapper {
-  padding: 0; } 
-  @media only screen and (max-width: 480px) {
-    .content-boxes__wrapper > .columns {
-      padding: 0; } }
+  padding: 0; 
+  /*@media only screen and (max-width: 480px) {*/
+
+}
+
+.content-boxes__wrapper .columns {
+    padding: 0; 
+    
+    @media #{$medium-up} {
+        padding-left: 0.1rem;
+        padding-right: 0.1rem; 
+    } 
+}
+
+/*.row .collapse .menu__recipes {
+    @media #{$small-only} {
+        margin-bottom: 0.1rem;
+    }
+    @media #{$medium-up} {
+        margin-bottom: -1rem;
+    } 
+}*/
+
+#recipe__row{
+    @media #{$small-only} {
+        margin-bottom: 0.1rem;
+    }
+    @media #{$medium-up} {
+        margin-bottom: -1rem;
+    }  
+}
 
 /* line 16, C:/webroot/lcsnbn/sass/modules/tile */
 .content-box {
   background: #fff;
-  border: solid 1px #e0e0e0;
+  /*border: solid 1px #e0e0e0;*/
   /*padding-bottom: 30px; */
   /*margin-bottom: 0.5rem;*/
   padding-left: 0px;
   padding-right: 0px;
-  margin-bottom: 0.25rem; }
+  /*margin-bottom: 0.25rem; */
+}
   @media only screen and (min-width:1351px) {
     .content-box {
       margin-bottom: 1rem; } }
@@ -28,15 +56,25 @@
       .content-box .row {
         position: static; } }
 
+.content-box__copy--wrapper{
+    // position: static;
+}
+
 /* line 75, C:/webroot/lcsnbn/sass/modules/tile */
 .content-box__copy {
-  position: relative;
-  height: 100%; }
+    position: relative;
+    height: 100%; 
+    border-top:1px solid #e0e0e0;
+    @media #{$medium-up} {
+        display: none;
+    }
+}
 
 /* line 79, C:/webroot/lcsnbn/sass/modules/tile */
 .content-box__copy__inner {
   display: block;
-  padding: 0.5rem 0.75rem; }
+  padding: 0.5rem 0.75rem; 
+}
 
 /* line 83, C:/webroot/lcsnbn/sass/modules/tile */
 .content-box__copy__inner--recipe {
@@ -47,6 +85,41 @@
 .content-box__copy__inner--homepage {
   padding: 0.5rem 0.75rem 0rem;
   border-bottom: 0; }
+
+.tile__title{
+    position: static;
+
+}
+
+.tile__title--inner{
+    @media #{$small-only} {
+        display: none;
+    }
+    @media #{$medium-up} {
+        position: absolute;
+        text-align: center;
+        top: 0rem;
+        left: 0.1rem;
+        right: 0.1rem;
+        bottom: 0.2rem;
+        /*background-color: #e0e0e0;*/
+        /*opacity: 0.5;*/
+        color: transparent;
+        font-size: 22px;
+        padding-top: 1rem;
+    }
+}
+
+.tile__title--inner:hover{
+    @media #{$small-only} {
+        display: none;
+    }
+    @media #{$medium-up} {
+        background-color: $main_light;
+        opacity: 0.8;
+        color: $white;
+    }
+}
 
 /* line 93, C:/webroot/lcsnbn/sass/modules/tile */
 .content-box__title {
