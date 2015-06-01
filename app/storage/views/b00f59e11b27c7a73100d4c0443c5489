@@ -4,18 +4,10 @@
 <?php $__env->startSection('content'); ?>
     <section class="page">  
         <nav class="tabs subnav subnav--centre" data-tab data-options="deep_linking:true; scroll_to_content: false">
-            <h2 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#recipes"><?php if(Auth::check()): ?><?php if(Auth::user()->user_type != 'B2B'): ?>Recipes <?php else: ?> Nutritents <?php endif; ?> <?php else: ?> Recipes <?php endif; ?></a></h2>
-            <?php if(Auth::check()): ?>
-                <?php if(Auth::user()->user_type != 'B2B'): ?>
-                | <h2 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#myrecipes">Exclusive Recipes</a></h2>
-                <?php endif; ?> 
-            <?php else: ?>
-                | <h2 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#myrecipes">Exclusive Recipes</a></h2>
-            <?php endif; ?> 
-            <!-- <h2 class="subnav"></h2> -->
+            <h2 class="content__title--main"><a class="plain__header__link" href="/">Today's Menu</a></h2>
        </nav>
 
-        <section class="tabs-content"> 
+        <section class="content__page--sub"> 
 
             <div id="recipes" class="row content-boxes__wrapper content active">
                 <?php foreach($rData as $index=>$recipe): ?>
@@ -40,140 +32,7 @@
                         </article>
                     </div>
                 <?php endforeach; ?>
-            </div>
-
-            <div id="ae" class="row content-boxes__wrapper content">
-                <?php foreach($aeData as $ae): ?>
-                <?php if($ae->selection_active == 1): ?>
-                    <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
-                        <article class="content-box">
-                            <div class="row collapse">                                   
-                                <a href="/recipe/<?php echo $ae->id; ?>" class="columns small-4 medium-12 end">
-                                  <img src="/uploads/<?php echo $aeImage[$ae->id]; ?>" />
-                                </a>
-                                <section class="columns small-8 medium-12">
-                                    <div class="content-box__copy">
-                                        <a href="/recipe/<?php echo $ae->id; ?>" class="content-box__copy__inner--recipe"><h5 class="content-box__title"><?php echo $ae->name; ?></h5></a>
-                                        <?php if(!empty($category[$ae->id])): ?>
-                                            <a href="/collection/<?php echo $category[$ae->id]->id; ?>" class="content-box__tag"><?php echo $category[$ae->id]->name; ?></a>
-                                        <?php else: ?>
-                                            <a href="/collections" class="content-box__tag">Collection</a>
-                                        <?php endif; ?>
-                                    </div>
-                                </section>
-                            </div>
-                        </article>
-                    </div>
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </div>
-
-            <div id="fj" class="row content-boxes__wrapper content">
-                <?php foreach($fjData as $fj): ?>
-                <?php if($fj->selection_active == 1): ?>
-                    <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
-                        <article class="content-box">
-                            <div class="row collapse">                                   
-                                <a href="/recipe/<?php echo $fj->id; ?>" class="columns small-4 medium-12 end">
-                                  <img src="/uploads/<?php echo $fjImage[$fj->id]; ?>" />
-                                </a>
-                                <section class="columns small-8 medium-12">
-                                    <div class="content-box__copy">
-                                        <a href="/recipe/<?php echo $fj->id; ?>" class="content-box__copy__inner--recipe"><h5 class="content-box__title"><?php echo $fj->name; ?></h5></a>
-                                        <?php if(!empty($category[$fj->id])): ?>
-                                            <a href="/collection/<?php echo $category[$fj->id]->id; ?>" class="content-box__tag"><?php echo $category[$fj->id]->name; ?></a>
-                                        <?php else: ?>
-                                            <a href="/collections" class="content-box__tag">Collection</a>
-                                        <?php endif; ?>
-                                    </div>
-                                </section>
-                            </div>
-                        </article>
-                    </div>
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </div>
-
-            <div id="ko" class="row content-boxes__wrapper content">
-                <?php foreach($koData as $ko): ?>
-                <?php if($ko->selection_active == 1): ?>
-                    <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
-                        <article class="content-box">
-                            <div class="row collapse">                                   
-                                <a href="/recipe/<?php echo $ko->id; ?>" class="columns small-4 medium-12 end">
-                                  <img src="/uploads/<?php echo $koImage[$ko->id]; ?>" />
-                                </a>
-                                <section class="columns small-8 medium-12">
-                                    <div class="content-box__copy">
-                                        <a href="/recipe/<?php echo $ko->id; ?>" class="content-box__copy__inner--recipe"><h5 class="content-box__title"><?php echo $ko->name; ?></h5></a>
-                                        <?php if(!empty($category[$ko->id])): ?>
-                                            <a href="/collection/<?php echo $category[$ko->id]->id; ?>" class="content-box__tag"><?php echo $category[$ko->id]->name; ?></a>
-                                        <?php else: ?>
-                                            <a href="/collections" class="content-box__tag">Collection</a>
-                                        <?php endif; ?>
-                                    </div>
-                                </section>
-                            </div>
-                        </article>
-                    </div>
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </div>
-
-            <div id="pt" class="row content-boxes__wrapper content">
-
-                <?php foreach($ptData as $pt): ?>
-                <?php if($pt->selection_active == 1): ?>
-                    <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
-                        <article class="content-box">
-                            <div class="row collapse">                                   
-                                <a href="/recipe/<?php echo $pt->id; ?>" class="columns small-4 medium-12 end">
-                                  <img src="/uploads/<?php echo $ptImage[$pt->id]; ?>" />
-                                </a>
-                                <section class="columns small-8 medium-12">
-                                    <div class="content-box__copy">
-                                        <a href="/recipe/<?php echo $pt->id; ?>" class="content-box__copy__inner--recipe"><h5 class="content-box__title"><?php echo $pt->name; ?></h5></a>
-                                        <?php if(!empty($category[$pt->id])): ?>
-                                            <a href="/collection/<?php echo $category[$pt->id]->id; ?>" class="content-box__tag"><?php echo $category[$pt->id]->name; ?></a>
-                                        <?php else: ?>
-                                            <a href="/collections" class="content-box__tag">Collection</a>
-                                        <?php endif; ?>
-                                    </div>
-                                </section>
-                            </div>
-                        </article>
-                    </div>
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </div>
-
-            <div id="uz" class="row content-boxes__wrapper content">
-                
-                <?php foreach($uzData as $uz): ?>
-                <?php if($uz->selection_active == 1): ?>
-                    <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
-                        <article class="content-box">
-                            <div class="row collapse">                                   
-                                <a href="/recipe/<?php echo $uz->id; ?>" class="columns small-4 medium-12 end">
-                                  <img src="/uploads/<?php echo $uzImage[$uz->id]; ?>" />
-                                </a>
-                                <section class="columns small-8 medium-12">
-                                    <div class="content-box__copy">
-                                        <a href="/recipe/<?php echo $uz->id; ?>" class="content-box__copy__inner--recipe"><h5 class="content-box__title"><?php echo $uz->name; ?></h5></a>
-                                        <?php if(!empty($category[$uz->id])): ?>
-                                            <a href="/collection/<?php echo $category[$uz->id]->id; ?>" class="content-box__tag"><?php echo $category[$uz->id]->name; ?></a>
-                                        <?php else: ?>
-                                            <a href="/collections" class="content-box__tag">Collection</a>
-                                        <?php endif; ?>
-                                    </div>
-                                </section>
-                            </div>
-                        </article>
-                    </div>
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </div>
-
+            </div> 
 
             <div id="myrecipes" class="row content-boxes__wrapper content">
                 <?php if(isset($exrData)): ?>

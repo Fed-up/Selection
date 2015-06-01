@@ -68,7 +68,7 @@
                 <?php echo ((Auth::guest())? '' : ((Auth::user()->admin == 1)? HTML::link('admin', 'Profile', array('class' => 'side--nav')) : HTML::link('profile', 'Profile', array('class' => 'side--nav')))); ?>
                 <a class="<?php echo ((Request::segment(1) === '/')? 'side--nav navTab_active' : 'side--nav'); ?>" href="/">Home</a>
                 <a class="<?php echo ((Request::segment(1) === 'ingredients')? 'side--nav navTab_active' : 'side--nav'); ?>" href="/">Our Vision</a>                 
-                <a class="<?php echo ((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav'); ?>" href="/recipes">Our Menu</a>
+                <a class="<?php echo ((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav'); ?>" href="/menu">Our Menu</a>
                 <!-- <a class="<?php echo ((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav'); ?>" href="/collections">Our Selections</a> -->
                 <a class="<?php echo ((Request::segment(1) === 'recipes')? 'side--nav navTab_active' : 'side--nav'); ?>" href="/catering">Order Catering</a>
                 <a class="<?php echo ((Request::segment(1) === 'events')? 'side--nav navTab_active' : 'side--nav'); ?>" href="/">Sign Up</a>

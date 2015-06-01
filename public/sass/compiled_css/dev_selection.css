@@ -2881,51 +2881,45 @@ ul, li {
   padding-bottom: 1rem; }
 
 /* line 159, C:/GitHub/Selection/public/sass/modules/_base.scss */
-.content__title--main {
-  text-align: center;
-  margin: 0.5rem 0;
-  font-family: headings; }
-
-/* line 164, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .content__title--login {
   display: inline-block;
   text-align: center;
   margin: 0.5rem 0;
   font-family: headings; }
 
-/* line 170, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 165, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .content__title--recipe {
   text-align: center;
   font-family: headings !important; }
 
-/* line 174, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 169, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .content__title--main--signup {
   text-align: center;
   margin: 0.5rem 0 2.5rem 0;
   font-family: headings;
   line-height: 1.6rem; }
 
-/* line 181, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 176, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .content__title--link {
   text-decoration: none;
   color: #343434;
   font-weight: bold; }
 
-/* line 187, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 182, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .content__title--link:hover {
   color: #343434; }
 
-/* line 191, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 186, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .content__title--homepage {
   text-align: center;
   margin-top: 0.5rem; }
 
 @media only screen and (min-width: 768px) {
-  /* line 195, C:/GitHub/Selection/public/sass/modules/_base.scss */
+  /* line 190, C:/GitHub/Selection/public/sass/modules/_base.scss */
   .content__title--homepage {
     display: none; } }
 
-/* line 198, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 193, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .content__title--main--tabs {
   display: inline-block;
   padding: 0.5rem;
@@ -2934,92 +2928,74 @@ ul, li {
   margin-left: 0.5rem;
   margin-right: 0.5rem; }
 
-/* line 207, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 202, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .content__title--main--tabs:hover {
   color: #343434; }
 
-/* line 211, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 206, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .content__title--main--tabs.active {
   background-color: #ff7c81;
   color: #fff; }
 
-/* line 215, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 210, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .content-title--sub {
   text-align: center;
   font-family: headings;
   padding: 0.5rem;
   float: left; }
 
-/* line 222, C:/GitHub/Selection/public/sass/modules/_base.scss */
-.subnav {
-  /*border-bottom: 1px solid $main_color;*/
-  background-color: #fa262b;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  height: 3.2rem;
-  text-align: center; }
-
-@media only screen and (min-width: 481px) {
-  /* line 231, C:/GitHub/Selection/public/sass/modules/_base.scss */
-  .subnav {
-    text-align: left; } }
-
-/* line 236, C:/GitHub/Selection/public/sass/modules/_base.scss */
-.subnav--centre {
-  text-align: center; }
-
-/* line 240, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 217, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tab__link {
   text-decoration: none;
   color: #fff;
   white-space: nowrap;
   font-family: headings; }
 
-/* line 246, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 223, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tab__link:hover {
   color: #ff7c81; }
 
-/* line 250, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 227, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .active > .tab__link {
   color: #fff; }
 
-/* line 253, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 230, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .promo__text {
   padding-top: .3rem;
   font-size: 0.9rem;
   font-style: italic; }
 
-/* line 259, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 236, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .column, .columns {
   padding-left: 0.625rem;
   padding-right: 0.625rem; }
 
-/* line 264, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 241, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs-content > .content {
   padding: 0.625rem 0; }
 
-/* line 268, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 245, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs {
   margin-bottom: 0 !important;
   margin-left: 0; }
 
-/* line 271, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 248, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs:before, .tabs:after {
   content: " ";
   display: table; }
 
-/* line 274, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 251, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs:after {
   clear: both; }
 
-/* line 276, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 253, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs dd, .tabs .tab-title {
   position: relative;
   margin-bottom: 0 !important;
   list-style: none;
   float: left; }
 
-/* line 281, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 258, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs dd > a, .tabs .tab-title > a {
   display: block;
   background-color: #efefef;
@@ -3028,82 +3004,82 @@ ul, li {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1rem; }
 
-/* line 288, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 265, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs dd > a:hover, .tabs .tab-title > a:hover {
   background-color: #e1e1e1; }
 
-/* line 290, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 267, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs dd.active a, .tabs .tab-title.active a {
   background-color: white;
   color: #222222; }
 
-/* line 293, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 270, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs.radius dd:first-child a, .tabs.radius .tab:first-child a {
   -webkit-border-bottom-left-radius: 3px;
   -webkit-border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px; }
 
-/* line 298, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 275, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs.radius dd:last-child a, .tabs.radius .tab:last-child a {
   -webkit-border-bottom-right-radius: 3px;
   -webkit-border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px; }
 
-/* line 303, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 280, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs.vertical dd, .tabs.vertical .tab-title {
   position: inherit;
   float: none;
   display: block;
   top: auto; }
 
-/* line 309, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 286, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs-content {
   margin-bottom: 1.5rem;
   width: 100%; }
 
-/* line 312, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 289, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs-content:before, .tabs-content:after {
   content: " ";
   display: table; }
 
-/* line 315, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 292, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs-content:after {
   clear: both; }
 
-/* line 317, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 294, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs-content > .content {
   display: none;
   float: left;
   padding: 0.1rem 0;
   width: 100%; }
 
-/* line 322, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 299, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs-content > .content.active {
   display: block;
   float: none; }
 
-/* line 325, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 302, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs-content > .content.contained {
   padding: 0.9375rem; }
 
-/* line 327, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 304, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs-content.vertical {
   display: block; }
 
-/* line 329, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 306, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tabs-content.vertical > .content {
   padding: 0 0.9375rem; }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 333, C:/GitHub/Selection/public/sass/modules/_base.scss */
+  /* line 310, C:/GitHub/Selection/public/sass/modules/_base.scss */
   .tabs.vertical {
     width: 20%;
     max-width: 20%;
     float: left;
     margin: 0 0 1.25rem; }
-  /* line 339, C:/GitHub/Selection/public/sass/modules/_base.scss */
+  /* line 316, C:/GitHub/Selection/public/sass/modules/_base.scss */
   .tabs-content.vertical {
     width: 80%;
     max-width: 80%;
@@ -3111,23 +3087,27 @@ ul, li {
     margin-left: -1px;
     padding-left: 1rem; } }
 
-/* line 345, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 322, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .no-js .tabs-content > .content {
   display: block;
   float: none; }
 
-/* line 349, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 326, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .package__total {
   text-align: right;
   margin-top: -1rem;
   margin-bottom: 1rem;
   color: #c21e22; }
 
-/* line 356, C:/GitHub/Selection/public/sass/modules/_base.scss */
+/* line 333, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .package__total--create-package {
   text-align: right;
   margin-bottom: 1rem;
   color: #c21e22; }
+
+/* line 339, C:/GitHub/Selection/public/sass/modules/_base.scss */
+.content__page--sub {
+  padding-top: 3.4rem; }
 
 /* line 4, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 input:focus, select:focus, textarea:focus, button:focus {
@@ -4247,7 +4227,50 @@ div.collection.container {
   .menu__image {
     top: 1.75rem; } }
 
-/*End Header*/
+/* line 95, C:/GitHub/Selection/public/sass/modules/_header.scss */
+.plain__header__link {
+  font-size: 20px;
+  color: #fff;
+  margin-top: 0.3rem; }
+
+/* line 101, C:/GitHub/Selection/public/sass/modules/_header.scss */
+.plain__header__link:hover {
+  /*display: inline-block;*/
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  /*font-weight: bold;*/
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: #fd5155; }
+
+/* line 111, C:/GitHub/Selection/public/sass/modules/_header.scss */
+.content__title--main {
+  margin: 0.2rem;
+  text-align: center;
+  /*margin: 0.5rem 0;*/
+  /*font-family: $headings;*/ }
+
+/* line 118, C:/GitHub/Selection/public/sass/modules/_header.scss */
+.subnav {
+  /*border-bottom: 1px solid $main_color;*/
+  background-color: #fa262b;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  height: 3.2rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1; }
+
+@media only screen and (min-width: 481px) {
+  /* line 131, C:/GitHub/Selection/public/sass/modules/_header.scss */
+  .subnav {
+    text-align: left; } }
+
+/* line 136, C:/GitHub/Selection/public/sass/modules/_header.scss */
+.subnav--centre {
+  text-align: center; }
+
 /**----------Ingrdient Section------------**/
 /* line 2, C:/webroot/lcsnbn/sass/modules/ingredients */
 /* line 3, C:/GitHub/Selection/public/sass/modules/_ingredients.scss */
@@ -4947,6 +4970,12 @@ div.four.columns.social_links {
   display: block;
   margin-bottom: -0.7rem;
   margin-top: 0.4rem; }
+
+/* line 100, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
+.section__menu__heading {
+  /*margin-left: 8rem;*/
+  padding: 3rem 0;
+  font-size: 22px; }
 
 /*///////////// Sign up section*/
 /* line 3, C:/webroot/lcsnbn/sass/modules/signup */

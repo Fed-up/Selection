@@ -114,7 +114,7 @@ class RecipeController  extends BaseController {
 			        }
 				}
 			}
-		// echo '<pre>'; print_r($ae); echo '</pre>'; 
+		// echo '<pre>'; print_r($ae_recipe_image); echo '</pre>'; 
 		}
 		// exit;
 

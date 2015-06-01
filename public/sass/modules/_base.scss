@@ -156,11 +156,6 @@ ul, li {
   padding-bottom: 1rem;
 }
 
-.content__title--main {
-  text-align: center;
-  margin: 0.5rem 0;
-  font-family: $headings; }
-
 .content__title--login {
   display: inline-block;
   text-align: center;
@@ -217,24 +212,6 @@ ul, li {
     font-family: headings;
     padding: 0.5rem; 
     float: left;
-}
-
-.subnav {
-  /*border-bottom: 1px solid $main_color;*/
-  // font-family: headings;
-  background-color: $main_color;;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  height: 3.2rem;
-  text-align: center; }
-  @media only screen and (min-width:481px) {
-    .subnav {
-      text-align: left; 
-    } 
-  }
-
-.subnav--centre{
-  text-align: center;
 }
 
 .tab__link {
@@ -359,3 +336,6 @@ ul, li {
   color: $main_dark;
 }
 
+.content__page--sub{
+    padding-top: 3.4rem;
+}

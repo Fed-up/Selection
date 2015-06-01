@@ -13,8 +13,8 @@
             @else
                 | <h2 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#myrecipes">Exclusive Recipes</a></h2>
             @endif 
-            <!-- <h2 class="subnav"></h2> -->
-       </nav>
+            <h2 class="subnav"></h2>
+
 
         <section class="tabs-content"> 
 
@@ -22,19 +22,18 @@
                 @foreach($rData as $index=>$recipe)
                     <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
                         <article class="content-box">
-                            <div class="row collapse" id="recipe__row">                                   
-                                <a href="/recipe/{{$recipe->id}}" class="columns small-4 medium-12 tile__title end">
-                                    <span class="tile__title--inner">{{$recipe->name}}</span>
-                                    <img src="/uploads/{{ $rImage[$recipe->id] }}" />
+                            <div class="row collapse">                                   
+                                <a href="/recipe/{{$recipe->id}}" class="columns small-4 medium-12 end">
+                                  <img src="/uploads/{{ $rImage[$recipe->id] }}" />
                                 </a>
-                                <section class="columns small-8 medium-12 content-box__copy--wrapper">
+                                <section class="columns small-8 medium-12">
                                     <div class="content-box__copy">
                                         <a href="/recipe/{{$recipe->id}}" class="content-box__copy__inner--recipe"><h5 class="content-box__title">{{$recipe->name}}</h5></a>
-                                        <!-- @if(!empty($category[$recipe->id]))
+                                        @if(!empty($category[$recipe->id]))
                                             <a href="/collection/{{$category[$recipe->id]->id}}" class="content-box__tag">{{$category[$recipe->id]->name}}</a>
                                         @else
                                             <a href="/collections" class="content-box__tag">Collections</a>
-                                        @endif -->
+                                        @endif
                                     </div>
                                 </section>
                             </div>
@@ -45,7 +44,7 @@
 
             <div id="ae" class="row content-boxes__wrapper content">
                 @foreach($aeData as $ae)
-                @if($ae->selection_active == 1)
+                @if($ae->active == 1)
                     <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
                         <article class="content-box">
                             <div class="row collapse">                                   
@@ -71,7 +70,7 @@
 
             <div id="fj" class="row content-boxes__wrapper content">
                 @foreach($fjData as $fj)
-                @if($fj->selection_active == 1)
+                @if($fj->active == 1)
                     <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
                         <article class="content-box">
                             <div class="row collapse">                                   
@@ -97,7 +96,7 @@
 
             <div id="ko" class="row content-boxes__wrapper content">
                 @foreach($koData as $ko)
-                @if($ko->selection_active == 1)
+                @if($ko->active == 1)
                     <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
                         <article class="content-box">
                             <div class="row collapse">                                   
@@ -124,7 +123,7 @@
             <div id="pt" class="row content-boxes__wrapper content">
 
                 @foreach($ptData as $pt)
-                @if($pt->selection_active == 1)
+                @if($pt->active == 1)
                     <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
                         <article class="content-box">
                             <div class="row collapse">                                   
@@ -151,7 +150,7 @@
             <div id="uz" class="row content-boxes__wrapper content">
                 
                 @foreach($uzData as $uz)
-                @if($uz->selection_active == 1)
+                @if($uz->active == 1)
                     <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
                         <article class="content-box">
                             <div class="row collapse">                                   
@@ -223,12 +222,12 @@
 
         </section>
 
-<!--                 <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#ae">A - E</a></h3> |
+                <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#ae">A - E</a></h3> |
                 <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#fj">F - J</a></h3> |
                 <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#ko">K - O</a></h3> |
                 <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#pt">P - T</a></h3> |
-                <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#uz">U - Z</a></h3>  -->
-     
+                <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#uz">U - Z</a></h3> 
+        </nav>
         <!-- <h2 class="content__title content__title--main"><a class="content__title--link" href="/recipes">More Recipes</a></h2> -->
         <!-- <div class="footer__push"></div> -->
   	</section><!--End Band Content-->
