@@ -54,7 +54,7 @@ class Admin_CategoriesController extends BaseController {
 	
 	public function getEditCategories($id){
 		$data = MenuCategories::findOrFail($id);
-		$recipes = MenuRecipes::where('menu_categories_id', '=', $id)->where('active', '!=', 9)->orderBy('ordering','ASC')->get();
+		$recipes = MenuRecipes::where('menu_categories_id', '=', $id)->where('selection_active', '!=', 9)->orderBy('ordering','ASC')->get();
 		
 		//echo '<pre>'; print_r($recipes); echo '</pre>'; exit;
 		return View::make('admin.categories.form')

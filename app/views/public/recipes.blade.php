@@ -13,8 +13,8 @@
             @else
                 | <h2 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#myrecipes">Exclusive Recipes</a></h2>
             @endif 
-            <h2 class="subnav"></h2>
-
+            <!-- <h2 class="subnav"></h2> -->
+       </nav>
 
         <section class="tabs-content"> 
 
@@ -223,12 +223,12 @@
 
         </section>
 
-                <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#ae">A - E</a></h3> |
+<!--                 <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#ae">A - E</a></h3> |
                 <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#fj">F - J</a></h3> |
                 <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#ko">K - O</a></h3> |
                 <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#pt">P - T</a></h3> |
-                <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#uz">U - Z</a></h3> 
-        </nav>
+                <h3 class="content-title--main content__title--main--tabs"><a class="tab__link" href="#uz">U - Z</a></h3>  -->
+     
         <!-- <h2 class="content__title content__title--main"><a class="content__title--link" href="/recipes">More Recipes</a></h2> -->
         <!-- <div class="footer__push"></div> -->
   	</section><!--End Band Content-->

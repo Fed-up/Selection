@@ -92,6 +92,12 @@ Route::group(array('before' => 'auth'), function() {
 	Route::get('admin/user/members', 'Admin_UserController@getMembers');
 	Route::get('admin/user/members/add', 'Admin_UserController@getAddMembers');	
 });
+	//Cafe Menu
+	Route::get('admin/menu/menu', 'Admin_MenuController@getMenu');
+	Route::get('admin/menu/savoury/{id}', 'Admin_MenuController@getSavoury');
+	Route::get('admin/menu/snack/{id}', 'Admin_MenuController@getSnack');
+	Route::get('admin/menu/dessert/{id}', 'Admin_MenuController@getDessert');
+	Route::get('admin/menu/refreshment/{id}', 'Admin_MenuController@getRefreshment');
 
 	//Our Categories
 	Route::get('admin/menu/categories', 'Admin_CategoriesController@getCategories');

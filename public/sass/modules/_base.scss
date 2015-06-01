@@ -67,17 +67,31 @@ ul, li {
   transition-duration: 0.5s;
   background-color: $background; //F3F6F5;
   // height: 100%;
-  padding-top:2.5rem;
+  /*padding-top:2.5rem;*/
   position: relative;
   z-index: 1; }
 
 .main.page.home{
-    margin-top:-5.5rem;
+    /*margin-top:-5.5rem;*/
 }
 
 .page {
   color: $text;
-  height: 100%; }
+  height: 100%; 
+}
+
+.menu__name{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: #fff;
+    font-size: 18px;
+}
+
+.nav__block{
+    margin-top: 1rem;
+    border-top:1px #343434 solid;
+}
 
 .error_message{
   font-size: 80%;
@@ -206,10 +220,12 @@ ul, li {
 }
 
 .subnav {
-  border-bottom: 1px solid $main_color;
+  /*border-bottom: 1px solid $main_color;*/
   // font-family: headings;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  background-color: $main_color;;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  height: 3.2rem;
   text-align: center; }
   @media only screen and (min-width:481px) {
     .subnav {
@@ -223,7 +239,7 @@ ul, li {
 
 .tab__link {
   text-decoration: none;
-  color: $text; 
+  color: $white; 
   white-space: nowrap;
   font-family: headings;
 }
@@ -301,7 +317,7 @@ ul, li {
   .tabs-content > .content {
     display: none;
     float: left;
-    padding: 0.625rem 0;
+    padding: 0.1rem 0;
     width: 100%; }
     .tabs-content > .content.active {
       display: block;

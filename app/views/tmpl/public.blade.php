@@ -41,6 +41,7 @@
       id="panel--right" 
       class="panel--right"> <!-- //panel -->
         <div id="navigation" class="">
+          <a href="#" class="menu__name">Selection Cafe</a>
           @if (Auth::check())
               
           @else
@@ -61,7 +62,7 @@
               
             {{ Form::close() }}
           @endif
-            <nav class="">
+            <nav class="nav__block">
                 <!-- <a class="side--nav" href="/">{{ ((Auth::guest())? '' : ((Auth::user()->admin == 1)? HTML::link('admin', 'Profile') : HTML::link('profile', 'Profile'))) }}</a> -->
 <!--                 {{ ((Auth::guest())? '' : ((Auth::user()->admin == 1)? HTML::link('admin', 'Admin', array('class' => 'side--nav')) : '')) }} -->
                 {{ ((Auth::guest())? '' : ((Auth::user()->admin == 1)? HTML::link('admin', 'Profile', array('class' => 'side--nav')) : HTML::link('profile', 'Profile', array('class' => 'side--nav')))) }}
