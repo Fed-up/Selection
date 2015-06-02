@@ -3107,7 +3107,9 @@ ul, li {
 
 /* line 339, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .content__page--sub {
-  padding-top: 3.4rem; }
+  padding-top: 3.4rem;
+  margin-left: 0.9rem;
+  margin-right: 0.9rem; }
 
 /* line 4, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 input:focus, select:focus, textarea:focus, button:focus {
@@ -4974,8 +4976,17 @@ div.four.columns.social_links {
 /* line 100, C:/GitHub/Selection/public/sass/modules/_recipes.scss */
 .section__menu__heading {
   /*margin-left: 8rem;*/
-  padding: 3rem 0;
-  font-size: 22px; }
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  font-size: 22px;
+  text-align: center; }
+  @media only screen and (min-width:481px) {
+    .section__menu__heading {
+      text-align: left;
+      padding-left: 0.2rem; } }
+  @media only screen and (min-width:961px) {
+    .section__menu__heading {
+      padding-left: 0rem; } }
 
 /*///////////// Sign up section*/
 /* line 3, C:/webroot/lcsnbn/sass/modules/signup */

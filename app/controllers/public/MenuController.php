@@ -27,6 +27,30 @@ class MenuController  extends BaseController {
 		
 		->get();
 
+		$desData = MenuRecipes::orderBy(DB::raw('RAND()'))->where('selection_active', '=', 1)->where('dessert', '=', 1)
+			->with(array('MenuCategories' => function($query)
+			{
+				$query->where('menu_categories.active', '=', 1);
+			}))
+			
+			->with(array('Images' => function($query){
+				$query->where('images.ordering', '=', 0)->where('section', '=', 'RECIPE')->where('active', '=', 1);
+			}))
+		
+		->get();
+
+		$refData = MenuRecipes::orderBy(DB::raw('RAND()'))->where('selection_active', '=', 1)->where('refreshment', '=', 1)
+			->with(array('MenuCategories' => function($query)
+			{
+				$query->where('menu_categories.active', '=', 1);
+			}))
+			
+			->with(array('Images' => function($query){
+				$query->where('images.ordering', '=', 0)->where('section', '=', 'RECIPE')->where('active', '=', 1);
+			}))
+		
+		->get();
+
 		
 
 		foreach ($savData as $sav) {
@@ -70,6 +94,48 @@ class MenuController  extends BaseController {
 				}
 			}
 		}
+
+		foreach ($desData as $des) {
+			$count = count($des->MenuCategories);
+			if($count > 0){
+				$category[$des->id] = $des->MenuCategories;
+			}else{
+				$category[$des->id] = '';
+			}
+			$count = count($des->Images);
+			if($count < 1){
+				$des_image[$des->id] = 'recipe.png';
+			}else{
+				foreach($des->Images as $image){
+			        if(file_exists('uploads/'.$image->name)){
+			            $des_image[$des->id] = $image->name;
+			        }else{
+			           	$des_image[$des->id] = 'recipe.png';
+			        }
+				}
+			}
+		}
+
+		foreach ($refData as $ref) {
+			$count = count($ref->MenuCategories);
+			if($count > 0){
+				$category[$ref->id] = $ref->MenuCategories;
+			}else{
+				$category[$ref->id] = '';
+			}
+			$count = count($ref->Images);
+			if($count < 1){
+				$ref_image[$ref->id] = 'recipe.png';
+			}else{
+				foreach($ref->Images as $image){
+			        if(file_exists('uploads/'.$image->name)){
+			            $ref_image[$ref->id] = $image->name;
+			        }else{
+			           	$ref_image[$ref->id] = 'recipe.png';
+			        }
+				}
+			}
+		}
 		
 
 		return View::make('public.menu')->with(array(
@@ -77,6 +143,10 @@ class MenuController  extends BaseController {
 			'savImage' => $sav_image,
 			'snaData' => $snaData,
 			'snaImage' => $sna_image,
+			'desData' => $desData,
+			'desImage' => $des_image,
+			'refData' => $refData,
+			'refImage' => $ref_image,
 			'category' => $category,
 			)
 		);

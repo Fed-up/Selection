@@ -99,6 +99,15 @@
 
 .section__menu__heading{
      /*margin-left: 8rem;*/
-    padding: 3rem 0;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
     font-size: 22px;
+    text-align: center;
+    @media #{$medium-up}{
+      text-align: left;
+      padding-left: 0.2rem;
+    }
+    @media #{$xlarge-up}{
+      padding-left: 0rem;
+    }
 }

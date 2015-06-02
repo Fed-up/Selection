@@ -42,7 +42,7 @@ Route::filter('auth', function()
         if (!Auth::User()->admin == 1){
         	return Redirect::guest('/');
        	}else{
-       		// return View::make('admin.index');
+       		return View::make('admin.index');
        	}
     }
 });

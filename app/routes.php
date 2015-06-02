@@ -60,8 +60,6 @@ Route::post('signup', 'UserProfileController@postAddUser');
 Route::post('/', 'HomeController@postAddUser');
 
 
-
-
 Route::group(array('before' => 'profile'), function() {
 	Route::get('profile', 'ProfileController@getProfile');
 	Route::get('profile/events', 'ProfileEventsController@getProfileEvents');
@@ -94,7 +92,7 @@ Route::group(array('before' => 'auth'), function() {
 	Route::get('admin/user/managers/edit', 'Admin_UserController@getEditManagers');
 	Route::get('admin/user/members', 'Admin_UserController@getMembers');
 	Route::get('admin/user/members/add', 'Admin_UserController@getAddMembers');	
-});
+
 	//Cafe Menu
 	Route::get('admin/menu/menu', 'Admin_MenuController@getMenu');
 	Route::get('admin/menu/savoury/{id}', 'Admin_MenuController@getSavoury');
@@ -201,7 +199,7 @@ Route::group(array('before' => 'auth'), function() {
 	Route::get('admin/website/allrecipes', 'Admin_RecipesController@getAllRecipes');	
 	Route::get('admin/website/allrecipes/active/{id}', 'Admin_RecipesController@getAllActiveRecipes');
 	Route::get('admin/menu/recipes/confirmdelete/{id}', 'Admin_RecipesController@getConfirmDeleteRecipes');
-	
+});	
 	
 	
 	// Route::post('admin/upload', 'Admin_AdminController@postUpload');
