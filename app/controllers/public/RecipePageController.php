@@ -5,7 +5,7 @@ class RecipePageController  extends BaseController {
 			if(Auth::user()){
 				$user = Auth::user();
 				$user_id = $user->id;
-				if($user->user_type == 'B2B'){
+				// if(auth::check()){
 					$sales_data = SalesData::where('menu_recipe_id', '=', $id)->get();
 					$sales_count = count($sales_data);
 					if($sales_count == 0){
@@ -25,10 +25,10 @@ class RecipePageController  extends BaseController {
 						}
 					}
 					
-				}else{
-					$sales_data = 0;
-					$sales_count = 0;
-				}
+				// }else{
+				// 	$sales_data = 0;
+				// 	$sales_count = 0;
+				// }
 			}else{
 				$user_id = 0;
 				$sales_count = 0;
@@ -37,18 +37,6 @@ class RecipePageController  extends BaseController {
 
 
 			$rData = MenuRecipes::where('id', '=', $id) 
-				->with(array('MenuCategories' => function($query) use ($id)
-				{
-					$query->orderBy(DB::raw('RAND()'))
-						->with(array('menuRecipes' => function($query) use ($id)
-						{
-							$query->where('menu_recipes.selection_active', '=', 1)->where('menu_recipes.id', '!=', $id)
-								->with(array('Images' => function($query)
-								{
-									$query->where('ordering', '=', 0)->where('section', '=', 'RECIPE');
-								}));
-						}));
-				}))
 				->with(array('MenuRecipesFacts' => function($query){
 					$query->orderBy('menu_recipes_facts.ordering','ASC');
 				}))
@@ -72,41 +60,7 @@ class RecipePageController  extends BaseController {
 				}))
 			->orderBy(DB::raw('RAND()'))->where('selection_active', '=', 1)->take(3)->get();
 
-			$exrData = MenuRecipes::where('id', '=', $id)
-				->with(array('MenuCategories' => function($query) use ($id)
-				{
-					$query->orderBy(DB::raw('RAND()'))
-						->with(array('menuRecipes' => function($query) use ($id)
-						{
-							$query->where('menu_recipes.selection_active', '=', 1)->where('menu_recipes.id', '!=', $id)
-								->with(array('Images' => function($query)
-								{
-									$query->where('ordering', '=', 0)->where('section', '=', 'RECIPE');
-								}));
-						}));
-				}))
-				->with(array('MenuRecipesFacts' => function($query){
-					$query->orderBy('menu_recipes_facts.ordering','ASC');
-				}))
-				->with(array('MenuRecipesIngredients' => function($query){
-					$query->where('menu_recipes_ingredients.active', '=', 1)
-						->with('MenuIngredients')
-						->with('Metric');
-				}))
-				->with(array('MenuRecipesMethods' => function($query){
-					$query->orderBy('menu_recipes_methods.ordering','ASC');
-				}))
-				->with(array('MenuRecipesExtras' => function($query){
-					$query->orderBy('menu_recipes_extras.ordering','ASC');
-				}))
-				->with(array('Images' => function($query){
-					$query->orderBy('images.ordering','DESC')->where('section', '=', 'RECIPE');
-				}))
-				->with(array('User' => function($query) use ($user_id){
-					// echo '<pre>'; print_r($user_id); echo '</pre>';exit;
-					$query->where('paid.user_id', '=', $user_id)->where('paid.type', '=', 'RECIPE');
-				}))
-			->orderBy(DB::raw('RAND()'))->where('selection_active', '=', 1)->take(3)->get();
+			
 
 			foreach ($rData as $recipe) {	
 				$count = count($cRecipes = $recipe->MenuCategories->menuRecipes);
