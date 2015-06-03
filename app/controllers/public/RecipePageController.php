@@ -112,6 +112,8 @@ class RecipePageController  extends BaseController {
 			        $selection = "refreshment";
 			        $selection_title = "Fill up on extra Refreshments";
 			    break;
+			    default :
+			    	$selection = 0;
 			}
 
 			// $intolerance = $arrayName = array('' => , );
@@ -136,28 +138,32 @@ class RecipePageController  extends BaseController {
 		}
 
 		// echo '<pre>q'; print_r($intolerance); echo '</pre>';exit;
+		if($selection != 0){
+			$sData = MenuRecipes::where($selection, '=', 1)
+			->with(array('Images' => function($query){
+					$query->orderBy('images.ordering','DESC')->where('section', '=', 'RECIPE');
+				}))
+			->orderBy(DB::raw('RAND()'))->where('selection_active', '=', 1)->take(6)->get();
 
-		$sData = MenuRecipes::where($selection, '=', 1)
-		->with(array('Images' => function($query){
-				$query->orderBy('images.ordering','DESC')->where('section', '=', 'RECIPE');
-			}))
-		->orderBy(DB::raw('RAND()'))->where('selection_active', '=', 1)->take(6)->get();
-
-		foreach ($sData as $sRecipe) {
-			$count = count($sRecipe->Images);
-			if($count < 1){
-				$sRecipe_image[$sRecipe->id] = 'recipe.png';
-			}else{
-				foreach($sRecipe->Images as $image){
-			        if(file_exists('uploads/'.$image->name)){
-			            $sRecipe_image[$sRecipe->id] = $image->name;
-			        }else{
-			           	$sRecipe_image[$sRecipe->id] = 'recipe.png';
-			        }
+			foreach ($sData as $sRecipe) {
+				$count = count($sRecipe->Images);
+				if($count < 1){
+					$sRecipe_image[$sRecipe->id] = 'recipe.png';
+				}else{
+					foreach($sRecipe->Images as $image){
+				        if(file_exists('uploads/'.$image->name)){
+				            $sRecipe_image[$sRecipe->id] = $image->name;
+				        }else{
+				           	$sRecipe_image[$sRecipe->id] = 'recipe.png';
+				        }
+					}
 				}
 			}
+		}else{
+			$selection_title = 0;
+			$sData = 0;
+			$sRecipe_image = 0;
 		}
-
 		// echo '<pre>'; print_r($sales_data); echo '</pre>';exit;
 
 		

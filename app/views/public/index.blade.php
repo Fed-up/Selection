@@ -257,18 +257,20 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
             </article>         
         </section>
-        <div class=" section__white--homepage"> 
-            <section class="row ">
-                <p class="section__heading instagram__feed">Instagram Feed</p>
-                @foreach($insta_array['data'] as $image)
-                <a href="https://instagram.com/sonaughtybutnice" class="columns small-4 large-2 end">
-                    <div class="image-box">
-                        <img src="{{$image['images']['low_resolution']['url']}}"> </img>    
-                    </div>
-                </a>
-                @endforeach
-            </section>
-        </div>
+        @if(!empty($insta_array))
+            <div class=" section__white--homepage"> 
+                <section class="row ">
+                    <p class="section__heading instagram__feed">Instagram Feed</p>
+                    @foreach($insta_array['data'] as $image)
+                    <a href="https://instagram.com/sonaughtybutnice" class="columns small-4 large-2 end">
+                        <div class="image-box">
+                            <img src="{{$image['images']['low_resolution']['url']}}"> </img>    
+                        </div>
+                    </a>
+                    @endforeach
+                </section>
+            </div>
+        @endif
         <section id="fs" class="section__facebook">
             <!-- <img src="/images/paws/s2leaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf1"> -->
             <a id="fl" href="https://www.facebook.com/pages/Time-4-Paws/341349089397253?fref=ts" class="facebook__link">

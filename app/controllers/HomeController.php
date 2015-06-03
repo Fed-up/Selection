@@ -15,6 +15,8 @@ class HomeController extends BaseController {
 		$token = "94698d5b9b00463481a789a88fd89195";
 		$insta_url = 'https://api.instagram.com/v1/tags/sonaughtybutnice/media/recent?client_id='.$token.'&count=12';
 
+
+
 		// $insta_json = file_get_contents($insta_url);
 		// $insta_array = json_decode($insta_json, $true);
 
@@ -36,6 +38,11 @@ class HomeController extends BaseController {
 		// foreach($insta_array['data'] as $image){
 		// 	echo '<pre>'; print_r($image['images']['low_resolution']['url']); echo '</pre>'; 	
 		// }
+
+		// if(empty($insta_array)){
+		// 	echo '<pre>'; print_r($token); echo '</pre>'; exit;	
+		// }
+		
 
 		return View::make('public.index')
 		->with(array(

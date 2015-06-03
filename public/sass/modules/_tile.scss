@@ -96,22 +96,22 @@
 }
 
 .tile__title--inner{
-    @media #{$small-only} {
-        display: none;
-    }
-    @media #{$medium-up} {
-        position: absolute;
-        text-align: center;
-        top: 0rem;
-        left: 0.1rem;
-        right: 0.1rem;
-        bottom: 0.2rem;
-        /*background-color: #e0e0e0;*/
-        /*opacity: 0.5;*/
-        color: transparent;
-        font-size: 22px;
-        padding-top: 1rem;
-    }
+  @media #{$small-only} {
+      display: none;
+  }
+  @media #{$medium-up} {
+      position: absolute;
+      text-align: center;
+      top: 0rem;
+      left: 0.1rem;
+      right: 0.1rem;
+      bottom: 0.2rem;
+      /*background-color: #e0e0e0;*/
+      /*opacity: 0.5;*/
+      color: transparent;
+      font-size: 22px;
+      padding-top: 1rem;
+  }
 }
 
 .tile__title--inner:hover{

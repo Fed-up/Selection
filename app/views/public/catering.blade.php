@@ -135,26 +135,22 @@
                         @endif
                         @foreach($cData as $index=>$package)
                         <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
-                            <article class="content-box">
-                                <div class="row collapse">
-
-                                    
-                                    <a href="/package/{{$package->id}}" class="columns small-4 medium-12 end">
+                          <article class="content-box">
+                              <div class="row collapse" id="recipe__row">                                   
+                                  <a href="/package/{{$package->id}}" class="columns small-4 medium-12 tile__title end">
+                                      <span class="tile__title--inner">{{$package->name}}<br/><span class="tile__add--inner">{{$package->quantity}} pieces</span></span>
                                       <img src="/uploads/{{$catering_image[$package->id]}}" />
-                                    </a>
-                                    
-
-                                    <section class="columns small-8 medium-12">
-                                        <div class="content-box__copy">
-                                            <a href="/package/{{$package->id}}" class="content-box__copy__inner">
-                                                <h5 class="content-box__title">{{$package->name}}</h5>
-                                                <p class="content-box__summary--display">{{$package->quantity}} pieces</p>
-                                            </a>
-                                            
-                                        </div>
-                                    </section>
-                                </div>
-                            </article>
+                                  </a>
+                                  <section class="columns small-8 medium-12 content-box__copy--wrapper">
+                                      <div class="content-box__copy">
+                                          <a href="/package/{{$package->id}}" class="content-box__copy__inner--recipe">
+                                            <h5 class="content-box__title">{{$package->name}}</h5>
+                                            <p class="content-box__summary--display content-box__title">{{$package->quantity}} pieces</p> 
+                                          </a> 
+                                      </div> 
+                                  </section> 
+                              </div>
+                          </article>
                         </div>
                         @endforeach
                     </div>
