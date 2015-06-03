@@ -2,7 +2,7 @@
 class Admin_MenuController extends BaseController{
 
 	public function getMenu(){
-		$recipes = MenuRecipes::where('selection_active', '!=', 9)->orderBy('name','ASC')->get();
+		$recipes = MenuRecipes::where('selection_active', '=', 1)->orderBy('name','ASC')->get();
 		$savoury = MenuRecipes::where('savoury', '=', 1)->orderBy('name','ASC')->get();
 		$snack = MenuRecipes::where('snack', '=', 1)->orderBy('name','ASC')->get();
 		$dessert = MenuRecipes::where('dessert', '=', 1)->orderBy('name','ASC')->get();
@@ -27,7 +27,7 @@ class Admin_MenuController extends BaseController{
 		$data = MenuRecipes::findOrFail($id);
 		$data->savoury  = ($data->savoury == 0) ? 1 : 0;
 		$data->save();
-		$recipes = MenuRecipes::where('selection_active', '!=', 9)->orderBy('name','ASC')->get();
+		$recipes = MenuRecipes::where('selection_active', '=', 1)->orderBy('name','ASC')->get();
 		$savoury = MenuRecipes::where('savoury', '=', 1)->orderBy('name','ASC')->get();
 		$snack = MenuRecipes::where('snack', '=', 1)->orderBy('name','ASC')->get();
 		$dessert = MenuRecipes::where('dessert', '=', 1)->orderBy('name','ASC')->get();
@@ -52,7 +52,7 @@ class Admin_MenuController extends BaseController{
 		$data = MenuRecipes::findOrFail($id);
 		$data->snack  = ($data->snack == 0) ? 1 : 0;
 		$data->save();
-		$recipes = MenuRecipes::where('selection_active', '!=', 9)->orderBy('name','ASC')->get();
+		$recipes = MenuRecipes::where('selection_active', '=', 1)->orderBy('name','ASC')->get();
 		$savoury = MenuRecipes::where('savoury', '=', 1)->orderBy('name','ASC')->get();
 		$snack = MenuRecipes::where('snack', '=', 1)->orderBy('name','ASC')->get();
 		$dessert = MenuRecipes::where('dessert', '=', 1)->orderBy('name','ASC')->get();
@@ -77,7 +77,7 @@ class Admin_MenuController extends BaseController{
 		$data = MenuRecipes::findOrFail($id);
 		$data->dessert  = ($data->dessert == 0) ? 1 : 0;
 		$data->save();
-		$recipes = MenuRecipes::where('selection_active', '!=', 9)->orderBy('name','ASC')->get();
+		$recipes = MenuRecipes::where('selection_active', '=', 1)->orderBy('name','ASC')->get();
 		$savoury = MenuRecipes::where('savoury', '=', 1)->orderBy('name','ASC')->get();
 		$snack = MenuRecipes::where('snack', '=', 1)->orderBy('name','ASC')->get();
 		$dessert = MenuRecipes::where('dessert', '=', 1)->orderBy('name','ASC')->get();
@@ -102,7 +102,7 @@ class Admin_MenuController extends BaseController{
 		$data = MenuRecipes::findOrFail($id);
 		$data->refreshment  = ($data->refreshment == 0) ? 1 : 0;
 		$data->save();
-		$recipes = MenuRecipes::where('selection_active', '!=', 9)->orderBy('name','ASC')->get();
+		$recipes = MenuRecipes::where('selection_active', '=', 1)->orderBy('name','ASC')->get();
 		$savoury = MenuRecipes::where('savoury', '=', 1)->orderBy('name','ASC')->get();
 		$snack = MenuRecipes::where('snack', '=', 1)->orderBy('name','ASC')->get();
 		$dessert = MenuRecipes::where('dessert', '=', 1)->orderBy('name','ASC')->get();

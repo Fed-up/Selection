@@ -186,13 +186,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
                     <div class="form-group {{ ($errors->has('fname')) ? 'has-error' : '' ; }} row">
                         {{ Form::label('fname', 'Full Name: ', array('class' => ' form_field_title ')) }}
                         <div class=""> 
-                            {{ Form::text('fname', (isset($input['fname'])? Input::old('fname') : (isset($data->fname)? $data->fname : '' )), array('class' => ($errors->has('fname'))? 'columns small-12 medium-8 input__text input__text--error' : 'columns small-12 medium-8 input__text', 'placeholder' => ($errors->has('fname'))? $errors->first('fname') : '' )) }} 
+                            {{ Form::text('fname', (isset($input['fname'])? Input::old('fname') : (isset($data->fname)? $data->fname : '' )), array('class' => ($errors->has('fname'))? 'columns small-12 medium-8 input__text--home input__text--error' : 'columns small-12 medium-8 input__text--home', 'placeholder' => ($errors->has('fname'))? $errors->first('fname') : '' )) }} 
                         </div>
                     </div>
                     <div class="form-group {{ ($errors->has('email')) ? 'has-error' : '' ; }} row">
                         {{ Form::label('email', 'Email: ', array('class' => ' form_field_title ')) }}
                         <div class="">
-                            {{ Form::text('email', (isset($input['email'])? Input::old('email') : (isset($data->email)? $data->email : '' )), array('class' => ($errors->has('email'))? 'columns small-12 medium-8 input__text input__text--error' : 'columns small-12 medium-8 input__text', 'placeholder' => ($errors->has('email'))? $errors->first('email') : '' )) }}  
+                            {{ Form::text('email', (isset($input['email'])? Input::old('email') : (isset($data->email)? $data->email : '' )), array('class' => ($errors->has('email'))? 'columns small-12 medium-8 input__text--home input__text--error' : 'columns small-12 medium-8 input__text--home', 'placeholder' => ($errors->has('email'))? $errors->first('email') : '' )) }}  
                         </div>
                     </div>  
      

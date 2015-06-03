@@ -4,7 +4,7 @@
     <div class="page">
     @foreach($rData as $recipe)
         <nav class=" subnav subnav--centre" data-tab data-options="deep_linking:true; scroll_to_content: false">
-            <h2 class="content__title--main"><a class="plain__header__link" href="/recipes">{{$recipe->name}}</a></h2>
+            <h2 class="content__title--main"><a class="plain__header__link" href="/menu">{{$recipe->name}}</a></h2>
         </nav>
         <section class="content__page--sub"> 
             <section class="row">
@@ -15,28 +15,26 @@
                 
                 <div class="columns small-3 medium-2 medium-push-6 large-2 large-push-6 xlarge-1 xlarge-push-7">
                     <div class="intolerance__block">
-                        <div class="content__side__icon" ><span class="icon__text"> {{$recipe->length}}</span></div>
-                        <div class="content__side__icon" ><span class="icon__text"> {{$recipe->difficulty}}</span></div>
-                        <div class="content__side__icon" ><span class="icon__text"> {{$recipe->serve}}</span></div>
-                        <div class="content__side__icon" ><span class="icon__text"> {{$recipe->serve}}</span></div>
-                        <div class="content__side__icon" ><span class="icon__text"> {{$recipe->serve}}</span></div>
-                        <div class="content__side__icon" ><span class="icon__text"> {{$recipe->serve}}</span></div>
+                        @foreach($intolerance as $intol)
+                            <div class="content__side__icon" ><span class="icon__text"> {{$intol}}</span></div>
+                        @endforeach
                     </div> 
                 </div>
                 <div class="columns small-12 medium-6 medium-pull-2 large-6 large-pull-2 xlarge-7 xlarge-pull-1">
-                    <section class="section__box section__box--fresh-fact">
+                    <section class="section__box section__summary">
                             {{$recipe->summary}}
                     </section> 
                 </div>
 
                 <div class="columns small-12 medium-12 medium-push-12 large-6 large-pull-2 xlarge-7 xlarge-pull-1">
+                    
+                    <section class="section__box section__ingredients">
                     <h3 class="content__title">The Ingredients</h3> 
-                    <section class="section__box section__box--nutrition-panel">
                         @foreach($rIngredients as $index=>$ingredient)
                             @if($ingredient->MenuIngredients->active == 1)
-                                <a class="content-link" href="/ingredient/{{$ingredient->MenuIngredients->id}}">
-                                    {{$ingredient->MenuIngredients->name}},
-                                </a>
+                                <!-- <span class="ingredient__link"> href="/ingredient/{{$ingredient->MenuIngredients->id}} -->
+                                    - {{$ingredient->MenuIngredients->name}}
+                                <!-- </span> -->
                             @endif
                         @endforeach
                     </section>
@@ -46,11 +44,7 @@
 
 
         	<section class="row">
-                <div class="columns small-12 medium-6">
-                	<section class="section__box">
-                        <p> Nutritional Panel is coming</p>
-                    </section>	
-                </div>
+                
                 <div class="columns small-12 medium-6 ">
                     
 
@@ -59,7 +53,7 @@
                         @if(auth::check())
                             
                                 @if($sales_count == 0)
-                                    <p>This product is still being perfected, please email us directly if you are interested in it, as we want to accomodate to your needs promptly.<br/>Regards,<br/> So Naughty But Nice</p>
+                                    <p>This product is still being perfected, please email us directly if you are interested in it, as we want to accomodate to your needs promptly.<br/>Regards,<br/>Selection Cafe</p>
                                 @else
                                     <p><span class="content-link">Ideal amount:</span>&nbsp; &nbsp; {{$sales_data[0]->sales_amount}}</p>
                                     <p><span class="content-link">Ideal grams:</span>&nbsp; &nbsp; {{$sales_data[0]->total_recipe_grams}}g</p>
@@ -78,10 +72,26 @@
                         
                     </section>  	 
                 </div> 
+                <div class="columns small-12 medium-6">
+                    <section class="section__box">
+                        <!-- <p> Nutritional Panel is coming</p> -->
+                        @if(Auth::check())
+                            <h3 class="content__title">Little Extras</h3>
+                            @foreach($recipe->MenuRecipesExtras as $rExtras)
+                                <p>
+                                    {{$rExtras->description}}
+                                </p><br/>
+                            @endforeach 
+                        @else
+                            <p>Please <a class="content-link" href="/login">Login</a> or <a class="content-link" href="/signup">create an account</a> to view more info about this menu item</p>
+                        @endif
+                    </section>  
+
+                </div>
             </section>
 
 
-            <section class="row"> 
+            <!-- <section class="row"> 
         
                 @foreach($recipe->Images as $image)
                     
@@ -93,60 +103,52 @@
                      
                 @endforeach
                 
-            </section>
-        
-            @if(Auth::check())
-                @if(Auth::user()->user_type != 'B2B')
-                    @if($recipe->exclusive != 1)
-                        <section class="row">
-                            <div class="columns small-12 "> 
-                                <div class=" ">
-                                    <h3 class="content__title">Little Extras</h3>
-                                    <section class="section__box">
-                                        @if (Auth::check())
-                                            @foreach($recipe->MenuRecipesExtras as $rExtras)
-                                                <p>
-                                                    {{$rExtras->description}}
-                                                </p><br/>
-                                            @endforeach 
-                                        @else
-                                            <p>Please <a class="content-link" href="/login">Login</a> or <a class="content-link" href="/signup">create an account</a> to view Little Extras</p>
-                                        @endif 
-                                    </section>
-                                </div>         
-                            </div>            
+            </section> -->
+            <!-- <section class="row">
+                    <div class="columns small-12 "> 
+                    @if(Auth::check())
+                
+                        <h3 class="content__title">Little Extras</h3>
+                        <section class="section__box">
+                            @foreach($recipe->MenuRecipesExtras as $rExtras)
+                                <p>
+                                    {{$rExtras->description}}
+                                </p><br/>
+                            @endforeach 
+                        </section>
+                    @else
+                        <section class="section__box">
+                            <p>Please <a class="content-link" href="/login">Login</a> or <a class="content-link" href="/signup">create an account</a> to view more info about this menu item</p>
                         </section>
                     @endif
-                @endif
-            @else
-                <p>Please <a class="content-link" href="/login">Login</a> or <a class="content-link" href="/signup">create an account</a> to view Little Extras</p>
-            @endif
-   
-            <section class="row content-boxes__wrapper">
-                <h5 class="content__title">{{$recipe->name}}'s cousins</h5>
-                @foreach($savData as $index=>$recipe)
+                </div>            
+            </section> -->
+            <a href="/menu"><h3 class="content__title">{{$selection_title}}</h3></a>
+            <div class="row content-boxes__wrapper content">
+                <section class="row cousin__selection">
+                    @foreach($sData as $recipe)
                         <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
                             <article class="content-box">
                                 <div class="row collapse" id="recipe__row">                                   
                                     <a href="/recipe/{{$recipe->id}}" class="columns small-4 medium-12 tile__title end">
                                         <span class="tile__title--inner">{{$recipe->name}}</span>
-                                        <img src="/uploads/{{ $savImage[$recipe->id] }}" />
+                                        <img src="/uploads/{{ $sRecipe_image[$recipe->id] }}" />
                                     </a>
                                     <section class="columns small-8 medium-12 content-box__copy--wrapper">
                                         <div class="content-box__copy">
                                             <a href="/recipe/{{$recipe->id}}" class="content-box__copy__inner--recipe"><h5 class="content-box__title">{{$recipe->name}}</h5></a>
-                                            <!-- @if(!empty($category[$recipe->id]))
-                                                <a href="/collection/{{$category[$recipe->id]->id}}" class="content-box__tag">{{$category[$recipe->id]->name}}</a>
-                                            @else
-                                                <a href="/collections" class="content-box__tag">Collections</a>
-                                            @endif -->
                                         </div>
                                     </section>
                                 </div>
                             </article>
                         </div>
-                    @endforeach 
-            </section>
+                    @endforeach
+                </section>
+            </div>
+
+
+
+            <div class="footer__push"></div> 
         </section>
     @endforeach  
   	</div><!--End Band Content-->

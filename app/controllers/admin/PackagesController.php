@@ -10,7 +10,7 @@ class Admin_PackagesController extends BaseController {
 	}
 	
 	public function getAddPackages(){
-		$recipes = MenuRecipes::orderBy('name','ASC')->where('active', '=', '1')->get();
+		$recipes = MenuRecipes::orderBy('name','ASC')->where('selection_active', '=', '1')->get();
 
 		$mRep = array();
 		$mRep[0]	= '- Select Recipe -';	
@@ -147,7 +147,7 @@ class Admin_PackagesController extends BaseController {
 		$data = Catering::findOrFail($id);
 		$catering_images = $data->Images()->orderBy('ordering','ASC')->where('section', '=', 'CATERING')->get();
 
-		$recipes = MenuRecipes::orderBy('name','ASC')->where('active', '=', '1')
+		$recipes = MenuRecipes::orderBy('name','ASC')->where('selection_active', '=', '1')
 			->with(array('Catering' => function($query) use ($id){
 					$query->where('catering_recipes.catering_id', '=', $id);
 				}))

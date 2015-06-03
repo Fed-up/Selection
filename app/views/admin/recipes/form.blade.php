@@ -638,9 +638,9 @@
         
         
         <div class="form-group">
-            {{ Form::label('active', 'Active: ', array('class' => 'col-sm-2 control-label')) }}
+            {{ Form::label('selection_active', 'Active: ', array('class' => 'col-sm-2 control-label')) }}
             <div class="col-sm-10">
-              {{ Form::checkbox('active', 1, (isset($input['active'])? Input::old('active') : (isset($data->active)? $data->active : '' )), array('class' => '')) }}
+              {{ Form::checkbox('selection_active', 1, (isset($input['selection_active'])? Input::old('selection_active') : (isset($data->selection_active)? $data->selection_active : '' )), array('class' => '')) }}
             </div>
         </div>  
         <div class="form-group">

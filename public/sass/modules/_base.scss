@@ -118,14 +118,28 @@ ul, li {
 .content-link {
   color: #000;
   text-decoration: none;
-  font-weight: bold; }
+  font-weight: bold; 
+}
 
 .content-link:hover {
-  color: $text;
-  border-bottom: 1px solid #ff5531; }
+    color: $text;
+    border-bottom: 1px solid #ff5531; 
+}
+
+.ingredient__link{
+    color: $text;
+    text-decoration: none;
+}
+
+.ingredient__link:hover {
+    color: $text;
+    border-bottom: 1px solid #ff5531; 
+    // font-weight: bold; 
+}
 
 .footer__push{
-  height: 33rem;
+  height: 45rem;
+  background-color: $white;
 }
 
 @media only screen {
@@ -144,8 +158,9 @@ ul, li {
 
 .content__title {
   text-align: center;
-  font-family: paws_heading;
+  font-family: base_font;
   padding: 0.5rem;
+  font-size:22px;
   /*border-bottom: 1px solid $main_color;*/
   margin-top: 0.5rem;
   /*font-weight: bold;*/

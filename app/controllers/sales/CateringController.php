@@ -146,7 +146,7 @@ class CateringController  extends BaseController {
 				}
 			}
 		}
-		$recipes = MenuRecipes::orderBy('name','ASC')->where('active', '=', '1')->get();
+		$recipes = MenuRecipes::orderBy('name','ASC')->where('selection_active', '=', '1')->get();
 		$mRep = array();
 		$mRep[0]	= '- Select Recipe -';	
 		foreach ($recipes as $recipe) {
@@ -362,11 +362,11 @@ class CateringController  extends BaseController {
 		    );
 
 			Mail::send('sales.package_email', $messageData, function($message) use ($email, $pData){
-				$message->to( $email )->cc('sales@sonaughtybutnice.com')->subject('Confirmation, We recieved your catering enquiry - '.$pData[0]->name);
+				$message->to( $email )->cc('hello@selectioncafe.com.au')->subject('Confirmation, We recieved your catering enquiry - '.$pData[0]->name);
 			}); //->cc('sales@sonaughtybutnice.com')
 
 			
-			$confirmation_message = "A confirmation email has been sent to So Naughty but Nice, we will be in contact with you as soon as possible! =)";
+			$confirmation_message = "A confirmation email has been sent to Selection Cafe, we will be in contact with you as soon as possible! =)";
 			return View::make('public.catering')->with(array(
 				'cData' => $cData,
 				'catering_image' => $package_image,
@@ -533,7 +533,7 @@ class CateringController  extends BaseController {
 			    );
 
 				Mail::send('sales.package_email', $messageData, function($message) use ($email, $pData){
-					$message->to( $email )->cc('sales@sonaughtybutnice.com')->subject('Confirmation, We recieved your catering enquiry - '.$pData[0]->name);
+					$message->to( $email )->cc('hello@selectioncafe.com.au')->subject('Confirmation, We recieved your catering enquiry - '.$pData[0]->name);
 				}); //->cc('sales@sonaughtybutnice.com')
 			}else{
 				$messageData = array(
@@ -545,17 +545,17 @@ class CateringController  extends BaseController {
 			    );
 
 				Mail::send('sales.catering_email', $messageData, function($message) use ($email){
-					$message->to( $email )->cc('sales@sonaughtybutnice.com')->subject('Catering Confirmation, We recieved your catering enquiry!');
+					$message->to( $email )->cc('hello@selectioncafe.com.au')->subject('Catering Confirmation, We recieved your catering enquiry!');
 				}); //->cc('sales@sonaughtybutnice.com')
 
 				 return Redirect::action('CateringController@getCatering')
-				->with('message', 'A confirmation email has been sent to So Naughty but Nice, we will be in contact with you as soon as possible! =)');
+				->with('message', 'A confirmation email has been sent to Selection Cafe, we will be in contact with you as soon as possible! =)');
 
 
 			}
 
 		    return Redirect::action('CateringController@getPackage', array($package_id))
-			->with('message', 'A confirmation email has been sent to So Naughty but Nice, we will be in contact with you as soon as possible! =)');
+			->with('message', 'A confirmation email has been sent to Selection Cafe, we will be in contact with you as soon as possible! =)');
 
 		    
 		    // return Redirect::to('package/'$package_id);

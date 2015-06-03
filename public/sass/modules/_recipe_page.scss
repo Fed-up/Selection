@@ -1,8 +1,8 @@
   
 
 .content__side__icon {
-    color: $text;
-    border: 1px solid $main_light;
+    color: #999;
+    border: 1px solid #999;
     background-color: transparent;
     text-align: center;
     font-size: 1rem;
@@ -48,7 +48,22 @@
 }
 
 .intolerance__block{
-    height: 12.1rem;
-    background-color: orange;
-    overflow: hidden;
+    // height: 12.1rem;
+    // background-color: orange;
+    // overflow: hidden;
+}
+
+section.row.cousin__selection{
+    @media #{$medium-up}{
+        margin: 0.625rem;
+    }
+}
+
+.section__summary{
+    font-style: italic;
+    border: 0;
+}
+
+.section__ingredients{
+    border: 1px solid $main_light;
 }

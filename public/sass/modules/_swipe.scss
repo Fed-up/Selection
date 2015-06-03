@@ -25,10 +25,26 @@ body.showPanel .content-slot {
 
 
 .navTab_active {
-  background-color: $menu_dark;
-  color: #fff;
-  width: 100%;
-  // margin: 0.1rem 0; 
+    color: $white;
+    display: block;
+    background-color: $main_light;
+    width: 100%;
+    padding-left: 1rem;
+    // margin: 0.1rem 0;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: left;
+    font-size: 1.125rem; 
+    border-bottom: #343434 1px solid;
+    font-weight: 700;
+}
+
+.navTab_active:hover {
+  background-color: $main_light; 
+  color: $white;
+  margin-top: -0.1rem;
+  border-top: #191919 1px solid;
+  border-bottom: #191919 1px solid;
 }
 
 .side--nav {

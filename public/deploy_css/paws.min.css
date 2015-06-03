@@ -2835,7 +2835,9 @@ ul, li {
 
 /* line 109, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .footer__push {
-  height: 33rem; }
+  height: 33rem; 
+  background-color: #fff;
+}
 
 @media only screen {
   /* line 114, C:/GitHub/Selection/public/sass/modules/_base.scss */
