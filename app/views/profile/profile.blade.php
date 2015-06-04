@@ -19,22 +19,22 @@
 					<section class="row">
 						@foreach($rData as $recipe)
 				        <div class="columns small-6 large-3">
-				            <a href="/recipes#myrecipes" class="profile__image__link">
+				            <a href="/recipes" class="profile__image__link">
 				                <img class="top-right profile__image" src="/uploads/{{ $rImage[$recipe->id] }}">
-				                <p class="profile__image__link__name">Nutrients</p>
+				                <p class="profile__image__link__name">All Catering Options</p>
 				            </a>
 				        </div>
 				        @endforeach
 
 				        @foreach($collections as $index=>$collection)
 				        <div class="columns small-6 large-3">
-				            <a href="/collections#mycollections" class="profile__image__link">
+				            <a href="menu" class="profile__image__link">
 				            	@if($collection_check == 1)
 				                	<img class="bottom-right profile__image" src="/uploads/{{ $cImage[$collection->id] }}">  
 				                @else
 				                	<img class="bottom-right profile__image" src="/uploads/{{ $cImage }}">  
 				                @endif 
-				                <p class="profile__image__link__name">Collections</p>
+				                <p class="profile__image__link__name">Today's Menu</p>
 				            </a>
 				        </div>
 				        @endforeach
@@ -62,7 +62,7 @@
 				        <div class="columns small-6 large-3">
 				            <a href="/catering#fndtn-custom" class="profile__image__link">
 				                <img class="bottom-left profile__image" src="/uploads/{{ $pImage[$catering->id] }}">
-								<p class="profile__image__link__name">Catering</p>
+								<p class="profile__image__link__name">Order Catering</p>
 				            </a>
 				        </div>
 				        @endforeach
@@ -70,13 +70,13 @@
 					</section>
 					
 					<section class="row ">
-						<div class="columns small-12 large-3 large-push-6">
+						<!-- <div class="columns small-12 large-3 large-push-6">
 							<a class="profile__account__link" href="/events">Up Coming Events</a>		
-						</div>
+						</div> -->
 						<!-- <div class="columns small-12 medium-6 large-3 large-push-3">
 							<a class="profile__account__link" href="/account">Account Settings</a>
 						</div> -->
-						<div class="columns small-12 medium-6 large-3">
+						<div class="columns small-12 medium-6 medium-push-6 large-3 large-push-9 end">
 							<a class="profile__account__link" href="/logout">Logout</a>
 						</div>
 					</section>

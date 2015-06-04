@@ -5,7 +5,7 @@
 
 @section('content')   
 <div class="band page">
-	<nav class=" subnav subnav--centre" data-tab data-options="deep_linking:true; scroll_to_content: false">
+	<nav class=" subnav subnav--centre">
 	    <h2 class="content__title--main"><a class="plain__header__link" href="/">Hello!! Get excited, healthy desserts are near..</a></h2>
 	</nav>
 	<div class="container row"> <!--Sign up section-->
@@ -74,8 +74,9 @@
 					</ul>
 				</div>
 			</section>
+			<div class="footer__push"></div>
 		</section>
 	</div>
-</div>
+</div> 
 
 @stop

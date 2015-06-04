@@ -3,7 +3,7 @@
 @section('content')
     <div class="page">
     @foreach($rData as $recipe)
-        <nav class=" subnav subnav--centre" data-tab data-options="deep_linking:true; scroll_to_content: false">
+        <nav class=" subnav subnav--centre">
             <h2 class="content__title--main"><a class="plain__header__link" href="/menu">{{$recipe->name}}</a></h2>
         </nav>
         <section class="content__page--sub"> 

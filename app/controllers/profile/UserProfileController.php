@@ -12,43 +12,32 @@ class UserProfileController extends BaseController {
 	}
 	
 	public function postAddUser(){
-		
-		$input = Input::all();	
-
-		$fname = $input['fname'];
-		// $email = $input['email'];
-
+		$input = Input::all();
+		// echo '<pre>'; print_r($input); echo '</pre>'; 	exit;
 		$rules = array(
 			'fname' => 'required',
-			'email' => 'required|email|unique:users',
+			'email' => 'required|email|unique:users,email,'.Input::get('id'),
+			'password' => 'required|min:6',
+			'password_match' => 'required|min:6|same:password',
 		);
 
+
+		
 		$validator = Validator::make($input, $rules);
 		
 		if($validator->fails()){
-
-			// get the error messages from the validator
-        	$issue = $validator->messages();
-        	
-   //      	if ( ! empty( $errors ) ) {
-			//     foreach ( $errors->all() as $error ) {
-			//         echo '<div class="error">' . $errors->first() . '</div>';
-			//     }
-			// }exit;
-
-        	// echo '<pre>'; print_r($messages); echo '</pre>'; 	exit;
-
-			return Redirect::back()	
-				->withInput($input)
-				->withErrors($validator);
-				
-
+			return Redirect::back()
+				->withErrors($validator)
+				->withInput($input);
 		}else{
+
+			// echo '<pre>'; print_r($input); echo '</pre>'; 	exit;
 
 			$data	= new User();
 			//echo '<pre>'; print_r($input); echo '</pre>'; 	exit;
 			$data->fname 	= Input::get('fname');
 			$data->email 	= Input::get('email');
+			$data->password 	= Hash::make(Input::get('password'));
 			$data->user_type 	= 'GUEST';
 			$data->active  = 1;	
 			$data->save();
@@ -56,8 +45,8 @@ class UserProfileController extends BaseController {
 		}; 
 
 		//$data = User::all();	
-		return Redirect::action('HomeController@getIndex');
-		//->with(array('data' => $data));
+		return Redirect::action('ProfileController@getProfile');
+			//->with(array('data' => $data));
 	}
 
 

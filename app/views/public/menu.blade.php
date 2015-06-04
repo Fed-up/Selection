@@ -4,8 +4,8 @@
 
 @section('content')
     <section class="page">  
-        <nav class=" subnav subnav--centre" data-tab data-options="deep_linking:true; scroll_to_content: false">
-            <h2 class="content__title--main"><a class="plain__header__link" href="/">Today's Menu</a></h2>
+        <nav class=" subnav subnav--centre">
+            <h2 class="content__title--main"><a class="plain__header__link" href="/menu">Today's Menu</a></h2>
         </nav>
 
         <section class="content__page--sub"> 

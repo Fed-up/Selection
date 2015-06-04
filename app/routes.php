@@ -16,6 +16,9 @@ Route::get('geogram', function(){
 
 Route::get('square', 'SquareController@getSquare');
 
+//About Us
+Route::get('aboutus', 'HomeController@getAbout');
+
 //Menu
 Route::get('menu', 'MenuController@getMenu');
 

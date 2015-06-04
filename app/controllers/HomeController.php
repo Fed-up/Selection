@@ -97,6 +97,9 @@ class HomeController extends BaseController {
 			->with(array('registered' => $registered));	
 	}
 
+	public function getAbout(){
+		return View::make('public.about');
+	}
 
 	public function getMaps(){
 
