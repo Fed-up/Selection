@@ -13,7 +13,7 @@ class ProfileController extends BaseController {
 		$cData = MenuCategories::orderBy(DB::raw('RAND()'))->where('active', '=', 1)->take(1)
 			->with(array('menuRecipes' => function($query)
 			{
-				$query->where('menu_recipes.active', '=', 1)
+				$query->where('menu_recipes.selection_active', '=', 1)
 					->with(array('Images' => function($query)
 					{
 						$query->where('ordering', '=', 0)->where('section', '=', 'RECIPE');
@@ -58,7 +58,7 @@ class ProfileController extends BaseController {
 		// echo '<pre>'; print_r($category_image); echo '</pre>';exit;
 
 		// Recipe
-		$rData = MenuRecipes::orderBy(DB::raw('RAND()'))->where('active', '=', 1)->take(1)
+		$rData = MenuRecipes::orderBy(DB::raw('RAND()'))->where('selection_active', '=', 1)->take(1)
 				->with(array('MenuCategories' => function($query)
 				{
 					$query->where('menu_categories.active', '=', 1);

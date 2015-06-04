@@ -57,20 +57,19 @@ class AuthController extends BaseController {
 				
 				switch (Auth::user()->user_type) {
 					case 'ADMIN':
-						// return Redirect::to('admin');
-						return View::make('admin.index');
+						return Redirect::to('admin');
 						break;
 					case 'MANAGER':
 						return Redirect::to('admin');
 						break;
 					case 'B2B':
-						return $this->_doLogout();
+						return Redirect::to('profile');
 						break;
 					case 'REGISTERED':
-						return $this->_doLogout();
+						return Redirect::to('profile');
 						break;
 					case 'GUEST':
-						return $this->_doLogout();
+						return Redirect::to('profile');
 						break;
 					default:
 						return $this->_doLogout();
