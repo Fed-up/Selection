@@ -7,7 +7,7 @@
 <html>
 	<head>
     	<title><?php echo isset($title) ? $title : "Selection Cafe"; ?></title>  
-      <link rel="shortcut icon" type="image/png" href="images/selection/minitab.png">
+      <link rel="shortcut icon" type="image/png" href="images/selection/minitab1.png">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" > 
       <?php echo $__env->yieldContent('_header'); ?>
       <!-- Dev site css --> 

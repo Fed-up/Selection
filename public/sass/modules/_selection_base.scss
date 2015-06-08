@@ -6,7 +6,7 @@ button:focus {
 }
 
 .video__home{
-	@media #{$small-only} { 
+	@media #{$small-only} {
 		background-color: $main_dark;
 	  	background: transparent url(/images/selection/selection.png) 50% 50% / cover no-repeat ;
 	 	height: 23.5rem;
@@ -14,18 +14,50 @@ button:focus {
 	 	margin-top: -2.5rem; 
 	 	overflow: hidden;
 	 	background-size:cover;  
-  	}
-
-  	@media #{$medium-only} { 
+	}
+	@media #{$medium-only} {
 		background-color: $main_dark;
 		background: transparent url(/images/selection/selection.png) 50% 50% / cover no-repeat ;
-	  	/*background: url(/images/paws/mobiledog.png) no-repeat 0 0; */
-	 	height: 23.5rem;
+	  	// background: url(/images/paws/mobiledog.png) no-repeat 0 0; 
+	 	height: 30rem;
 	 	width: 100%;
 	 	margin-top: -2.5rem; 
 	 	overflow: hidden;
 	 	background-size:cover; 
-  	}   
+	}
+	
+	@media #{$large-up} { 
+		background-color: $main_dark;
+		background: transparent url(/images/selection/selection.png) 50% 50% / cover no-repeat ;
+	  	// background: url(/images/paws/mobiledog.png) no-repeat 0 0; 
+	 	height: 35rem;
+	 	width: 100%;
+	 	margin-top: -2.5rem; 
+	 	overflow: hidden;
+	 	background-size:cover; 
+  	}
+  	@media #{$xlarge-up} { 
+		background-color: $main_dark;
+		background: transparent url(/images/selection/selection.png) 50% 50% / cover no-repeat ;
+	  	// background: url(/images/paws/mobiledog.png) no-repeat 0 0; 
+	 	height: 50rem;
+	 	width: 100%;
+	 	margin-top: -2.5rem; 
+	 	overflow: hidden;
+	 	background-size:cover; 
+  	}
+  	@media #{$xxlarge-up} { 
+		background-color: $main_dark;
+		background: transparent url(/images/selection/selection.png) 50% 50% / cover no-repeat ;
+	  	// background: url(/images/paws/mobiledog.png) no-repeat 0 0; 
+	 	height: 60rem;
+	 	width: 100%;
+	 	margin-top: -2.5rem; 
+	 	overflow: hidden;
+	 	background-size:cover; 
+  	}
+
+		
 } 
 
 
@@ -70,11 +102,11 @@ video#bgvid {
 	/* border: 1px solid #e0e0e0; */
 	color: #fff;
 	@media #{$medium-up} { 
-  		top: 3rem;
+  		top: 7rem;
   	}
 
 	@media #{$large-up} { 
-  		top: 7rem;
+  		top: 9rem;
   	}
 
   	@media #{$xlarge-up} { 
@@ -170,9 +202,9 @@ video#bgvid {
 
 .section__mission{
 	position: relative;
-	font-family: paws_base_font; 
+	font-family: base_font; 
 	font-weight: 100;
-	margin-top: 7rem;
+	margin-top: 2rem;
   	margin-bottom: 5rem;
 	padding-top:3rem;
 	padding-bottom:3rem;
@@ -226,35 +258,73 @@ video#bgvid {
 		padding-right: 0.5rem;
 	}
 }
+.facebook__link{
+	// padding-top: 5rem;
+	// padding-left: 1rem;
+	// padding-right: 1rem;
+	// padding-bottom:5rem;
+	/*text-align: center;*/
+	color: $main_light;
+	@media #{$medium-up} { 
+  		/*padding:5rem;*/
+  		// font-size: 3.1rem;
+  	}
+  	@media #{$large-up} { 
+  		/*padding:5rem;*/
+  		// font-size: 6.2rem;
+  	}
+  	@media #{$xlarge-up} { 
+  		/*padding:5rem;*/
+  		// font-size: 8.3rem;
+  	}
+  	@media #{$xxlarge-up} { 
+  		/*padding:5rem;*/
+  		// font-size: 10rem;
+  	}
+}
 
 .section__facebook{
 	/*position: relative;*/
 	margin: 0rem;
-	font-family: paws_heading;
+	font-family: base_font;
 	// color: #fff;
-	font-size: 2.3rem;
+	font-size: 2rem;
 	background-color: $white;
 	padding-top: 5rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	// padding-left: 1rem;
+	// padding-right: 1rem;
 	padding-bottom:5rem;
 	text-align: center;
 	z-index: -1;
 	@media #{$medium-up} { 
-  		padding:5rem;
-  		font-size: 3.1rem;
+  		padding-left:1rem;
+  		padding-right:1rem;
+  		padding-top: 7.5rem;
+		padding-bottom:7.5rem;
+  		font-size: 2.5rem;
   	}
   	@media #{$large-up} { 
-  		padding:5rem;
-  		font-size: 6.2rem;
+  		padding-left:1rem;
+  		padding-right:1rem;
+  		padding-top: 10rem;
+		padding-bottom:10rem;
+  		font-size: 3.5rem;
   	}
   	@media #{$xlarge-up} { 
-  		padding:5rem;
-  		font-size: 8.3rem;
+  		padding-left:1rem;
+  		padding-right:1rem;
+  		padding-top: 12rem;
+		padding-bottom:12rem;
+  		font-size: 4.5rem;
+  		// font-size: 8.3rem;
   	}
   	@media #{$xxlarge-up} { 
-  		padding:5rem;
-  		font-size: 10rem;
+  		padding-left:1rem;
+  		padding-right:1rem;
+  		padding-top: 14rem;
+		padding-bottom:14rem;
+  		font-size: 6rem;
+  		// font-size: 10rem;
   	}
 }
 
@@ -290,30 +360,7 @@ video#bgvid {
 	font-size: 28px;
 }
 
-.facebook__link{
-	padding-top: 5rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-bottom:5rem;
-	/*text-align: center;*/
-	color: $main_light;
-	@media #{$medium-up} { 
-  		/*padding:5rem;*/
-  		font-size: 3.1rem;
-  	}
-  	@media #{$large-up} { 
-  		/*padding:5rem;*/
-  		font-size: 6.2rem;
-  	}
-  	@media #{$xlarge-up} { 
-  		/*padding:5rem;*/
-  		font-size: 8.3rem;
-  	}
-  	@media #{$xxlarge-up} { 
-  		/*padding:5rem;*/
-  		font-size: 10rem;
-  	}
-}
+
 
 #fs:hover{ background-color: #3b5998; }
 #fs:hover #fl {color: white}
@@ -334,16 +381,16 @@ a.textlink:hover{text-decoration: none; color: $main_dark;}
 }*/
 
 .points{
-	border:1px #343434 solid;
+	// border:1px #343434 solid;
 	height:20rem;
 	// width:100%;
 	padding: 1rem;
-	background-color:$main_dark;
+	// background-color:$main_dark;
 	/*@media #{$small-only} { 
   		margin-top:1rem;
   	}*/
   	@media #{$medium-up} { 
-  		height:14rem;
+  		height:15.5rem;
   		padding: 0rem;
   	}
   	@media #{$large-up} { 
@@ -376,15 +423,23 @@ a.textlink:hover{text-decoration: none; color: $main_dark;}
   	text-align: center;
   	@media #{$medium-up} { 
   		font-size: 20px;
+  		width: 100%; 
+		height: 100%;
   	}
   	@media #{$large-up} { 
   		font-size: 24px;
+  		width: 80%; 
+		height: 80%;
   	}
   	@media #{$xlarge-up} { 
-  		font-size: 28px
+  		font-size: 28px;
+  		width: 80%; 
+		height: 80%;
   	}
   	@media #{$xxlarge-up} { 
   		font-size: 30px;
+  		width: 70%; 
+		height: 70%;
   	}
 }
 

@@ -3140,8 +3140,34 @@ input:focus, select:focus, textarea:focus, button:focus {
   .video__home {
     background-color: #c21e22;
     background: transparent url(/images/selection/selection.png) 50% 50%/cover no-repeat;
-    /*background: url(/images/paws/mobiledog.png) no-repeat 0 0; */
-    height: 23.5rem;
+    height: 30rem;
+    width: 100%;
+    margin-top: -2.5rem;
+    overflow: hidden;
+    background-size: cover; } }
+@media only screen and (min-width:769px) {
+  .video__home {
+    background-color: #c21e22;
+    background: transparent url(/images/selection/selection.png) 50% 50%/cover no-repeat;
+    height: 35rem;
+    width: 100%;
+    margin-top: -2.5rem;
+    overflow: hidden;
+    background-size: cover; } }
+@media only screen and (min-width:961px) {
+  .video__home {
+    background-color: #c21e22;
+    background: transparent url(/images/selection/selection.png) 50% 50%/cover no-repeat;
+    height: 50rem;
+    width: 100%;
+    margin-top: -2.5rem;
+    overflow: hidden;
+    background-size: cover; } }
+@media only screen and (min-width:1351px) {
+  .video__home {
+    background-color: #c21e22;
+    background: transparent url(/images/selection/selection.png) 50% 50%/cover no-repeat;
+    height: 60rem;
     width: 100%;
     margin-top: -2.5rem;
     overflow: hidden;
@@ -3175,7 +3201,7 @@ input:focus, select:focus, textarea:focus, button:focus {
 		display:none;
 	}
 }*/
-/* line 64, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 96, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__white--form {
   position: absolute;
   top: 3.5rem;
@@ -3186,16 +3212,16 @@ input:focus, select:focus, textarea:focus, button:focus {
   color: #fff; }
   @media only screen and (min-width:481px) {
     .section__white--form {
-      top: 3rem; } }
+      top: 7rem; } }
   @media only screen and (min-width:769px) {
     .section__white--form {
-      top: 7rem; } }
+      top: 9rem; } }
   @media only screen and (min-width:961px) {
     .section__white--form {
       top: 15rem;
       /*background-color: green;*/ } }
 
-/* line 87, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 119, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .business_name {
   color: #fa262b;
   font-size: 1.4rem; }
@@ -3212,7 +3238,7 @@ input:focus, select:focus, textarea:focus, button:focus {
     .business_name {
       font-size: 2.1rem; } }
 
-/* line 103, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 135, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .map_location {
   color: #fd5155;
   font-size: 0.9rem; }
@@ -3229,7 +3255,7 @@ input:focus, select:focus, textarea:focus, button:focus {
     .map_location {
       font-size: 1.7rem; } }
 
-/* line 120, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 152, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__heading {
   color: #fd5155;
   font-size: 0.9rem; }
@@ -3246,11 +3272,11 @@ input:focus, select:focus, textarea:focus, button:focus {
     .section__heading {
       font-size: 1.7rem; } }
 
-/* line 137, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 169, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .instagram__feed {
   color: #fff; }
 
-/* line 141, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 173, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__white--homepage {
   position: relative;
   font-family: base_font;
@@ -3275,17 +3301,17 @@ input:focus, select:focus, textarea:focus, button:focus {
     .section__white--homepage {
       padding: 5rem; } }
 
-/* line 166, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 198, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 #map-canvas {
   width: 100%;
   height: 400px; }
 
-/* line 171, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 203, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__mission {
   position: relative;
-  font-family: paws_base_font;
+  font-family: base_font;
   font-weight: 100;
-  margin-top: 7rem;
+  margin-top: 2rem;
   margin-bottom: 5rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -3297,7 +3323,7 @@ input:focus, select:focus, textarea:focus, button:focus {
     .section__mission {
       font-size: 22px; } }
 
-/* line 188, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 220, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__vision {
   position: relative;
   font-family: base_font;
@@ -3312,27 +3338,27 @@ input:focus, select:focus, textarea:focus, button:focus {
     .section__vision {
       font-size: 22px; } }
 
-/* line 203, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 235, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .error_message {
   font-size: 80%;
   color: #ff7c81; }
 
-/* line 208, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 240, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .video__link {
   color: #343434;
   position: fixed;
   bottom: 1rem;
   right: 1rem; }
 
-/* line 214, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 246, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .video__link:hover {
   color: #c21e22; }
 
-/* line 218, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 250, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .bullet_point {
   list-style-type: circle; }
 
-/* line 222, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 254, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .vision_list {
   text-align: left; }
   @media only screen and (max-width: 480px) {
@@ -3340,60 +3366,75 @@ input:focus, select:focus, textarea:focus, button:focus {
       padding-left: 2rem;
       padding-right: 0.5rem; } }
 
-/* line 230, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 261, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+.facebook__link {
+  /*text-align: center;*/
+  color: #fd5155; }
+
+/* line 286, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__facebook {
   /*position: relative;*/
   margin: 0rem;
-  font-family: paws_heading;
-  font-size: 2.3rem;
+  font-family: base_font;
+  font-size: 2rem;
   background-color: #fff;
   padding-top: 5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-bottom: 5rem;
   text-align: center;
   z-index: -1; }
   @media only screen and (min-width:481px) {
     .section__facebook {
-      padding: 5rem;
-      font-size: 3.1rem; } }
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 7.5rem;
+      padding-bottom: 7.5rem;
+      font-size: 2.5rem; } }
   @media only screen and (min-width:769px) {
     .section__facebook {
-      padding: 5rem;
-      font-size: 6.2rem; } }
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+      font-size: 3.5rem; } }
   @media only screen and (min-width:961px) {
     .section__facebook {
-      padding: 5rem;
-      font-size: 8.3rem; } }
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 12rem;
+      padding-bottom: 12rem;
+      font-size: 4.5rem; } }
   @media only screen and (min-width:1351px) {
     .section__facebook {
-      padding: 5rem;
-      font-size: 10rem; } }
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 14rem;
+      padding-bottom: 14rem;
+      font-size: 6rem; } }
 
-/* line 261, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 331, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .vision_p {
   text-align: center; }
 
-/* line 265, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 335, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .leaf1 {
   position: absolute;
   bottom: 1rem;
   left: 0;
   margin: 0; }
 
-/* line 272, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 342, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .leaf2 {
   position: absolute;
   bottom: 0;
   right: 2rem; }
 
-/* line 278, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 348, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .leaf3 {
   position: absolute;
   right: 0;
   bottom: -9rem; }
 
-/* line 284, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 354, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .registered__message {
   font-family: paws_base_font;
   color: #fff;
@@ -3402,51 +3443,26 @@ input:focus, select:focus, textarea:focus, button:focus {
   padding: 1rem;
   font-size: 28px; }
 
-/* line 293, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
-.facebook__link {
-  padding-top: 5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 5rem;
-  /*text-align: center;*/
-  color: #fd5155; }
-  @media only screen and (min-width:481px) {
-    .facebook__link {
-      /*padding:5rem;*/
-      font-size: 3.1rem; } }
-  @media only screen and (min-width:769px) {
-    .facebook__link {
-      /*padding:5rem;*/
-      font-size: 6.2rem; } }
-  @media only screen and (min-width:961px) {
-    .facebook__link {
-      /*padding:5rem;*/
-      font-size: 8.3rem; } }
-  @media only screen and (min-width:1351px) {
-    .facebook__link {
-      /*padding:5rem;*/
-      font-size: 10rem; } }
-
-/* line 318, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 365, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 #fs:hover {
   background-color: #3b5998; }
 
-/* line 319, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 366, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 #fs:hover #fl {
   color: white; }
 
-/* line 321, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 368, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 a.textlink {
   text-decoration: none;
   color: #fff; }
 
-/* line 322, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 369, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 a.textlink:hover {
   text-decoration: none;
   color: #c21e22; }
 
 /*////////////////////  Icon Links  /////////////////////////////////////////*/
-/* line 326, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 373, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__points {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -3455,18 +3471,16 @@ a.textlink:hover {
 /*.points.first{
 	margin-top:0rem;
 }*/
-/* line 336, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 383, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .points {
-  border: 1px #343434 solid;
   height: 20rem;
   padding: 1rem;
-  background-color: #c21e22;
   /*@media only screen and (max-width: 480px) { 
   		margin-top:1rem;
   	}*/ }
   @media only screen and (min-width:481px) {
     .points {
-      height: 14rem;
+      height: 15.5rem;
       padding: 0rem; } }
   @media only screen and (min-width:769px) {
     .points {
@@ -3478,7 +3492,7 @@ a.textlink:hover {
     .points {
       height: 25rem; } }
 
-/* line 360, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 407, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .iconbox {
   overflow: hidden;
   /*background: #fff; */
@@ -3486,7 +3500,7 @@ a.textlink:hover {
   width: 100%;
   height: 100%; }
 
-/* line 368, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 415, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .iconbox__content {
   position: relative;
   /*background: red; */
@@ -3498,23 +3512,31 @@ a.textlink:hover {
   text-align: center; }
   @media only screen and (min-width:481px) {
     .iconbox__content {
-      font-size: 20px; } }
+      font-size: 20px;
+      width: 100%;
+      height: 100%; } }
   @media only screen and (min-width:769px) {
     .iconbox__content {
-      font-size: 24px; } }
+      font-size: 24px;
+      width: 80%;
+      height: 80%; } }
   @media only screen and (min-width:961px) {
     .iconbox__content {
-      font-size: 28px; } }
+      font-size: 28px;
+      width: 80%;
+      height: 80%; } }
   @media only screen and (min-width:1351px) {
     .iconbox__content {
-      font-size: 30px; } }
+      font-size: 30px;
+      width: 70%;
+      height: 70%; } }
 
-/* line 391, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 446, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .fresh__point {
   margin: 1rem;
   background-color: #fff; }
 
-/* line 396, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 451, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .user__message {
   font-style: italic;
   padding-left: 1rem;
@@ -5702,15 +5724,16 @@ input.input__text--error {
   position: absolute;
   bottom: 2.5rem;
   right: 0;
-  background: url(/images/selection/join100.png) no-repeat 0 0;
-  height: 120px;
-  width: 140px; }
+  background: url(/images/selection/joinw1.png) no-repeat 0 0;
+  height: 130px;
+  width: 130px; }
   @media only screen and (max-width: 480px) {
     .form__image__submit {
       position: static;
-      margin-top: 2rem; } }
+      margin-top: 3rem;
+      background: url(/images/selection/join.png) no-repeat 0 0; } }
 
-/* line 335, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 336, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__image__submit:active {
   border: 0; }
 
