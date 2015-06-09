@@ -632,12 +632,20 @@
                 {{ Form::text('serve', (isset($input['serve'])? Input::old('serve') : (isset($data->serve)? $data->serve : '' )), array('class' => 'form-control')) }}
             </div>
 		</div>
-        
-        
-        
-        
-        
-        <div class="form-group">
+        <div class="form-group }}">
+        	{{ Form::label('menu_type', 'Menu Type: ', array('class' => 'col-sm-2 control-label')) }}
+            <div class="col-sm-3">
+                {{ Form::select('menu_type', 
+                    array(
+                    	'Default' => 'Default',
+                        'Savoury Meal' => 'Savoury Meal',                   	
+                        'Quick Snack' => 'Quick Snack',
+                        'Dessert' => 'Dessert',
+                        'Refreshment' => 'Refreshment', 
+                    ), (isset($input['menu_type'])? Input::old('menu_type') : (isset($data->menu_type)? $data->menu_type : null )), array('class'=>'form-control')) }} 
+            </div>
+        </div>
+		<div class="form-group">
             {{ Form::label('selection_active', 'Active: ', array('class' => 'col-sm-2 control-label')) }}
             <div class="col-sm-10">
               {{ Form::checkbox('selection_active', 1, (isset($input['selection_active'])? Input::old('selection_active') : (isset($data->selection_active)? $data->selection_active : '' )), array('class' => '')) }}
@@ -647,6 +655,12 @@
             {{ Form::label('exclusive', 'Exclusive: ', array('class' => 'col-sm-2 control-label')) }}
             <div class="col-sm-10">
               {{ Form::checkbox('exclusive', 1, (isset($input['exclusive'])? Input::old('exclusive') : (isset($data->exclusive)? $data->exclusive : '' )), array('class' => '')) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ Form::label('catering', 'Catering: ', array('class' => 'col-sm-2 control-label')) }}
+            <div class="col-sm-10">
+              {{ Form::checkbox('catering', 1, (isset($input['catering'])? Input::old('catering') : (isset($data->catering)? $data->catering : '' )), array('class' => '')) }}
             </div>
         </div>        
         <div class="form-group {{ ($errors->has('categories')) ? 'has-error' : '' ; }}">

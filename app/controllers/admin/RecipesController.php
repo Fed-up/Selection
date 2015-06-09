@@ -88,9 +88,11 @@ class Admin_RecipesController extends BaseController{
 			$data->menu_categories_id = Input::get('categories');
 			$data->selection_active = (isset($input['selection_active'])) ? 1 : 0;
 			$data->exclusive  = (isset($input['exclusive'])) ? 1 : 0;
+			$data->catering  = (isset($input['catering'])) ? 1 : 0;
 			$data->length 	= $input['length'];
 			$data->difficulty 	= $input['difficulty'];
 			$data->serve 	= $input['serve'];
+			$data->menu_type 	= $input['menu_type'];
 			$data->df  = (isset($input['DF'])) ? 1 : 0;
 			$data->ds  = (isset($input['DS'])) ? 1 : 0;
 			$data->ef  = (isset($input['EF'])) ? 1 : 0;
@@ -397,10 +399,11 @@ class Admin_RecipesController extends BaseController{
 			$data->menu_categories_id 	= $input['categories'];
 			$data->selection_active = (isset($input['selection_active'])) ? 1 : 0;
 			$data->exclusive  = (isset($input['exclusive'])) ? 1 : 0;
+			$data->catering  = (isset($input['catering'])) ? 1 : 0;
 			$data->length 	= $input['length'];
-			
 			$data->difficulty 	= $input['difficulty'];
 			$data->serve = $serve_amount = $input['serve'];
+			$data->menu_type 	= $input['menu_type'];
 			$data->df  = (isset($input['DF'])) ? 1 : 0;
 			$data->ds  = (isset($input['DS'])) ? 1 : 0;
 			$data->ef  = (isset($input['EF'])) ? 1 : 0;

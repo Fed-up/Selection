@@ -116,6 +116,31 @@ video#bgvid {
 
 }
 
+.homepage_title{
+	font-family: selection_heading;
+	text-align: center;
+	color: #fff;
+	font-weight: 100;
+	font-size: 60px;
+	letter-spacing: 0.1rem; 
+	@media #{$medium-up} { 
+		font-size: 75px;
+		letter-spacing: 0.1rem; 
+	}
+    @media #{$large-up} { 
+        font-size: 100px;
+  		letter-spacing: 0.1rem;  
+    }
+    @media #{$xlarge-up} { 
+        font-size: 100px;
+  		letter-spacing: 0.1rem;  
+    }
+    @media #{$xxlarge-up} { 
+        font-size: 120px;
+  		letter-spacing: 0.1rem;  
+    }
+}
+
 .business_name{
 	color: $main_color;
 	font-size:1.4rem;
@@ -133,6 +158,23 @@ video#bgvid {
   	}
 }
 .map_location{
+	color: $main_light;
+	font-size:0.9rem;
+	@media #{$medium-up} { 
+  		font-size: 1.2rem;
+   	}
+  	@media #{$large-up} { 
+  		font-size: 1.6rem;
+  	}
+  	@media #{$xlarge-up} { 
+  		font-size: 1.7rem;
+  	}
+  	@media #{$xxlarge-up} { 
+  		font-size: 1.7rem;
+  	}
+}
+
+.business_hours{
 	color: $main_light;
 	font-size:0.9rem;
 	@media #{$medium-up} { 
@@ -173,16 +215,16 @@ video#bgvid {
 .section__white--homepage{
 	position: relative;
 	font-family: base_font;
-	font-size: 0.9rem;
+	font-size: .9rem;
 	background-color: #fff;
 	padding-top: 10rem;
-	padding-left: 1rem; 
+	padding-left: 1rem;
 	padding-right: 1rem;
-	padding-bottom:1.8rem;
+	padding-bottom: 1.8rem;
 	text-align: center;
 	z-index: -1;
-	@media #{$medium-up} { 
-  		padding:4rem;
+	@media #{$medium-up} {  
+  		padding: 4rem;
   	}
   	@media #{$large-up} { 
   		padding:4rem;;
@@ -192,6 +234,31 @@ video#bgvid {
   	}
   	@media #{$xxlarge-up} { 
   		padding:5rem;
+  	}
+}
+
+.section__white--insta{
+	position: relative;
+	font-family: base_font;
+	font-size: 0.9rem;
+	background-color: #fff;
+	padding-top: 1rem;
+	padding-left: 1rem; 
+	padding-right: 1rem;
+	padding-bottom:1.8rem;
+	text-align: center;
+	z-index: -1;
+	@media #{$medium-up} {  
+  		padding:1rem;
+  	}
+  	@media #{$large-up} { 
+  		padding:1rem;;
+  	}
+  	@media #{$xlarge-up} { 
+  		padding:1rem;
+  	}
+  	@media #{$xxlarge-up} { 
+  		padding:1rem;
   	}
 }
 

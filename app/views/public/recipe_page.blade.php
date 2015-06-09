@@ -55,12 +55,19 @@
                                 @if($sales_count == 0)
                                     <p>This product is still being perfected, please email us directly if you are interested in it, as we want to accomodate to your needs promptly.<br/>Regards,<br/>Selection Cafe</p>
                                 @else
-                                    <p><span class="content-link">Ideal amount:</span>&nbsp; &nbsp; {{$sales_data[0]->sales_amount}}</p>
-                                    <p><span class="content-link">Ideal grams:</span>&nbsp; &nbsp; {{$sales_data[0]->total_recipe_grams}}g</p>
-                                    <p><span class="content-link">Ideal cost:</span>&nbsp; &nbsp; $ {{$sales_data[0]->B2B_total_recipe_revenue}}</p><br/>
-
-                                    <p><span class="content-link">Total grams per piece:</span>&nbsp; &nbsp; {{$sales_data[0]->total_grams_per_piece}}g</p>
-                                    <p><span class="content-link">Total cost per piece:</span>&nbsp; &nbsp; ${{$sales_data[0]->B2B_sales_price}}</p>
+                                    <p><span class="content-link">Minimum catering amount:</span>&nbsp; &nbsp; {{$sales_data[0]->sales_amount}}</p>
+                                    <p><span class="content-link">Total batch weight:</span>&nbsp; &nbsp; {{$sales_data[0]->total_recipe_grams}}g</p>
+                                    @if(Auth::user()->user_type == 'B2B')
+                                        <p><span class="content-link">Catering total:</span>&nbsp; &nbsp; $ {{$sales_data[0]->B2B_total_recipe_revenue}}</p><br/>
+                                    @else
+                                        <p><span class="content-link">Catering total:</span>&nbsp; &nbsp; $ {{$sales_data[0]->total_recipe_revenue}}</p><br/>
+                                    @endif
+                                    <p><span class="content-link">Total weight per piece:</span>&nbsp; &nbsp; {{$sales_data[0]->total_grams_per_piece}}g</p>
+                                    @if(Auth::user()->user_type == 'B2B')
+                                        <p><span class="content-link">Total cost per piece:</span>&nbsp; &nbsp; ${{$sales_data[0]->B2B_sales_price}}</p>
+                                    @else
+                                        <p><span class="content-link">Total cost per piece:</span>&nbsp; &nbsp; ${{$sales_data[0]->sales_price}}</p>
+                                    @endif
                                     <hr>
                                     <p>All products are handmade to perfection, we are able to tailor this product to your specific requirements at no additional cost. 
                                     <!-- <br/>Our prices are formulated, so the cost to produce is 30%, ensuring you recieve the same value every time you purchase these delicious creations</p> -->
@@ -77,11 +84,13 @@
                         <!-- <p> Nutritional Panel is coming</p> -->
                         @if(Auth::check())
                             <h3 class="content__title">Little Extras</h3>
+                            @if($ecount != 0)
                             @foreach($recipe->MenuRecipesExtras as $rExtras)
-                                <p>
-                                    {{$rExtras->description}}
-                                </p><br/>
+                                <p>{{$rExtras->description}}</p><br/>
                             @endforeach 
+                            @else
+                                <p>We are curretly workin on different alterntives to improve the health benefits of {{$recipe->name}}</p><br/> 
+                            @endif
                         @else
                             <p>Please <a class="content-link" href="/login">Login</a> or <a class="content-link" href="/signup">create an account</a> to view more info about this menu item</p>
                         @endif

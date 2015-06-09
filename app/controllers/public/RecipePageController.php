@@ -63,8 +63,12 @@ class RecipePageController  extends BaseController {
 		
 		$count = count($rData);
 		$intolerance = array();
-			 // echo '<pre>'; print_r($count); echo '</pre>';exit;
+			 
 		foreach ($rData as $recipe) {	
+			$ecount = count($recipe->MenuRecipesExtras);
+
+			// echo '<pre>'; print_r($ecount); echo '</pre>';exit;
+
 			$count = count($recipe->menuRecipesIngredients);
 			if($count > 0){
 				foreach ($recipe->menuRecipesIngredients as $rIngredient) {
@@ -179,6 +183,7 @@ class RecipePageController  extends BaseController {
 			'selection_title' => $selection_title,
 			'intolerance' => $intolerance,
 			'iCount' => $iCount,
+			'ecount' => $ecount,
 			)
 		);
 	}

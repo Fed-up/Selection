@@ -181,7 +181,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 <div class="registered__message">{{ $registered }}</div>
             @else
                 {{ Form::open(array('action' => 'HomeController@postAddUser', 'class' => 'form-horizontal')) }} 
-                    <h2 class="form__title--signup">Fresh New Food at Selection Cafe</h2> 
+                    <h2 class="homepage_title">Selection Cafe</h2> 
 
                     <div class="form-group {{ ($errors->has('fname')) ? 'has-error' : '' ; }} row">
                         {{ Form::label('fname', 'Full Name: ', array('class' => ' form_field_title ')) }}
@@ -206,19 +206,20 @@ google.maps.event.addDomListener(window, 'load', initialize);
                         {{ Form::submit('', array('class' => 'form__image__submit form__image__submit--small')) }}
                     </div> -->
                 {{ Form::close() }} 
-            @endif        
+            @endif         
         </section>
         <section class="section__white--homepage">
             <!-- <img src="/images/paws/s2leaf.png" alt="Where Real food comes to life" name="Where Real food comes to life" class="leaf1"> -->
             <p class="business_name">Selection Cafe</p>
             <p class="map_location">210 Clarendon Street, South Melbourne, 3250</p>
+            <p class="business_hours">Open: Sunrise - Sunset</p>
         </section>
         <div id="map-canvas"></div>
         <section id=""class="section__points row">
             <div class="columns small-12 medium-4 end">
                 <article class="points">
                     <div id="1" class="iconbox">
-                        <div id="2" class="iconbox__content">
+                        <div id="2" class="iconbox__content"> 
                             <a href="/menu"><img src="/images/selection/menu.png" alt="Today's Menu"/></a>
                             <!-- <p>Our Menu</p> -->
                         </div>
@@ -258,7 +259,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
             </article>         
         </section>
         @if(!empty($insta_array))
-            <div class=" section__white--homepage"> 
+            <div class=" section__white--insta"> 
                 <section class="row ">
                     <p class="section__heading instagram__feed">Instagram Feed</p>
                     @foreach($insta_array['data'] as $image)

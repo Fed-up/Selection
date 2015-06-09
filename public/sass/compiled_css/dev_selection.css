@@ -3222,6 +3222,31 @@ input:focus, select:focus, textarea:focus, button:focus {
       /*background-color: green;*/ } }
 
 /* line 119, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+.homepage_title {
+  font-family: selection_heading;
+  text-align: center;
+  color: #fff;
+  font-weight: 100;
+  font-size: 60px;
+  letter-spacing: 0.1rem; }
+  @media only screen and (min-width:481px) {
+    .homepage_title {
+      font-size: 75px;
+      letter-spacing: 0.1rem; } }
+  @media only screen and (min-width:769px) {
+    .homepage_title {
+      font-size: 100px;
+      letter-spacing: 0.1rem; } }
+  @media only screen and (min-width:961px) {
+    .homepage_title {
+      font-size: 100px;
+      letter-spacing: 0.1rem; } }
+  @media only screen and (min-width:1351px) {
+    .homepage_title {
+      font-size: 120px;
+      letter-spacing: 0.1rem; } }
+
+/* line 144, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .business_name {
   color: #fa262b;
   font-size: 1.4rem; }
@@ -3238,7 +3263,7 @@ input:focus, select:focus, textarea:focus, button:focus {
     .business_name {
       font-size: 2.1rem; } }
 
-/* line 135, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 160, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .map_location {
   color: #fd5155;
   font-size: 0.9rem; }
@@ -3255,7 +3280,24 @@ input:focus, select:focus, textarea:focus, button:focus {
     .map_location {
       font-size: 1.7rem; } }
 
-/* line 152, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 177, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+.business_hours {
+  color: #fd5155;
+  font-size: 0.9rem; }
+  @media only screen and (min-width:481px) {
+    .business_hours {
+      font-size: 1.2rem; } }
+  @media only screen and (min-width:769px) {
+    .business_hours {
+      font-size: 1.6rem; } }
+  @media only screen and (min-width:961px) {
+    .business_hours {
+      font-size: 1.7rem; } }
+  @media only screen and (min-width:1351px) {
+    .business_hours {
+      font-size: 1.7rem; } }
+
+/* line 194, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__heading {
   color: #fd5155;
   font-size: 0.9rem; }
@@ -3272,15 +3314,15 @@ input:focus, select:focus, textarea:focus, button:focus {
     .section__heading {
       font-size: 1.7rem; } }
 
-/* line 169, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 211, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .instagram__feed {
   color: #fff; }
 
-/* line 173, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 215, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__white--homepage {
   position: relative;
   font-family: base_font;
-  font-size: 0.9rem;
+  font-size: .9rem;
   background-color: #fff;
   padding-top: 10rem;
   padding-left: 1rem;
@@ -3301,12 +3343,37 @@ input:focus, select:focus, textarea:focus, button:focus {
     .section__white--homepage {
       padding: 5rem; } }
 
-/* line 198, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 240, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+.section__white--insta {
+  position: relative;
+  font-family: base_font;
+  font-size: 0.9rem;
+  background-color: #fff;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.8rem;
+  text-align: center;
+  z-index: -1; }
+  @media only screen and (min-width:481px) {
+    .section__white--insta {
+      padding: 1rem; } }
+  @media only screen and (min-width:769px) {
+    .section__white--insta {
+      padding: 1rem; } }
+  @media only screen and (min-width:961px) {
+    .section__white--insta {
+      padding: 1rem; } }
+  @media only screen and (min-width:1351px) {
+    .section__white--insta {
+      padding: 1rem; } }
+
+/* line 265, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 #map-canvas {
   width: 100%;
   height: 400px; }
 
-/* line 203, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 270, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__mission {
   position: relative;
   font-family: base_font;
@@ -3323,7 +3390,7 @@ input:focus, select:focus, textarea:focus, button:focus {
     .section__mission {
       font-size: 22px; } }
 
-/* line 220, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 287, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__vision {
   position: relative;
   font-family: base_font;
@@ -3338,27 +3405,27 @@ input:focus, select:focus, textarea:focus, button:focus {
     .section__vision {
       font-size: 22px; } }
 
-/* line 235, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 302, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .error_message {
   font-size: 80%;
   color: #ff7c81; }
 
-/* line 240, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 307, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .video__link {
   color: #343434;
   position: fixed;
   bottom: 1rem;
   right: 1rem; }
 
-/* line 246, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 313, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .video__link:hover {
   color: #c21e22; }
 
-/* line 250, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 317, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .bullet_point {
   list-style-type: circle; }
 
-/* line 254, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 321, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .vision_list {
   text-align: left; }
   @media only screen and (max-width: 480px) {
@@ -3366,12 +3433,12 @@ input:focus, select:focus, textarea:focus, button:focus {
       padding-left: 2rem;
       padding-right: 0.5rem; } }
 
-/* line 261, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 328, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .facebook__link {
   /*text-align: center;*/
   color: #fd5155; }
 
-/* line 286, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 353, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__facebook {
   /*position: relative;*/
   margin: 0rem;
@@ -3411,30 +3478,30 @@ input:focus, select:focus, textarea:focus, button:focus {
       padding-bottom: 14rem;
       font-size: 6rem; } }
 
-/* line 331, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 398, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .vision_p {
   text-align: center; }
 
-/* line 335, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 402, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .leaf1 {
   position: absolute;
   bottom: 1rem;
   left: 0;
   margin: 0; }
 
-/* line 342, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 409, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .leaf2 {
   position: absolute;
   bottom: 0;
   right: 2rem; }
 
-/* line 348, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 415, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .leaf3 {
   position: absolute;
   right: 0;
   bottom: -9rem; }
 
-/* line 354, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 421, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .registered__message {
   font-family: paws_base_font;
   color: #fff;
@@ -3443,26 +3510,26 @@ input:focus, select:focus, textarea:focus, button:focus {
   padding: 1rem;
   font-size: 28px; }
 
-/* line 365, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 432, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 #fs:hover {
   background-color: #3b5998; }
 
-/* line 366, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 433, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 #fs:hover #fl {
   color: white; }
 
-/* line 368, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 435, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 a.textlink {
   text-decoration: none;
   color: #fff; }
 
-/* line 369, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 436, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 a.textlink:hover {
   text-decoration: none;
   color: #c21e22; }
 
 /*////////////////////  Icon Links  /////////////////////////////////////////*/
-/* line 373, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 440, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__points {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -3471,7 +3538,7 @@ a.textlink:hover {
 /*.points.first{
 	margin-top:0rem;
 }*/
-/* line 383, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 450, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .points {
   height: 20rem;
   padding: 1rem;
@@ -3492,7 +3559,7 @@ a.textlink:hover {
     .points {
       height: 25rem; } }
 
-/* line 407, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 474, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .iconbox {
   overflow: hidden;
   /*background: #fff; */
@@ -3500,7 +3567,7 @@ a.textlink:hover {
   width: 100%;
   height: 100%; }
 
-/* line 415, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 482, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .iconbox__content {
   position: relative;
   /*background: red; */
@@ -3531,12 +3598,12 @@ a.textlink:hover {
       width: 70%;
       height: 70%; } }
 
-/* line 446, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 513, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .fresh__point {
   margin: 1rem;
   background-color: #fff; }
 
-/* line 451, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 518, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .user__message {
   font-style: italic;
   padding-left: 1rem;

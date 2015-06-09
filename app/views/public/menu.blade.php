@@ -17,7 +17,7 @@
                         <p class="user__message">Sorry there are no Savoury meals on our menu today</p>
                     @else
                         @foreach($savData as $index=>$recipe)
-                            <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
+                            <div class="columns small-12 medium-4 large-3 xlarge-3 xxlarge-2 end">
                                 <article class="content-box">
                                     <div class="row collapse" id="recipe__row">                                   
                                         <a href="/recipe/{{$recipe->id}}" class="columns small-4 medium-12 tile__title end">
@@ -46,7 +46,7 @@
                         <p class="user__message">Sorry there are savoury snacks on our menu today</p>
                     @else
                         @foreach($snaData as $index=>$recipe)
-                            <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
+                            <div class="columns small-12 medium-4 large-3 xlarge-3 xxlarge-2 end">
                                 <article class="content-box">
                                     <div class="row collapse" id="recipe__row">                                   
                                         <a href="/recipe/{{$recipe->id}}" class="columns small-4 medium-12 tile__title end">
@@ -75,7 +75,7 @@
                         <p class="user__message">Sorry there are no So Naughty But Nice desserts on our menu today</p>
                     @else
                         @foreach($desData as $index=>$recipe)
-                            <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
+                            <div class="columns small-12 medium-4 large-3 xlarge-3 xxlarge-2 end">
                                 <article class="content-box">
                                     <div class="row collapse" id="recipe__row">                                   
                                         <a href="/recipe/{{$recipe->id}}" class="columns small-4 medium-12 tile__title end">
@@ -104,7 +104,7 @@
                         <p class="user__message">Sorry there are no refreshments on our menu today</p>
                     @else
                         @foreach($refData as $index=>$recipe)
-                            <div class="columns small-12 medium-6 large-4 xlarge-3 xxlarge-2 end">
+                            <div class="columns small-12 medium-4 large-3 xlarge-3 xxlarge-2 end">
                                 <article class="content-box">
                                     <div class="row collapse" id="recipe__row">                                   
                                         <a href="/recipe/{{$recipe->id}}" class="columns small-4 medium-12 tile__title end">

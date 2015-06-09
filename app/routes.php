@@ -205,7 +205,7 @@ Route::group(array('before' => 'auth'), function() {
 });	
 	
 	
-	// Route::post('admin/upload', 'Admin_AdminController@postUpload');
+	Route::post('admin/upload', 'Admin_AdminController@postUpload');
 	
 
 
