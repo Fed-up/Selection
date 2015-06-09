@@ -37,7 +37,7 @@ class CateringController  extends BaseController {
 
 
 		
-		$recipes = MenuRecipes::orderBy('name','ASC')->where('selection_active', '=', '1')->get();
+		$recipes = MenuRecipes::orderBy('name','ASC')->where('selection_active', '=', '1')->where('catering', '=', '1')->get();
 
 		$mRep = array();
 		$mRep[0]	= '- Select Recipe -';	
@@ -58,7 +58,7 @@ class CateringController  extends BaseController {
 		$input = Input::all();
 		
 
-
+ 
 		//dd($input);
 		$rules = array(
 			'amount' 		=> 'required'
