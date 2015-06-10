@@ -13,9 +13,11 @@ class HomeController extends BaseController {
 	// SUPPORT EMAIL	social@selectioncafe.com.au
 
 		$token = "94698d5b9b00463481a789a88fd89195";
+		$client_id ="dbc68a32a245496a85281256639e2ee3";
 		$insta_url = 'https://api.instagram.com/v1/tags/sonaughtybutnice/media/recent?client_id='.$token.'&count=12';
 
-
+		$insta_url = 'https://api.instagram.com/v1/users/self/feed?client_id='.$token.'&count=12';
+		$insta_url = 'https://api.instagram.com/v1/users/592534639/media/recent/?client_id='.$client_id.'&count=12';
 
 		// $insta_json = file_get_contents($insta_url);
 		// $insta_array = json_decode($insta_json, $true);
@@ -38,7 +40,8 @@ class HomeController extends BaseController {
 		// foreach($insta_array['data'] as $image){
 		// 	echo '<pre>'; print_r($image['images']['low_resolution']['url']); echo '</pre>'; 	
 		// }
-
+		// echo '<pre>'; print_r($insta_array); echo '</pre>'; exit;	
+		// exit;
 		// if(empty($insta_array)){
 		// 	echo '<pre>'; print_r($token); echo '</pre>'; exit;	
 		// }

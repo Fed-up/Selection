@@ -2954,7 +2954,7 @@ ul, li {
   text-align: center;
   font-family: headings;
   padding: 0.5rem;
-  float: left; }
+  /*float: left;*/ }
 
 /* line 232, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tab__link {
