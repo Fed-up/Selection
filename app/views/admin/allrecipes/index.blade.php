@@ -27,9 +27,9 @@
                 <td>{{ $recipe->name }}</td>
                 <td></td>
                 <td>@if($recipe->fedup_active == 1)
-                        {{ link_to('/admin/menu/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-success glyphicon glyphicon-ok disabled')) }}
+                        {{ link_to('/admin/website/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-success glyphicon glyphicon-ok disabled')) }}
                     @else
-                        {{ link_to('/admin/menu/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-danger glyphicon glyphicon-remove disabled')) }}
+                        {{ link_to('/admin/website/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-danger glyphicon glyphicon-remove disabled')) }}
                     @endif
                 </td>
                 <td>
@@ -41,9 +41,9 @@
                 </td>
                 <td>
                 	@if($recipe->naughty_active == 1)
-                        {{ link_to('/admin/menu/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-success glyphicon glyphicon-ok disabled')) }}
+                        {{ link_to('/admin/website/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-success glyphicon glyphicon-ok disabled')) }}
                     @else
-                        {{ link_to('/admin/menu/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-danger glyphicon glyphicon-remove disabled')) }}
+                        {{ link_to('/admin/website/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-danger glyphicon glyphicon-remove disabled')) }}
                     @endif
                 </td>
                 <td>

@@ -646,9 +646,9 @@
             </div>
         </div>
 		<div class="form-group">
-            {{ Form::label('selection_active', 'Active: ', array('class' => 'col-sm-2 control-label')) }}
+            {{ Form::label('fedup_active', 'Active: ', array('class' => 'col-sm-2 control-label')) }}
             <div class="col-sm-10">
-              {{ Form::checkbox('selection_active', 1, (isset($input['selection_active'])? Input::old('selection_active') : (isset($data->selection_active)? $data->selection_active : '' )), array('class' => '')) }}
+              {{ Form::checkbox('fedup_active', 1, (isset($input['fedup_active'])? Input::old('fedup_active') : (isset($data->fedup_active)? $data->fedup_active : '' )), array('class' => '')) }}
             </div>
         </div>  
         <div class="form-group">
@@ -940,7 +940,7 @@
 
 				            {{ Form::label('desired_total_markup', 'Desired Total Markup - %: ', array('class' => 'col-sm-2 control-label')) }}
 				            <div class="col-sm-2">
-				               {{ Form::text('desired_total_markup', (isset($input['desired_total_markup'])? Input::old('desired_total_markup') : (isset($sdata->desired_total_markup)? $sdata->desired_total_markup : '' )), array('class' => 'form-control', 'placeholder' => '400')) }}
+				               {{ Form::text('desired_total_markup', (isset($input['desired_total_markup'])? Input::old('desired_total_markup') : (isset($sdata->desired_total_markup)? $sdata->desired_total_markup : '' )), array('class' => 'form-control', 'placeholder' => '350')) }}
 				            </div>
 				            <!-- <div class="col-sm-1"></div> -->
 				             
@@ -982,7 +982,7 @@
 				               <p class="sales-data__info">$ {{$sdata->total_ingredient_cost_per_piece}}</p>
 				            </div>
 
-				            <h5 class="col-sm-2 control-label sales-data__title">Total recipe revenue:</h5>
+				            <h5 class="col-sm-2 control-label sales-data__title">B2C Total recipe revenue:</h5>
 				            <div class="col-sm-3">
 				               <p class="sales-data__info">$ {{$sdata->total_recipe_revenue}}</p>
 				            </div>
@@ -996,7 +996,7 @@
 				            </div>
 
 
-				            <h5 class="col-sm-2 control-label sales-data__title">Total profit:</h5>
+				            <h5 class="col-sm-2 control-label sales-data__title">Total gross profit:</h5>
 				            <div class="col-sm-3">
 				               <p class="sales-data__info">$ {{$sdata->total_profit}}</p>
 				            </div>
@@ -1024,7 +1024,7 @@
 				            </div>
 				        </div>
 				        <div class="form-group {{ ($errors->has('title')) ? ' has-error' : '' ; }}">
-				        	<h5 class="col-sm-2 control-label sales-data__title">Total margin percentage:</h5>
+				        	<h5 class="col-sm-2 control-label sales-data__title">Total gross margin percentage:</h5>
 				            <div class="col-sm-3">
 				               <p class="sales-data__info">{{$sdata->total_margin_percentage}} %</p>
 				            </div>

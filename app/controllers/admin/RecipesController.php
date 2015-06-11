@@ -20,7 +20,7 @@
 class Admin_RecipesController extends BaseController{
 
 	public function getRecipes(){
-		$data = MenuRecipes::where('selection_active', '!=', 9)->orderBy('name','ASC')->get();
+		$data = MenuRecipes::where('fedup_active', '!=', 9)->orderBy('name','ASC')->get();
 		return View::make('admin.recipes.index')
 			->with(array(
 				'data' => $data,
@@ -86,7 +86,7 @@ class Admin_RecipesController extends BaseController{
 			$data->name = Input::get('title');
 			$data->summary = Input::get('summary');
 			$data->menu_categories_id = Input::get('categories');
-			$data->selection_active = (isset($input['selection_active'])) ? 1 : 0;
+			$data->fedup_active = (isset($input['fedup_active'])) ? 1 : 0;
 			$data->exclusive  = (isset($input['exclusive'])) ? 1 : 0;
 			$data->catering  = (isset($input['catering'])) ? 1 : 0;
 			$data->length 	= $input['length'];
@@ -397,7 +397,7 @@ class Admin_RecipesController extends BaseController{
 			$data->name 	= $input['title'];
 			$data->summary 	= $input['summary'];
 			$data->menu_categories_id 	= $input['categories'];
-			$data->selection_active = (isset($input['selection_active'])) ? 1 : 0;
+			$data->fedup_active = (isset($input['fedup_active'])) ? 1 : 0;
 			$data->exclusive  = (isset($input['exclusive'])) ? 1 : 0;
 			$data->catering  = (isset($input['catering'])) ? 1 : 0;
 			$data->length 	= $input['length'];
@@ -779,8 +779,11 @@ class Admin_RecipesController extends BaseController{
 							$total_markup_percentage = $decimal_margin/ (1 - $decimal_margin) * 100;
 							$total_profit_per_piece = $total_profit/ $sales_amount;
 
-							
-							$B2B_total_recipe_revenue = $total_recipe_cost / 0.3;
+							if($sales_amount >= 100){
+								$B2B_total_recipe_revenue = $total_recipe_cost / 0.28566;
+							}else{
+								$B2B_total_recipe_revenue = $total_recipe_cost / 0.263151;
+							}
 							$B2B_desired_sales_price = $B2B_total_recipe_revenue/ $sales_amount;
 							if($B2B_sales_price == 0){
 								$B2B_sales_price = $B2B_desired_sales_price;
@@ -795,7 +798,7 @@ class Admin_RecipesController extends BaseController{
 
 
 							if($desired_total_markup == 0){
-								$desired_total_markup = 400;
+								$desired_total_markup = 350;
 							}
 
 							if($desired_total_markup > 0){
@@ -931,7 +934,7 @@ class Admin_RecipesController extends BaseController{
 	}
 
 	public function getAllRecipes(){
-		$data = MenuRecipes::where('selection_active','!=', 9)->orderBy('name','ASC')->get();
+		$data = MenuRecipes::where('fedup_active','!=', 9)->orderBy('name','ASC')->get();
 		return View::make('admin.allrecipes.index')
 			->with(array(
 				'data' => $data,
@@ -940,28 +943,28 @@ class Admin_RecipesController extends BaseController{
 
 	public function getAllActiveRecipes($id){
 		$data = MenuRecipes::findOrFail($id);
-		$data->selection_active = ($data->selection_active == 0)? 1 : ($data->selection_active == 9)? 1 : 0; //If it is == 0 thats true so change the value to 1, else if its false the value is 1 so change it to 0
+		$data->fedup_active = ($data->fedup_active == 0)? 1 : ($data->fedup_active == 9)? 1 : 0; //If it is == 0 thats true so change the value to 1, else if its false the value is 1 so change it to 0
 		$data->save();
 		return Redirect::action('Admin_RecipesController@getAllRecipes');
 	}
 	
 	public function getActiveRecipes($id){
 		$data = MenuRecipes::findOrFail($id);
-		$data->selection_active = ($data->selection_active == 0)? 1 : 0; //If it is == 0 thats true so change the value to 1, else if its false the value is 1 so change it to 0
+		$data->fedup_active = ($data->fedup_active == 0)? 1 : 0; //If it is == 0 thats true so change the value to 1, else if its false the value is 1 so change it to 0
 		$data->save();
 		return Redirect::action('Admin_RecipesController@getRecipes');
 	}
 	
 	public function getConfirmDeleteRecipes($id){
 		$data = MenuRecipes::findOrFail($id);
-		$data->selection_active = 9;
+		$data->fedup_active = 9;
 		$data->save();
 		return Redirect::action('Admin_RecipesController@getAllRecipes');
 	}
 
 	public function getDeleteRecipes($id){
 		$data = MenuRecipes::findOrFail($id);
-		$data->selection_active = 9;
+		$data->fedup_active = 9;
 		$data->save();
 		return Redirect::action('Admin_RecipesController@getRecipes');
 	}
