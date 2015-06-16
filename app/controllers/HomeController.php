@@ -54,8 +54,6 @@ class HomeController extends BaseController {
 		));
 	}
 
-	
-
 	public function getAbout(){
 		return View::make('public.about');
 	}

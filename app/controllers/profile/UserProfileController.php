@@ -269,9 +269,9 @@ class UserProfileController extends BaseController {
 			// echo '<pre>'; print_r($data); echo '</pre>'; 	exit;
 			$user->fname 	= Input::get('fname');
 			$user->email 	= Input::get('email');
-			$data->selection = 1;
+			$user->selection = 1;
 			$user->password 	= Hash::make(Input::get('password'));
-			// $user->user_type 	= 'GUEST';
+			$user->user_type 	= 'GUEST';
 			$user->active  = (isset($input['unsubscribe'])) ? 0 : 1;
 			$user->save();
 			// echo '<pre>'; print_r($data); echo '</pre>'; 	exit;	

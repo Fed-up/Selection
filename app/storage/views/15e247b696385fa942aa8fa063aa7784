@@ -9,7 +9,29 @@
 	</nav>
 	<div class="container row"> <!--Sign up section--> 
 		<section class="content__page--sub"> 
-			<section class="columns small-12 medium-8 medium-push-2 large-6 large-pull-0 xlarge-4">
+			<section class="columns columns small-12 medium-12 large-6 large xlarge-8">
+				<section class="section__box section__box--content">
+                    <div class="fluid-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KCiBIMu6-Mw" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </section>
+				<div class="section section--form" >
+					<h3 class="content__title--main">Welcome to Fed Up Project</h3>
+					<p class="content__sub__heading">We are passionate about health education, we aim to use the Fed Up Project cafe as a platform to inspire and feed you with delicious health based food</p>
+					<ul class="promo__list__ul">
+						<li class="promo__list">Join today for free!! </li>
+						<li class="promo__list">Be the first to know when Fed Up Project launches!</li>
+						<li class="promo__list">Receive the latest news and updates about Fed Up Project</li>
+						<li class="promo__list">Get early bird discounts to all future events & cafe dishes</li>
+						<li class="promo__list">Access free eBooks & get involved in our health discussions</li>
+					</ul>
+					<div class="about__join">
+						<a href="/signup"><img src="/images/selection/join.png" alt="Today's Menu"/></a>
+					</div>
+					
+				</div>
+			</section>
+			<section class="columns small-12 medium-12 large-6 large-pull-0 xlarge-4"> 
 				<div class="section section--form" >
 				  	<h2><b>Who are we</b></h2>
 				  	<p>Owners Sarah & Tom are from the Gippsland, they are aspiring to share their love for food & passion for health with the community.</p>
@@ -31,24 +53,7 @@
 
 				</div>
 			</section>
-			<section class="columns show-for-large-up large-6 large xlarge-8">
-				<div class="section section--form" >
-	                <section class="section__box section__box--content">
-	                    <div class="fluid-wrapper">
-	                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KCiBIMu6-Mw" frameborder="0" allowfullscreen></iframe>
-	                    </div>
-	                </section>
-					<h3 class="content__title--main">Welcome to Selection Cafe</h3>
-					<p class="content__sub__heading">We are on a mission to provide you with nutritious foods and quick service</p>
-					<ul class="promo__list__ul">
-						<li class="promo__list">Join today for free!! </li>
-						<li class="promo__list">Order online =)</li>
-						<li class="promo__list">Receive the latest news and updates about Selection Cafe</li>
-						<li class="promo__list">Get early bird discounts to all future events</li>
-						<li class="promo__list">Be the first to recieve free eBooks</li>
-					</ul>
-				</div>
-			</section>
+			
 			<div class="footer__push"></div>
 		</section>
 	</div>

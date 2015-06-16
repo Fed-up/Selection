@@ -64,10 +64,7 @@ Route::post('/', 'UserProfileController@postAddUserHome');
 Route::post('signup', 'UserProfileController@postAddUser');
 Route::post('signupmember', 'UserProfileController@postUpdateAddUser');
 
-
 // Route::post('/', 'HomeController@postAddUser');
-
-
 Route::group(array('before' => 'profile'), function() {
 	Route::get('profile', 'ProfileController@getProfile');
 	Route::get('profile/events', 'ProfileEventsController@getProfileEvents');
@@ -206,6 +203,7 @@ Route::group(array('before' => 'auth'), function() {
 	//Website All Recipes
 	Route::get('admin/website/allrecipes', 'Admin_RecipesController@getAllRecipes');	
 	Route::get('admin/website/allrecipes/active/{id}', 'Admin_RecipesController@getAllActiveRecipes');
+	Route::get('admin/website/allrecipes/makeactive', 'Admin_RecipesController@getMakeRecipesActive');
 	Route::get('admin/menu/recipes/confirmdelete/{id}', 'Admin_RecipesController@getConfirmDeleteRecipes');
 });	
 	

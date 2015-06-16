@@ -108,12 +108,12 @@ ul, li {
 
 .section__box {
   background-color: #fff;
-  border: 1px solid #e0e0e0;
+  /*border: 1px solid #e0e0e0;*/
   padding: 0.5rem;
   margin-bottom: 0.5rem; }
 
 .section__box--content {
-  padding: 0rem; }
+  margin: 0.5rem; }
 
 .content-link {
   color: #000;
@@ -226,7 +226,7 @@ ul, li {
     text-align: center;
     font-family: headings;
     padding: 0.5rem; 
-    /*float: left;*/
+    float: left;
 }
 
 .tab__link {
@@ -242,7 +242,7 @@ ul, li {
 .active > .tab__link {
   color: #fff; }
 
-.promo__text { 
+.promo__text {
   padding-top: .3rem;
   font-size: 0.9rem;
   font-style: italic;

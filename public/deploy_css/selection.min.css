@@ -2831,13 +2831,13 @@ ul, li {
 /* line 109, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .section__box {
   background-color: #fff;
-  border: 1px solid #e0e0e0;
+  /*border: 1px solid #e0e0e0;*/
   padding: 0.5rem;
   margin-bottom: 0.5rem; }
 
 /* line 115, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .section__box--content {
-  padding: 0rem; }
+  margin: 0.5rem; }
 
 /* line 118, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .content-link {
@@ -2954,7 +2954,7 @@ ul, li {
   text-align: center;
   font-family: headings;
   padding: 0.5rem;
-  /*float: left;*/ }
+  float: left; }
 
 /* line 232, C:/GitHub/Selection/public/sass/modules/_base.scss */
 .tab__link {
@@ -4612,10 +4612,13 @@ figcaption.caption_3_stack {
   border-radius: 5px;
   border: 0px;
   margin-right: 0.5rem;
-  margin-bottom: 1rem;
-  float: right; }
+  margin-bottom: 1.5rem;
+  /* float: right; */
+  text-align: right;
+  right: 1.5rem;
+  position: absolute; }
 
-/* line 42, C:/GitHub/Selection/public/sass/modules/_login.scss */
+/* line 45, C:/GitHub/Selection/public/sass/modules/_login.scss */
 .form__button--cancel {
   margin-top: 1.5rem;
   background-color: #fff;
@@ -4627,7 +4630,7 @@ figcaption.caption_3_stack {
   margin-bottom: 1rem;
   /*float: left;*/ }
 
-/* line 54, C:/GitHub/Selection/public/sass/modules/_login.scss */
+/* line 57, C:/GitHub/Selection/public/sass/modules/_login.scss */
 .input__text--login {
   width: 100%; }
 
@@ -5178,6 +5181,11 @@ div.four.columns.social_links {
 .promo__list__ul {
   margin: 2rem;
   margin-top: 2.5rem; }
+
+/* line 61, C:/GitHub/Selection/public/sass/modules/_signup.scss */
+.about__join {
+  width: 10rem;
+  margin: auto; }
 
 /*///////////// Content section*/
 /* line 2, C:/webroot/lcsnbn/sass/modules/tile */
