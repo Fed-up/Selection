@@ -51,6 +51,7 @@ class Admin_UserController extends BaseController {
 			$data->lname 		= Input::get('lname');
 			$data->username 	= Input::get('username');
 			$data->email 		= Input::get('email');
+			$data->selection 	= 1;
 			$data->password 	= Hash::make(Input::get('password'));
 			$data->user_type 	= Input::get('user_type');
 			$data->admin 		= $admin;
@@ -108,6 +109,7 @@ class Admin_UserController extends BaseController {
 			$data->lname 	= Input::get('lname');
 			$data->username 	= Input::get('username');
 			$data->email 	= Input::get('email');
+			$data->selection = 1;
 			if($input['password']){
 				$data->password 	= Hash::make(Input::get('password'));
 			};

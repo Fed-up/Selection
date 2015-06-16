@@ -5,7 +5,7 @@
 <?php $__env->startSection('content'); ?>   
 <div class="band page">
 	<nav class=" subnav subnav--centre">
-	    <h2 class="content__title--main"><a class="plain__header__link" href="/">Hello!! Get excited, healthy desserts are near..</a></h2>
+	    <h2 class="content__title--main"><a class="plain__header__link" href="/">Become a Member</a></h2>
 	</nav>
 	<div class="container row"> <!--Sign up section-->
 		<section class="content__page--sub"> 
@@ -13,11 +13,17 @@
 				<div class="section section--form" >
 				  	<!-- <h1 class="page-header"><?php echo $__env->yieldContent('title'); ?></h1> -->
 				    	<?php if(isset($data->id)): ?>
-				  			<?php echo Form::open(array('action' => 'UserProfileController@postUpdateMembers', 'class' => 'form-horizontal')); ?>
+				  			<?php echo Form::open(array('action' => 'UserProfileController@postUpdateAddUser', 'class' => 'form-horizontal')); ?>
 				        <?php else: ?>
 				        	<?php echo Form::open(array('action' => 'UserProfileController@postAddUser', 'class' => 'form-horizontal')); ?> 
 				        <?php endif; ?>
-				        <h2 class="content__title--main--signup">Create a free account<br/> Join us Today =)</h2> 
+				        <h2 class="content__title--main--signup">
+				        <?php if(isset($data)): ?>
+				        	Please confirm your password below to login into the members area
+				        <?php else: ?>
+				        	Create a free account<br/> Join us Today =)
+				        <?php endif; ?>
+				        </h2> 
 			         	<div class="form-group <?php echo ($errors->has('fname')) ? 'has-error' : '' ;; ?>">
 				        	<?php echo Form::label('fname', 'First Name: ', array('class' => ' content-title--sub ')); ?>
 				            <div class="">
@@ -46,7 +52,10 @@
 			                    <?php echo Form::password('password_match', array('class'=>'input__text' ) ); ?>
 			                </div>
 			            </div>
-			        
+
+			            <?php if(isset($data->id)): ?>
+			           		<input type="hidden" name="data_id" value="<?php echo $data->id; ?>"/>
+			        	<?php endif; ?>
 			      	
 				        <div class="form-group">
 				            <div class="form__buttons">

@@ -5,6 +5,7 @@
 Route::get('/', 'HomeController@getIndex');
 Route::get('login', 'AuthController@getLogin');
 Route::post('login', 'AuthController@postLogin');
+Route::post('signup', 'AuthController@postSignUpLogin');
 Route::get('logout', 'AuthController@logout');
 
 //Route
@@ -59,8 +60,12 @@ Route::get('/remove/{identifier}', 'CheckoutController@getRemoveItem');
 
 //Profile
 Route::get('signup', 'UserProfileController@getAddUser');
+Route::post('/', 'UserProfileController@postAddUserHome');
 Route::post('signup', 'UserProfileController@postAddUser');
-Route::post('/', 'HomeController@postAddUser');
+Route::post('signupmember', 'UserProfileController@postUpdateAddUser');
+
+
+// Route::post('/', 'HomeController@postAddUser');
 
 
 Route::group(array('before' => 'profile'), function() {

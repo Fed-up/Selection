@@ -589,10 +589,14 @@ class Admin_RecipesController extends BaseController{
 							$r_i->grams = $riGrams;
 
 							if(isset($input['sales_amount'])){
-								$sales_amount = $input['sales_amount'];
+								$total_recipe_grams_active = (isset($input['total_recipe_grams_active'])) ? 1 : 0;
+								if($total_recipe_grams_active == 1){
+									$sales_amount = $input['sales_amount'];
+								}else{
+									$sales_amount = $input['serve'];
+								}
+
 								$r_i->sales_grams = $sales_grams = $riGrams/$serve_amount * $sales_amount; 
-								
-								// 
 
 								foreach($i_grams as $id => $i_gram){
 								  	if($ingredient[$i][$xx[0]] == $id){
@@ -725,8 +729,7 @@ class Admin_RecipesController extends BaseController{
 
 						if(isset($ti_cost)){$ti_cost = $ti_cost;}else{$ti_cost = 0;}
 						if(isset($ti_grams)){$ti_grams = $ti_grams;}else{$ti_grams = 0;}
-						if(isset($input['B2B_sales_price'])){$B2B_sales_price = $input['B2B_sales_price'];}else{$B2B_sales_price = 0;}
-						
+						if(isset($input['B2B_sales_price'])){$B2B_sales_price = $input['B2B_sales_price'];}else{$B2B_sales_price = 0;}					
 
 						$sdata_id = $input['sdata_id'];
 						$staff_cost_per_hour = $input['staff_cost_per_hour'];
@@ -753,6 +756,8 @@ class Admin_RecipesController extends BaseController{
 						$B2B_desired_sales_price = 0;
 						$B2B_desired_total_markup = 0;
 						// $B2B_desired_total_markup
+
+						// total_recipe_grams_active
 
 						
 
@@ -812,7 +817,7 @@ class Admin_RecipesController extends BaseController{
 								$projected_recipe_revenue = $projected_total_markup_per_piece + $total_cost_per_piece;
 
 								$desired_sales_price = $projected_recipe_revenue;
-								// echo '<pre>'; print_r($desired_sales_price); echo '</pre>'; 	exit;
+								// echo '<pre>'; print_r($total_recipe_grams_active); echo '</pre>'; 	exit;
 							}
 						}
 						
@@ -832,6 +837,7 @@ class Admin_RecipesController extends BaseController{
 
 			            		'total_recipe_grams' => $ti_grams,
 			            		'total_grams_per_piece' => $total_grams_per_piece,
+			            		'total_recipe_grams_active' => $total_recipe_grams_active,
 
 			            		'staff_cost_to_make_recipe_batch' => $staff_cost_to_make_recipe_batch,
 			            		'total_recipe_cost' => $total_recipe_cost,

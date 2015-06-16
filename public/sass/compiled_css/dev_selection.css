@@ -3503,33 +3503,34 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 /* line 421, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .registered__message {
-  font-family: paws_base_font;
+  font-family: base_font;
+  text-align: center;
   color: #fff;
   border: 1px solid #e0e0e0;
   /* background: #fff; */
   padding: 1rem;
   font-size: 28px; }
 
-/* line 432, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 433, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 #fs:hover {
   background-color: #3b5998; }
 
-/* line 433, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 434, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 #fs:hover #fl {
   color: white; }
 
-/* line 435, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 436, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 a.textlink {
   text-decoration: none;
   color: #fff; }
 
-/* line 436, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 437, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 a.textlink:hover {
   text-decoration: none;
   color: #c21e22; }
 
 /*////////////////////  Icon Links  /////////////////////////////////////////*/
-/* line 440, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 441, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .section__points {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -3538,7 +3539,7 @@ a.textlink:hover {
 /*.points.first{
 	margin-top:0rem;
 }*/
-/* line 450, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 451, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .points {
   height: 20rem;
   padding: 1rem;
@@ -3559,7 +3560,7 @@ a.textlink:hover {
     .points {
       height: 25rem; } }
 
-/* line 474, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 475, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .iconbox {
   overflow: hidden;
   /*background: #fff; */
@@ -3567,7 +3568,7 @@ a.textlink:hover {
   width: 100%;
   height: 100%; }
 
-/* line 482, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 483, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .iconbox__content {
   position: relative;
   /*background: red; */
@@ -3598,12 +3599,12 @@ a.textlink:hover {
       width: 70%;
       height: 70%; } }
 
-/* line 513, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 514, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .fresh__point {
   margin: 1rem;
   background-color: #fff; }
 
-/* line 518, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
+/* line 519, C:/GitHub/Selection/public/sass/modules/_selection_base.scss */
 .user__message {
   font-style: italic;
   padding-left: 1rem;
@@ -5801,6 +5802,25 @@ input.input__text--error {
       background: url(/images/selection/join.png) no-repeat 0 0; } }
 
 /* line 336, C:/GitHub/Selection/public/sass/modules/_form.scss */
+.form__image__submit:hover {
+  padding: .8rem;
+  border: 0;
+  border-radius: .2rem;
+  font-size: 1.1rem;
+  color: #fff;
+  position: absolute;
+  bottom: 2.5rem;
+  right: 0;
+  background: url(/images/selection/joinr.png) no-repeat 0 0;
+  height: 130px;
+  width: 130px; }
+  @media only screen and (max-width: 480px) {
+    .form__image__submit:hover {
+      position: static;
+      margin-top: 3rem;
+      background: url(/images/selection/joinr.png) no-repeat 0 0; } }
+
+/* line 355, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__image__submit:active {
   border: 0; }
 

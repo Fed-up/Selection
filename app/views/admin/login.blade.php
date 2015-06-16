@@ -5,7 +5,7 @@
 
 @section('content')   
 <div class="band page">
-<nav class=" subnav subnav--centre" data-tab data-options="deep_linking:true; scroll_to_content: false">
+<nav class=" subnav subnav--centre">
         <h2 class="content__title--main"><a class="plain__header__link" href="/">Login</a></h2>
     </nav>
     <!-- <h2 class="content__title content__title--main"><a class="content__title--link" href="/profile">Login</a></h2> -->

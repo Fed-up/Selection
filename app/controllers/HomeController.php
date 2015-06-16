@@ -54,51 +54,7 @@ class HomeController extends BaseController {
 		));
 	}
 
-	public function postAddUser(){
-		
-		$input = Input::all();	
-
-		$fname = $input['fname'];
-		$email = $input['email'];
-
-		$rules = array(
-			'fname' => 'required',
-			'email' => 'required|email|unique:users',
-		);
-
-		$validator = Validator::make($input, $rules);
-		
-		if($validator->fails()){
-
-			// get the error messages from the validator
-        	$issues = $validator->messages();
-        	// echo '<pre>'; print_r($errors); echo '</pre>'; 	exit;
-
-			return View::make('public.index')	
-				->withInput($input)
-				->withErrors($validator);
-				// ->with(array(
-				// 	'issue' => $issues,
-				// 	)
-				// );
-
-		}else{
-
-			$data	= new User();
-			//echo '<pre>'; print_r($input); echo '</pre>'; 	exit;
-			$data->fname 	= Input::get('fname');
-			$data->email 	= Input::get('email');
-			$data->user_type 	= 'GUEST';
-			$data->active  = 1;	
-			$data->save();
-			// echo '<pre>'; print_r($data); echo '</pre>'; 	exit;	
-		}; 
-
-		//$data = User::all();	
-		$registered = 'Thankyou for showing your interest! We cannot wait to see you there!';
-		return View::make('public.index')
-			->with(array('registered' => $registered));	
-	}
+	
 
 	public function getAbout(){
 		return View::make('public.about');

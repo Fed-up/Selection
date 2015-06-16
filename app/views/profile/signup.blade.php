@@ -6,7 +6,7 @@
 @section('content')   
 <div class="band page">
 	<nav class=" subnav subnav--centre">
-	    <h2 class="content__title--main"><a class="plain__header__link" href="/">Hello!! Get excited, healthy desserts are near..</a></h2>
+	    <h2 class="content__title--main"><a class="plain__header__link" href="/">Become a Member</a></h2>
 	</nav>
 	<div class="container row"> <!--Sign up section-->
 		<section class="content__page--sub"> 
@@ -14,11 +14,17 @@
 				<div class="section section--form" >
 				  	<!-- <h1 class="page-header">@yield('title')</h1> -->
 				    	@if(isset($data->id))
-				  			{{ Form::open(array('action' => 'UserProfileController@postUpdateMembers', 'class' => 'form-horizontal')) }}
+				  			{{ Form::open(array('action' => 'UserProfileController@postUpdateAddUser', 'class' => 'form-horizontal')) }}
 				        @else
 				        	{{ Form::open(array('action' => 'UserProfileController@postAddUser', 'class' => 'form-horizontal')) }} 
 				        @endif
-				        <h2 class="content__title--main--signup">Create a free account<br/> Join us Today =)</h2> 
+				        <h2 class="content__title--main--signup">
+				        @if(isset($data))
+				        	Please confirm your password below to login into the members area
+				        @else
+				        	Create a free account<br/> Join us Today =)
+				        @endif
+				        </h2> 
 			         	<div class="form-group {{ ($errors->has('fname')) ? 'has-error' : '' ; }}">
 				        	{{ Form::label('fname', 'First Name: ', array('class' => ' content-title--sub ')) }}
 				            <div class="">
@@ -47,7 +53,10 @@
 			                    {{ Form::password('password_match', array('class'=>'input__text' ) ) }}
 			                </div>
 			            </div>
-			        
+
+			            @if(isset($data->id))
+			           		<input type="hidden" name="data_id" value="{{$data->id}}"/>
+			        	@endif
 			      	
 				        <div class="form-group">
 				            <div class="form__buttons">

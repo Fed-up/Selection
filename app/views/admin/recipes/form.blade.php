@@ -921,9 +921,9 @@
 				            </div>
 				        </div>
 				        <div class="form-group">
-				        	<h5 class="col-sm-2 control-label sales-data__title">   </h5>
+				        	<h5 class="col-sm-2 control-label sales-data__title">Generate Total Recipe Grams</h5>
 				            <div class="col-sm-3">
-				               
+				            	{{ Form::checkbox('total_recipe_grams_active', 1, (isset($input['total_recipe_grams_active'])? Input::old('total_recipe_grams_active') : (isset($sdata->total_recipe_grams_active)? $sdata->total_recipe_grams_active : '' )), array('class' => '')) }}
 				            </div>
 
 				            {{ Form::label('sales_time', 'Time - minutes: ', array('class' => 'col-sm-2 control-label')) }}
@@ -932,6 +932,20 @@
 				            </div>
 				        </div>
 				        <hr/>
+
+				        <div class="form-group {{ ($errors->has('title')) ? ' has-error' : '' ; }}">
+				        	<h5 class="col-sm-2 control-label sales-data__title">Total recipe grams:</h5>
+				            <div class="col-sm-3">
+				               <p class="sales-data__info">{{$sdata->total_recipe_grams}} g</p>
+				            </div>
+
+				            <h5 class="col-sm-2 control-label sales-data__title">Total grams per piece:</h5>
+				            <div class="col-sm-3">
+				               <p class="sales-data__info">{{$sdata->total_grams_per_piece}} g</p>
+				            </div>
+
+				        </div>
+				        <!-- <hr>  -->
 				        <div class="form-group">
 				        	 <h5 class="col-sm-2 control-label sales-data__title">B2C - Desired Sales Price:</h5>
 				            <div class="col-sm-3">
@@ -1031,19 +1045,7 @@
 
 				            
 				        </div>
-				        <hr>
-				        <div class="form-group {{ ($errors->has('title')) ? ' has-error' : '' ; }}">
-				        	<h5 class="col-sm-2 control-label sales-data__title">Total recipe grams:</h5>
-				            <div class="col-sm-3">
-				               <p class="sales-data__info">{{$sdata->total_recipe_grams}} g</p>
-				            </div>
-
-				            <h5 class="col-sm-2 control-label sales-data__title">Total grams per piece:</h5>
-				            <div class="col-sm-3">
-				               <p class="sales-data__info">{{$sdata->total_grams_per_piece}} g</p>
-				            </div>
-
-				        </div>
+				        
 				        <hr/>
 		        		<?php //echo '<pre>'; print_r($sdata->price); echo '</pre>'; exit; ?>
                	@endforeach

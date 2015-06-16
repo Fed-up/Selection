@@ -17,6 +17,7 @@
     	<script src="/packages/jquery-1.11.1.min/jquery-1.11.1.min.js"></script>
         <script src="/packages/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
         <script src="/js/tinymce/tinymce.min.js"></script>
+        <script src="js/jquery.spellchecker.js"></script>
         @yield('_head')
     </head>
 
@@ -37,8 +38,19 @@
         @endif
     </body>
     <script type="text/javascript">
-        tinymce.init({
-            selector: "textarea"
-         });
+        tinymce.init({ 
+            selector:'textarea',  
+            external_plugins: { "nanospell": "/packages/nanospell/dictionaries/plugin.js" },
+            nanospell_server:"php"
+        });
+        
+        // tinymce.init({
+        //     selector: "textarea",
+        //     // spellchecker_languages : "+English=en",
+        //     external_plugins: {"nanospell": "/packages/nanospell/dictionaries/plugin.js"},
+        //     nanospell_dictionary: "es" 
+        //     plugins: "spellchecker",
+        //     toolbar: "spellchecker",
+        //  });
     </script>
 </html>

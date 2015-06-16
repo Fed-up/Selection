@@ -26,9 +26,9 @@
                 <td><?php echo $recipe->name; ?></td>
                 <td></td>
                 <td><?php if($recipe->fedup_active == 1): ?>
-                        <?php echo link_to('/admin/menu/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-success glyphicon glyphicon-ok disabled')); ?>
+                        <?php echo link_to('/admin/website/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-success glyphicon glyphicon-ok disabled')); ?>
                     <?php else: ?>
-                        <?php echo link_to('/admin/menu/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-danger glyphicon glyphicon-remove disabled')); ?>
+                        <?php echo link_to('/admin/website/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-danger glyphicon glyphicon-remove disabled')); ?>
                     <?php endif; ?>
                 </td>
                 <td>
@@ -40,9 +40,9 @@
                 </td>
                 <td>
                 	<?php if($recipe->naughty_active == 1): ?>
-                        <?php echo link_to('/admin/menu/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-success glyphicon glyphicon-ok disabled')); ?>
+                        <?php echo link_to('/admin/website/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-success glyphicon glyphicon-ok disabled')); ?>
                     <?php else: ?>
-                        <?php echo link_to('/admin/menu/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-danger glyphicon glyphicon-remove disabled')); ?>
+                        <?php echo link_to('/admin/website/recipes/active/'.$recipe->id, '', array('class' => 'btn btn-danger glyphicon glyphicon-remove disabled')); ?>
                     <?php endif; ?>
                 </td>
                 <td>

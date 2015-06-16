@@ -180,7 +180,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
             @if (isset($registered))
                 <div class="registered__message">{{ $registered }}</div>
             @else
-                {{ Form::open(array('action' => 'HomeController@postAddUser', 'class' => 'form-horizontal')) }} 
+                {{ Form::open(array('action' => 'UserProfileController@postAddUserHome', 'class' => 'form-horizontal')) }} 
                     <h2 class="homepage_title">Selection Cafe</h2> 
 
                     <div class="form-group {{ ($errors->has('fname')) ? 'has-error' : '' ; }} row">
