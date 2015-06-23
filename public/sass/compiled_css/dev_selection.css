@@ -2757,7 +2757,7 @@ a {
 
 /* line 40, C:/GitHub/Selection/public/sass/modules/_base.scss */
 a:hover, a:focus {
-  color: #fff;
+  color: #fa262b;
   text-decoration: none; }
 
 /* line 45, C:/GitHub/Selection/public/sass/modules/_base.scss */
@@ -4613,10 +4613,10 @@ figcaption.caption_3_stack {
   border: 0px;
   margin-right: 0.5rem;
   margin-bottom: 1.5rem;
-  /* float: right; */
+  float: right;
   text-align: right;
   right: 1.5rem;
-  position: absolute; }
+  /*position: absolute;*/ }
 
 /* line 45, C:/GitHub/Selection/public/sass/modules/_login.scss */
 .form__button--cancel {
@@ -5530,21 +5530,21 @@ input:-webkit-autofill {
 
 /* line 92, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form-signin--swipe {
-  margin-bottom: 3.2rem;
-  margin-top: 1rem; }
+  margin-bottom: 4.2rem;
+  margin-top: 2rem; }
 
-/* line 96, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 97, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__input--side--login {
   /* margin: auto; */
   /* margin-top: 2rem; */
   margin-left: 1rem;
   margin-right: 1rem; }
 
-/* line 104, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 105, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__input--side--login--swipe {
-  margin-top: 0rem; }
+  margin-top: 1rem; }
 
-/* line 107, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 109, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form-control {
   display: block;
   color: #343434;
@@ -5555,7 +5555,7 @@ input:-webkit-autofill {
   margin-bottom: 1rem;
   width: 100%; }
 
-/* line 118, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 120, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__control--no-width {
   display: block;
   color: #343434;
@@ -5565,7 +5565,7 @@ input:-webkit-autofill {
   border: 0px;
   margin-bottom: 1rem; }
 
-/* line 128, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 130, C:/GitHub/Selection/public/sass/modules/_form.scss */
 #_PackageRecipes .form__control--no-width {
   display: inline;
   margin-right: 10px;
@@ -5574,13 +5574,13 @@ input:-webkit-autofill {
   height: 3rem;
   padding: 0.5rem; }
 
-/* line 138, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 140, C:/GitHub/Selection/public/sass/modules/_form.scss */
 #_PackageRecipes .form-control-amount {
   display: inline;
   margin: 0 10px 0 0;
   border: #e0e0e0 solid 1px; }
 
-/* line 145, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 147, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .side__login__button--swipe {
   background-color: #ff7c81;
   color: #fff;
@@ -5593,7 +5593,7 @@ input:-webkit-autofill {
   width: 30%;
   font-size: 1rem; }
 
-/* line 159, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 161, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .side__login__button {
   background-color: #fa262b;
   color: #fff;
@@ -5605,15 +5605,15 @@ input:-webkit-autofill {
   font-size: 1rem;
   border: 0px; }
 
-/* line 170, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 172, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .side__login__button:hover {
   background-color: #fd5155; }
 
-/* line 174, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 176, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .side__login__button--swipe:hover {
   background-color: #fd8d91; }
 
-/* line 177, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 179, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .side__member__button {
   background-color: #ff7c81;
   color: #fff;
@@ -5624,39 +5624,39 @@ input:-webkit-autofill {
   margin-bottom: 1rem;
   float: right; }
 
-/* line 187, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 189, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .side__member__button--login {
   margin-right: 0rem; }
 
-/* line 190, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 192, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .side__member__button:hover {
   background-color: #fd8d91; }
 
-/* line 193, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 195, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .total__price {
   width: 100%;
   margin-bottom: 1rem;
   margin-right: 1rem;
   text-align: right; }
 
-/* line 200, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 202, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form-group {
   min-height: 40px;
   display: block;
   margin-top: 1rem; }
 
-/* line 206, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 208, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__box {
   margin: 0 1rem; }
 
-/* line 210, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 212, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .input__checkbox {
   float: left;
   margin: .7rem;
   /* font-size: 200%; */
   display: inline; }
 
-/* line 230, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 232, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__title--signup {
   font-family: paws_base_font;
   text-align: center;
@@ -5667,13 +5667,13 @@ input:-webkit-autofill {
     .form__title--signup {
       padding-bottom: 1rem; } }
 
-/* line 242, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 244, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form_field_title {
   margin-top: 0.5rem; }
 
-/* line 247, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 249, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .input__text {
-  display: block;
+  /*display: block;*/
   color: #343434;
   padding: 0.7rem;
   border-radius: 5px;
@@ -5684,7 +5684,7 @@ input:-webkit-autofill {
   margin-right: 20rem;
   margin-bottom: 1rem; }
 
-/* line 260, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 262, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .input__text--home {
   display: block;
   color: #343434;
@@ -5697,79 +5697,79 @@ input:-webkit-autofill {
   margin-right: 20rem;
   margin-bottom: 1rem; }
 
-/* line 274, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 276, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .input__text--home::-webkit-input-placeholder {
   color: #fb4d3b;
   opacity: 1; }
 
-/* line 275, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 277, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .input__text--home::-moz-placeholder {
   color: #fb4d3b;
   opacity: 1; }
 
 /* firefox 19+ */
-/* line 276, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 278, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .input__text--home:-ms-input-placeholder {
   color: #fb4d3b;
   opacity: 1; }
 
 /* ie */
-/* line 277, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 279, C:/GitHub/Selection/public/sass/modules/_form.scss */
 input:-moz-placeholder {
   color: #fb4d3b;
   opacity: 1; }
 
-/* line 279, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 281, C:/GitHub/Selection/public/sass/modules/_form.scss */
 input.input__text--home {
   background: white;
   opacity: 0.5; }
 
-/* line 280, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 282, C:/GitHub/Selection/public/sass/modules/_form.scss */
 input.input__text--home:focus {
   opacity: 0.9;
   border: 0;
   border: 1px solid #e0e0e0; }
 
-/* line 282, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 284, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .input__text::-webkit-input-placeholder {
   color: #343434;
   opacity: 0.5; }
 
-/* line 283, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 285, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .input__text::-moz-placeholder {
   color: #343434;
   opacity: 0.5; }
 
 /* firefox 19+ */
-/* line 284, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 286, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .input__text:-ms-input-placeholder {
   color: #343434;
   opacity: 0.5; }
 
 /* ie */
-/* line 285, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 287, C:/GitHub/Selection/public/sass/modules/_form.scss */
 input:-moz-placeholder {
   color: #343434;
   opacity: 0.5; }
 
-/* line 287, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 289, C:/GitHub/Selection/public/sass/modules/_form.scss */
 input.input__text {
   background: white;
   opacity: 0.5;
   width: 100%; }
 
-/* line 288, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 290, C:/GitHub/Selection/public/sass/modules/_form.scss */
 input.input__text:focus {
   opacity: 0.9;
   border: 0;
   border: 1px solid #e0e0e0; }
 
-/* line 289, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 291, C:/GitHub/Selection/public/sass/modules/_form.scss */
 input.input__text--error {
   opacity: 0.9; }
 
 /* line 28, C:/webroot/lcsnbn/sass/modules/signup */
-/* line 294, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 296, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__submit__button {
   padding: 0.8rem;
   background-color: #ff8e5e;
@@ -5779,18 +5779,18 @@ input.input__text--error {
   color: #fff; }
 
 /* line 37, C:/webroot/lcsnbn/sass/modules/signup */
-/* line 304, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 306, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__submit__button:hover {
   background-color: #ff5531; }
 
-/* line 308, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 310, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form-horizontal {
   padding: 0 1rem; }
   @media only screen and (max-width: 480px) {
     .form-horizontal {
       padding: 0 0.2rem; } }
 
-/* line 317, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 319, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__image__submit {
   padding: .8rem;
   border: 0;
@@ -5809,7 +5809,7 @@ input.input__text--error {
       margin-top: 3rem;
       background: url(/images/selection/join.png) no-repeat 0 0; } }
 
-/* line 336, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 338, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__image__submit:hover {
   padding: .8rem;
   border: 0;
@@ -5828,7 +5828,7 @@ input.input__text--error {
       margin-top: 3rem;
       background: url(/images/selection/joinr.png) no-repeat 0 0; } }
 
-/* line 355, C:/GitHub/Selection/public/sass/modules/_form.scss */
+/* line 357, C:/GitHub/Selection/public/sass/modules/_form.scss */
 .form__image__submit:active {
   border: 0; }
 
