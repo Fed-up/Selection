@@ -25,21 +25,21 @@ html {
   @media only screen and (min-width:961px) {
     html {
       font-size: 0.9rem; } }
-
+ 
 body {
   background-color: #F3F6F5;
   -webkit-font-smoothing: antialiased;
   /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
   height: auto; }
-
+ 
 a {
   text-decoration: none; 
 }
 
 a:hover, a:focus {
   color: $main_color; 
-  text-decoration: none; 
+  text-decoration: none;  
 }
 
 .columns img {

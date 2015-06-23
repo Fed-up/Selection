@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 					'public/deploy_css/selection.min.css' : 'public/sass/compiled_css/dev_selection.css'
 				}
 			}
-		},
+		}, 
 		
 
 		// jshint: {
