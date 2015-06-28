@@ -103,7 +103,7 @@
                                                             <td width="30"><p style="margin:0; font-size:1px; line-height:1px;">&nbsp;</p></td>
                                                             <td colspan="3">
                                                                 <!-- <a style="display:block; margin:0 0 14px;" href="https://www.google.com.au/maps/place/Raw+Materials+PTY+Ltd./@-37.8081688,144.9014175,16z/data=!4m5!1m2!2m1!1sstudio+raw+materials!3m1!1s0x0000000000000000:0xe5b92f306f6c213e"><img src="http://www.selectioncafe.com.au/images/email/map.png" width="540" height="220" alt="Map to Venue" style="display:block; margin:0; border:0; background:#eeeeee;"></a> -->
-                                                                <!-- <p style="font-size:14px; line-height:22px; font-weight:bold; color:#333333; margin:0 0 5px;"><a href="http://www.selectioncafe.com.au/" style="color:#6c7e44; text-decoration:none;">Hi {{$name}}</a></p> -->
+                                                                <!-- <p style="font-size:14px; line-height:22px; font-weight:bold; color:#333333; margin:0 0 5px;"><a href="http://www.selectioncafe.com.au/" style="color:#6c7e44; text-decoration:none;">Hi <?php echo $name; ?></a></p> -->
 
                                                                 We look forward to seeing you soon!</p>
                                                             </td>

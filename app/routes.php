@@ -9,7 +9,7 @@ Route::post('signup', 'AuthController@postSignUpLogin');
 Route::get('logout', 'AuthController@logout');
 
 //Route
-// email::get('email', 'EmailController@getEmail');
+Route::get('email', 'EmailController@getEmail');
 
 Route::get('geogram', function(){
    return View::make("partial.geogram");

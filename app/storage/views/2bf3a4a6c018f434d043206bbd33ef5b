@@ -66,7 +66,7 @@
 						</td>
 						<td width="15"></td>
 						<td width="375" valign="top" colspan="3">
-							<h4>{{$name}}: Email Confirmation</h4>
+							<h4><?php echo $name; ?>: Email Confirmation</h4>
 							<h5>Ticket ID: </h5>
 							<h5>Quantity: </h5>
 						</td>
