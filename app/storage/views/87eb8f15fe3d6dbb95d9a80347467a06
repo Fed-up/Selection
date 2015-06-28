@@ -36,13 +36,13 @@
                                                 <!-- begin content -->
                                                 <img src="https://www.sonaughtybutnice.com/images/email/header.png" width="600" height="221" alt="Delicious Healthy Desserts" style="display:block; border:0; margin:0 0 44px; background:#eeeeee;">
                                                 <p style="margin:0px;; text-align:center; font-size:22px; line-height:30px; font-weight:bold; color:#484a42;">
-                                                    Thankyou {{--$fname--}} for your catering enquiry!
+                                                    Thankyou <?php /*$fname*/ ?> for your catering enquiry!
                                                 </p>
                                                 <p style="margin:0px;; text-align:center; font-size:16px; line-height:30px; color:#484a42;">
-                                                    Date: {{--$date--}}
+                                                    Date: <?php /*$date*/ ?>
                                                 </p>
                                                 <p style="margin:0 30px 33px;; text-align:center; font-size:16px; line-height:30px; color:#484a42;">
-                                                    Time: {{--$time--}}
+                                                    Time: <?php /*$time*/ ?>
                                                 </p>
 
                                                 <p style="margin:0; border-top:1px solid #e5e5e5; font-size:5px; line-height:5px; margin:0 30px 29px;">&nbsp;</p>
@@ -52,7 +52,7 @@
                                                             <td width="30"><p style="margin:0; font-size:1px; line-height:1px;">&nbsp;</p></td>
                                                             <td>
                                                                 <p style="margin:0 0 4px; font-weight:bold; color:#6c7e44; font-size:18px; line-height:22px;">Your message</p>
-                                                                <p style="margin-left:10px; color:#333333; font-size:14px; line-height:18px;">{{--$d_message--}}</p>
+                                                                <p style="margin-left:10px; color:#333333; font-size:14px; line-height:18px;"><?php /*$d_message*/ ?></p>
                                                             </td>
                                                             <td width="30"><p style="margin:0; font-size:1px; line-height:1px;">&nbsp;</p></td>
                                                         </tr>
